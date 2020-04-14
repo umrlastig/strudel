@@ -20,7 +20,7 @@ email: clement.mallet@ign.fr
 description:
   fr: "super équipe de ouf"
   en: "A research team"
-baseurl: "" #"/strudel" # the subpath of your site, e.g. /blog
+baseurl: "/strudel_academic" #"/strudel" # the subpath of your site, e.g. /blog
 url: "https://www.umr-lastig.fr" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username: umrlastig
