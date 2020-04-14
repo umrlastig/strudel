@@ -9,7 +9,7 @@ lang: en
 
 {% assign strudel_members_HAL = strudel_members | map: "HAL" | uniq | append: "" | join: ", " %}
 
-<script src="../../assets/js/hal.js" charset="utf-8"></script>
+<script src="{{ baseurl }}/assets/js/hal.js" charset="utf-8"></script>
 
 <div id="pubACL">
   [ACL] Journals
