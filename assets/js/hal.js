@@ -1,5 +1,5 @@
 ---
-
+---
 // The MIT License (MIT)
 
 // hal.js | Copyright (c) 2019 IGN
@@ -150,9 +150,8 @@ function parseCitation(doc, citationElement, linksElement)
     var icons = {
       'dx.doi.org': 'doi.svg',
       'www.mdpi.com': 'mdpi.jpg'
-    }
-    const img = "{{ baseurl }}/assets/images/icons/"+(icons[host] || "link.svg")
-
+    };
+    const img = "{{ site.baseurl }}/assets/images/icons/"+(icons[host] || "link.svg");
     const aElement = document.createElement('a');
     aElement.setAttribute("href",url);
     aElement.setAttribute("class","imgLink");
@@ -186,7 +185,7 @@ function createBibtex(label_bibtex, parent)
   const inputElement = document.createElement('input');
   inputElement.setAttribute("type","image");
   inputElement.setAttribute("class","imgLink");
-  inputElement.setAttribute("src","{{ baseurl }}/assets/images/icons/bibtex.jpg");
+  inputElement.setAttribute("src","{{ site.baseurl }}/assets/images/icons/bibtex.jpg");
   inputElement.setAttribute("alt","Copy BibTeX to clipboard");
   inputElement.setAttribute("title","Copy BibTeX to clipboard");
   inputElement.onclick = function() {clickBibtex(label_bibtex);}
@@ -251,7 +250,7 @@ var createPub = function(doc, parent){
     pdfElement.setAttribute("class","imgLink");
     imgPdfElement = document.createElement('img');
     imgPdfElement.setAttribute("title","pdf");
-    imgPdfElement.setAttribute("src","{{ baseurl }}/assets/images/icons/pdf_icon.gif");
+    imgPdfElement.setAttribute("src","{{ site.baseurl }}/assets/images/icons/pdf_icon.gif");
     imgPdfElement.setAttribute("height","20");
     imgPdfElement.setAttribute("alt","pdf");
     pdfElement.appendChild(imgPdfElement);
