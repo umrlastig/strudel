@@ -27,7 +27,7 @@ github_username: umrlastig
 
 # Build settings
 markdown: kramdown
-theme: academic
+remote_theme: academic
 plugins:
   - jekyll-feed
 #  - 'jekyll/scholar'
