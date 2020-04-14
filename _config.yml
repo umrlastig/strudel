@@ -27,10 +27,12 @@ github_username: umrlastig
 
 # Build settings
 markdown: kramdown
-remote_theme: academic
 plugins:
   - jekyll-feed
+  - jekyll-remote-theme
 #  - 'jekyll/scholar'
+
+remote_theme: gaalcaras/academic
 
 langs: ["fr", "en"]
 defaults:
