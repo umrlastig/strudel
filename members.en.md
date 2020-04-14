@@ -17,7 +17,9 @@ lang: en
 {% for member in strudel_permanent_researchers %}
   <div>
     <img class="rounded-circle" src="{{ member.photo }}"/>
-    <a href="{{ member.webpage }}" />
+    <a href="{{ member.webpage }}">
+      {{ member.firstname }} {{ member.lastname }}
+    </a>
   </div>
 {% endfor %}
 
@@ -28,7 +30,9 @@ lang: en
 {% for member in strudel_phds %}
   <div>
   <img class="rounded-circle" src="{{ member.photo }}"/>
-  <a href="{{ member.webpage }}" />
+  <a href="{{ member.webpage }}">
+    {{ member.firstname }} {{ member.lastname }}
+  </a>
   </div>
 {% endfor %}
 
@@ -37,6 +41,8 @@ lang: en
 {% for member in strudel_past_members %}
   <div>
   <img class="rounded-circle" src="{{ member.photo }}"/>
-  <a href="{{ member.webpage }}" />
+  <a href="{{ member.webpage }}">
+    {{ member.firstname }} {{ member.lastname }}
+  </a>
   </div>
 {% endfor %}
