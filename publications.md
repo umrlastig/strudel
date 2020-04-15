@@ -11,57 +11,58 @@ lang: fr
 
 <script src="{{ site.baseurl }}/assets/js/hal.js" charset="utf-8"></script>
 
-<div id="pubACL">
-  [ACL] Journals
-</div>
+<!-- [ACL] -->
+## Journaux internationaux
+<div id="pubACL"></div>
+<!-- to use markdown id naming: {: #pubACL} -->
 
-<div id="pubACLN">
-  [ACLN] Journals
-</div>
+<!-- [ACLN] -->
+## Journaux nationaux
+<div id="pubACLN"></div>
 
-<div id="pubASCL">
-  [ASCL] Others
-</div>
+<!-- [ASCL] -->
+## Autres
+<div id="pubASCL"></div>
 
-<div id="pubACTI">
-  [ACTI] Conferences
-</div>
+<!-- [ACTI] -->
+## Conférences internationales
+<div id="pubACTI"></div>
 
-<div id="pubACTN">
-  [ACTN] Conferences
-</div>
+<!-- [ACTN] -->
+## Conférences nationales
+<div id="pubACTN"></div>
 
-<div id="pubCOM">
-  [COM] Conferences
-</div>
+<!-- [COM] -->
+## Communications
+<div id="pubCOM"></div>
 
-<div id="pubOS">
-  [OS] Books and Chapters
-</div>
+<!-- [OS] -->
+## Chapitres d'ouvrages
+<div id="pubOS"></div>
 
-<div id="pubDO">
-  [DO] Books and Chapters
-</div>
+<!-- [DO] -->
+## Directions d'ouvrages
+<div id="pubDO"></div>
 
-<div id="pubAFF">
-  [AFF] Posters
-</div>
+<!-- [AFF] -->
+## Posters
+<div id="pubAFF"></div>
 
-<div id="pubAP">
-  [AP] Preprints
-</div>
+<!-- [AP] -->
+## Rapports ou pré-publications
+<div id="pubAP"></div>
 
-<div id="pubTH">
-  [TH] Dissertations
-</div>
+<!-- [TH] -->
+## Dissertations (thèses)
+<div id="pubTH"></div>
 
-<div id="pubINV">
-  [INV] Invited Talks
-</div>
+<!-- [INV] -->
+## Conférences invitées
+<div id="pubINV"></div>
 
-<div id="pubPV">
-  [PV] Popularization
-</div>
+<!-- [PV] -->
+## Vulgarisation
+<div id="pubPV"></div>
 
 <script defer>
   getPublicationsAuthor({{ strudel_members_HAL }});

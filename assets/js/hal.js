@@ -91,7 +91,7 @@ function classement(doc)
   if (doc.docType_s == 'REPORT' || doc.docType_s == 'UNDEFINED') return 'AP';
   if (doc.docType_s == 'COMM')
   {
-    console.log(doc);
+    // console.log(doc);
     if (doc.invitedCommunication_s == 1) return 'INV';
     if (doc.proceedings_s == 0) return 'COM';
     if (doc.audience_s == 2) return 'ACTI';
@@ -108,9 +108,9 @@ function classement(doc)
 
 var getPublicationsAuthor = function(halId, options = publication_options)
 {
-  console.log("getPublicationsAuthor: " + halId + " with " + options)
+  // console.log("getPublicationsAuthor: " + halId + " with " + options)
   for (var id in options) {
-    console.log("\toption: " + id)
+    // console.log("\toption: " + id)
     getPublications(halId, document.getElementById(id), options[id]);
   }
 }
@@ -127,7 +127,7 @@ var getKeywordPublicationsAuthorYear = function(halId, keyword, year, parent){
 
 var getKeywordPublicationsAuthorStartYear = function(halId, keyword, startYear, parent, endYear){
   parent = document.getElementById(parent || "pub") || parent;
-console.log(parent);
+  // console.log(parent);
   endYear = endYear || new Date().getFullYear();
   for(year=endYear;year >= startYear;year--)
   {

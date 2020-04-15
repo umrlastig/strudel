@@ -14,7 +14,7 @@ lang: fr
 {% assign phds = open_jobs | where: "type", "PhD" %}
 {% assign internships = open_jobs | where: "type", "Internship" %}
 
-## Enseignant-e / Chercheur-se-s :
+## Enseignant-e / Chercheur-se-s
 
 {% for job in researchers %}
   <div>
@@ -26,7 +26,8 @@ lang: fr
 {% else %}
   Aucun poste à pourvoir actuellement.
 {% endfor %}
-## Doctorants :
+
+## Doctorants
 
 {% for job in phds %}
   <div>
@@ -39,7 +40,7 @@ lang: fr
   Aucun poste à pourvoir actuellement.
 {% endfor %}
 
-## Stages :
+## Stages
 
 {% for job in internships %}
   <div>

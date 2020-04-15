@@ -13,7 +13,7 @@ lang: en
 {% assign phds = open_jobs | where: "type", "PhD" %}
 {% assign internships = open_jobs | where: "type", "Internship" %}
 
-## Teachers / Researchers :
+## Teachers / Researchers
 
 {% for job in researchers %}
   <div>
@@ -26,7 +26,7 @@ lang: en
   No position available at the moment.
 {% endfor %}
 
-## Doctorants :
+## PhD students
 
 {% for job in phds %}
 <div>
@@ -39,7 +39,7 @@ lang: en
   No position available at the moment.
 {% endfor %}
 
-## Stages :
+## Internships
 
 {% for job in internships %}
 <div>

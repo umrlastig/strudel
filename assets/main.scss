@@ -4,6 +4,7 @@
 @charset "utf-8";
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:800|PT+Serif');
+@import "academic";
 
 // Our variables
 // $base-font-family: "Open Sans", sans-serif;
@@ -28,10 +29,10 @@ $grey-color-lighter: lighten($grey-color, 70%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 // Width of the content area
-$content-width:    900px;//700px;
+$content-width:    1200px;//700px;
 
-$on-palm:          500px;
-$on-laptop:        900px;//700px;
+$on-palm:          1200px;//500px;
+$on-laptop:        1200px;//900px;//700px;
 
 .rounded-circle {
   border-radius: 50% !important;
@@ -71,4 +72,30 @@ tr {
 // }
 
 // Import partials from the `minima` theme.
-@import "academic";
+//@import "academic";
+
+/**
+ * Wrapper
+ */
+.wrapper {
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  // margin-right: auto;
+  // margin-left: auto;
+  // padding-right: $spacing-unit;
+  // padding-left: $spacing-unit;
+  margin: 0 auto;
+  padding: 0 $spacing-unit;
+  position: relative;
+  @extend %clearfix;
+
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+  }
+}
+.site-nav {
+  padding: 0 30px;  
+}

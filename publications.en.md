@@ -11,57 +11,58 @@ lang: en
 
 <script src="{{ site.baseurl }}/assets/js/hal.js" charset="utf-8"></script>
 
-<div id="pubACL">
-  [ACL] Journals
-</div>
+<!-- [ACL] -->
+## International Journals
+<div id="pubACL"></div>
+<!-- to use markdown id naming: {: #pubACL} -->
 
-<div id="pubACLN">
-  [ACLN] Journals
-</div>
+<!-- [ACLN] -->
+## National Journals
+<div id="pubACLN"></div>
 
-<div id="pubASCL">
-  [ASCL] Others
-</div>
+<!-- [ASCL] -->
+## Others
+<div id="pubASCL"></div>
 
-<div id="pubACTI">
-  [ACTI] Conferences
-</div>
+<!-- [ACTI] -->
+## International Conferences
+<div id="pubACTI"></div>
 
-<div id="pubACTN">
-  [ACTN] Conferences
-</div>
+<!-- [ACTN] -->
+## National Conferences
+<div id="pubACTN"></div>
 
-<div id="pubCOM">
-  [COM] Conferences
-</div>
+<!-- [COM] -->
+## Communications
+<div id="pubCOM"></div>
 
-<div id="pubOS">
-  [OS] Books and Chapters
-</div>
+<!-- [OS] -->
+## Book Chapters
+<div id="pubOS"></div>
 
-<div id="pubDO">
-  [DO] Books and Chapters
-</div>
+<!-- [DO] -->
+## Books
+<div id="pubDO"></div>
 
-<div id="pubAFF">
-  [AFF] Posters
-</div>
+<!-- [AFF] -->
+## Posters
+<div id="pubAFF"></div>
 
-<div id="pubAP">
-  [AP] Preprints
-</div>
+<!-- [AP] -->
+## Preprints
+<div id="pubAP"></div>
 
-<div id="pubTH">
-  [TH] Dissertations
-</div>
+<!-- [TH] -->
+## Dissertations (PhD theses)
+<div id="pubTH"></div>
 
-<div id="pubINV">
-  [INV] Invited Talks
-</div>
+<!-- [INV] -->
+## Invited Talks
+<div id="pubINV"></div>
 
-<div id="pubPV">
-  [PV] Popularization
-</div>
+<!-- [PV] -->
+## Popularization
+<div id="pubPV"></div>
 
 <script defer>
   getPublicationsAuthor({{ strudel_members_HAL }});
