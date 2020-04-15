@@ -58,6 +58,8 @@ lang: fr
       </a>
       <br>
       {{ member.statut }}
+      <br>
+      {{ member.start_date | split: "/" | last }} - {{ member.end_date | split: "/" | last }}
     </div>
   {% endtablerow %}
 </table>

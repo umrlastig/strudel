@@ -58,6 +58,9 @@ $on-laptop:        900px;//700px;
   width: 33%;
   text-align: center;
 }
+tr {
+  vertical-align: top;
+}
 // Minima also includes a mixin for defining media queries.
 // Use media queries like this:
 // @include media-query($on-palm) {
