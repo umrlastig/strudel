@@ -23,10 +23,9 @@ lang: fr
     </a>
     {{ job.titre }}
   </div>
-{% endfor %}
-{% if researchers.size == 0 %}
+{% else %}
   Aucun poste à pourvoir actuellement.
-{% endif %}
+{% endfor %}
 ## Doctorants :
 
 {% for job in phds %}
@@ -36,10 +35,9 @@ lang: fr
     </a>
     {{ job.titre }}
   </div>
-{% endfor %}
-{% if phds.size == 0 %}
+{% else %}
   Aucun poste à pourvoir actuellement.
-{% endif %}
+{% endfor %}
 
 ## Stages :
 
@@ -50,7 +48,6 @@ lang: fr
     </a>
     {{ job.titre }}
   </div>
-{% endfor %}
-{% if internships.size == 0 %}
+{% else %}
   Aucun poste à pourvoir actuellement.
-{% endif %}
+{% endfor %}

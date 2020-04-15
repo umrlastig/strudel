@@ -14,35 +14,50 @@ lang: fr
 
 ## Permanents :
 
-{% for member in strudel_permanent_researchers %}
-  <div>
-    <img class="rounded-circle" src="{{ member.photo }}"/>
-    <a href="{{ member.webpage }}">
-      {{ member.firstname }} {{ member.lastname }}
-    </a>
-  </div>
-{% endfor %}
+<table class='width-100'>
+  {% tablerow member in strudel_permanent_researchers cols:3 %}
+    <div align="center">
+      <a href="{{ member.webpage }}">
+        <img class="rounded-circle" src="{{ member.photo }}" alt="No image"/>
+        <br>
+        <b> {{ member.firstname }} <br> {{ member.lastname | capitalize }} </b>
+      </a>
+      <br>
+      {{ member.statut }}
+    </div>
+  {% endtablerow %}
+</table>
 
 {% assign strudel_phds = strudel_present_members | where_exp: "member", "member.status == 'PhD student'" %}
 
 ## Doctorants :
 
-{% for member in strudel_phds %}
-  <div>
-    <img class="rounded-circle" src="{{ member.photo }}"/>
-    <a href="{{ member.webpage }}">
-      {{ member.firstname }} {{ member.lastname }}
-    </a>
-  </div>
-{% endfor %}
+<table class='width-100'>
+  {% tablerow member in strudel_phds cols:3 %}
+    <div align="center">
+      <a href="{{ member.webpage }}">
+        <img class="rounded-circle" src="{{ member.photo }}" alt="No image"/>
+        <br>
+        <b> {{ member.firstname }} <br> {{ member.lastname | capitalize }} </b>
+      </a>
+      <br>
+      {{ member.statut }}
+    </div>
+  {% endtablerow %}
+</table>
 
 ## Anciens membres de l'équipe :
 
-{% for member in strudel_past_members %}
-  <div>
-    <img class="rounded-circle" src="{{ member.photo }}"/>
-    <a href="{{ member.webpage }}">
-      {{ member.firstname }} {{ member.lastname }}
-    </a>
-  </div>
-{% endfor %}
+<table class='width-100'>
+  {% tablerow member in strudel_past_members cols:3 %}
+    <div align="center">
+      <a href="{{ member.webpage }}">
+        <img class="rounded-circle" src="{{ member.photo }}" alt="No image"/>
+        <br>
+        <b> {{ member.firstname }} <br> {{ member.lastname | capitalize }} </b>
+      </a>
+      <br>
+      {{ member.statut }}
+    </div>
+  {% endtablerow %}
+</table>

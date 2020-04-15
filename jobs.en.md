@@ -22,10 +22,9 @@ lang: en
     </a>
     {{ job.title }}
   </div>
-{% endfor %}
-{% if researchers.size == 0 %}
+{% else %}
   No position available at the moment.
-{% endif %}
+{% endfor %}
 
 ## Doctorants :
 
@@ -36,10 +35,9 @@ lang: en
   </a>
   {{ job.title }}
 </div>
-{% endfor %}
-{% if phds.size == 0 %}
+{% else %}
   No position available at the moment.
-{% endif %}
+{% endfor %}
 
 ## Stages :
 
@@ -50,7 +48,6 @@ lang: en
   </a>
   {{ job.title }}
 </div>
-{% endfor %}
-{% if internships.size == 0 %}
+{% else %}
   No position available at the moment.
-{% endif %}
+{% endfor %}
