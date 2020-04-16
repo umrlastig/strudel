@@ -24,10 +24,34 @@
 
 // documentation on HAL API: https://api.archives-ouvertes.fr/docs/search/?schema=fields#fields
 
+const hal_baseurl = "https://api.archives-ouvertes.fr";
+const fl = 'fileAnnexesFigure_s,invitedCommunication_s,proceedings_s,popularLevel_s,halId_s,authIdHalFullName_fs,producedDateY_i,docType_s,files_s,fileMain_s,fileMainAnnex_s,linkExtUrl_s,title_s,en_title_s,fr_title_s,label_bibtex,citationRef_s';
+
 var halApi = function(halIds){
   var idList = halIds.join(' OR ');
-  const fl = 'fileAnnexesFigure_s,invitedCommunication_s,proceedings_s,popularLevel_s,halId_s,authIdHalFullName_fs,producedDateY_i,docType_s,files_s,fileMain_s,fileMainAnnex_s,linkExtUrl_s,title_s,en_title_s,fr_title_s,label_bibtex,citationRef_s';
-  return "https://api.archives-ouvertes.fr/search/?q=authIdHal_s:\("+idList+"\)&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
+  return hal_baseurl+"/search/?q=authIdHal_s:\("+idList+"\)&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
+}
+
+function getHalId(item) {
+  return item[0];
+}
+function getAuthorFullName(item) {
+  return item[1]+"+"+item[2];
+}
+function hasHalId(item) {
+  return getHalId(item) && getHalId(item) != "todo";
+}
+var halNameApi = function(ids){
+  // const [hasId, doesNot] =
+  //   ids.reduce((result, element) => {
+  //     result[hasHalId(element) ? 0 : 1].push(element);
+  //     return result;
+  //   },
+  //   [[], []]);
+  // var halIdList = hasId.map(getHalId).join(' OR ');
+  // var authorNameList = doesNot.map(getAuthorFullName).join(' OR ');
+  var query = ids.join(' OR ');
+  return hal_baseurl+"/search/?q="+query+"&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
 }
 
 // var halApi = function(halId){
@@ -35,19 +59,15 @@ var halApi = function(halIds){
 //   return "https://api.archives-ouvertes.fr/search/?q=authIdHal_s:%22"+halId+"%22&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
 // }
 
-var getPublications = function(halId, parent, params){
+var getPublications = function(halIds, parent, params){
   if (!parent) return;
 
   // Create a request variable and assign a new XMLHttpRequest object to it.
   var request = new XMLHttpRequest();
 
-  var halIds = [halId];
-  if (halId.constructor === Array) {
-    halIds = halId;
-  }
   // Open a new connection, using the GET request on the URL endpoint
-  var url = halApi(halIds)+params;
-  // console.log(url);
+  var url = halNameApi(halIds)+params;
+  console.log(url);
   request.open('GET', url, true);
   request.onload = function () {
     var docs = JSON.parse(this.response).response.docs;
@@ -66,18 +86,18 @@ var getPublications = function(halId, parent, params){
 
 const publication_options = {
   pubPV:  "&fq=popularLevel_s:1",
-  pubASCL:"&fq=popularLevel_s:0&fq=docType_s:\"ART\"&fq=peerReviewing_s:0",
-  pubACL: "&fq=popularLevel_s:0&fq=docType_s:\"ART\"&fq=peerReviewing_s:1&fq=audience_s:2",
-  pubACLN:"&fq=popularLevel_s:0&fq=docType_s:\"ART\"&fq=peerReviewing_s:1&fq=audience_s:(NOT 2)",
-  pubINV: "&fq=popularLevel_s:0&fq=docType_s:\"COMM\"&fq=invitedCommunication_s:1",
-  pubCOM: "&fq=popularLevel_s:0&fq=docType_s:\"COMM\"&fq=invitedCommunication_s:0&fq=proceedings_s:0",
-  pubACTI:"&fq=popularLevel_s:0&fq=docType_s:\"COMM\"&fq=invitedCommunication_s:0&fq=proceedings_s:1&fq=audience_s:2",
-  pubACTN:"&fq=popularLevel_s:0&fq=docType_s:\"COMM\"&fq=invitedCommunication_s:0&fq=proceedings_s:1&fq=audience_s:(NOT 2)",
-  pubOS:  "&fq=popularLevel_s:0&fq=docType_s:\"COUV\"",
-  pubDO:  "&fq=popularLevel_s:0&fq=docType_s:\"DOUV\"",
-  pubAP:  "&fq=popularLevel_s:0&fq=docType_s:(\"REPORT\" OR \"UNDEFINED\")",
-  pubTH:  "&fq=popularLevel_s:0&fq=docType_s:(\"THESE\" OR \"HDR\")",
-  pubAFF: "&fq=popularLevel_s:0&fq=docType_s:\"POSTER\""
+  pubASCL:"&fq=popularLevel_s:0&fq=docType_s:ART&fq=peerReviewing_s:0",
+  pubACL: "&fq=popularLevel_s:0&fq=docType_s:ART&fq=peerReviewing_s:1&fq=audience_s:2",
+  pubACLN:"&fq=popularLevel_s:0&fq=docType_s:ART&fq=peerReviewing_s:1&fq=audience_s:(NOT 2)",
+  pubINV: "&fq=popularLevel_s:0&fq=docType_s:COMM&fq=invitedCommunication_s:1",
+  pubCOM: "&fq=popularLevel_s:0&fq=docType_s:COMM&fq=invitedCommunication_s:0&fq=proceedings_s:0",
+  pubACTI:"&fq=popularLevel_s:0&fq=docType_s:COMM&fq=invitedCommunication_s:0&fq=proceedings_s:1&fq=audience_s:2",
+  pubACTN:"&fq=popularLevel_s:0&fq=docType_s:COMM&fq=invitedCommunication_s:0&fq=proceedings_s:1&fq=audience_s:(NOT 2)",
+  pubOS:  "&fq=docType_s:COUV",
+  pubDO:  "&fq=docType_s:DOUV",
+  pubAP:  "&fq=docType_s:(REPORT OR UNDEFINED)",
+  pubTH:  "&fq=docType_s:(THESE OR HDR)",
+  pubAFF: "&fq=docType_s:POSTER"
 }
 
 // based on http://production-scientifique.bnf.fr/Annexe/cadre-de-classement

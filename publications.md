@@ -7,63 +7,74 @@ lang: fr
 
 {% assign strudel_members = site.data.people | where: "team", "STRUDEL" %}
 
-{% assign strudel_members_HAL = strudel_members | map: "HAL" | uniq | append: "" | join: ", " %}
+{%- capture ids -%}
+  {%- for m in strudel_members -%}
+    {%- if forloop.first != true -%},{%- endif -%}
+    {%- if m.HAL == "todo" -%}
+      {%- assign lastname = m.lastname | strip -%}
+      authFullName_s:"{{ m.firstname | strip | append: " " | append: lastname | strip | url_encode }}"
+    {%- else -%}
+      authIdHal_s:{{ m.HAL }}
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- assign clean = ids | strip_newlines | split: "," | append: "" | join: ", " -%}
 
 <script src="{{ site.baseurl }}/assets/js/hal.js" charset="utf-8"></script>
 
 <!-- [ACL] -->
-## Journaux internationaux
+## {{ site.ACL | map: page.lang }}
 <div id="pubACL"></div>
 <!-- to use markdown id naming: {: #pubACL} -->
 
 <!-- [ACLN] -->
-## Journaux nationaux
+## {{ site.ACLN | map: page.lang }}
 <div id="pubACLN"></div>
 
 <!-- [ASCL] -->
-## Autres
+## {{ site.ASCL | map: page.lang }}
 <div id="pubASCL"></div>
 
 <!-- [ACTI] -->
-## Conférences internationales
+## {{ site.ACTI | map: page.lang }}
 <div id="pubACTI"></div>
 
 <!-- [ACTN] -->
-## Conférences nationales
+## {{ site.ACTN | map: page.lang }}
 <div id="pubACTN"></div>
 
 <!-- [COM] -->
-## Communications
+## {{ site.COM | map: page.lang }}
 <div id="pubCOM"></div>
 
 <!-- [OS] -->
-## Chapitres d'ouvrages
+## {{ site.OS | map: page.lang }}
 <div id="pubOS"></div>
 
 <!-- [DO] -->
-## Directions d'ouvrages
+## {{ site.DO | map: page.lang }}
 <div id="pubDO"></div>
 
 <!-- [AFF] -->
-## Posters
+## {{ site.AFF | map: page.lang }}
 <div id="pubAFF"></div>
 
 <!-- [AP] -->
-## Rapports ou pré-publications
+## {{ site.AP | map: page.lang }}
 <div id="pubAP"></div>
 
 <!-- [TH] -->
-## Dissertations (thèses)
+## {{ site.TH | map: page.lang }}
 <div id="pubTH"></div>
 
 <!-- [INV] -->
-## Conférences invitées
+## {{ site.INV | map: page.lang }}
 <div id="pubINV"></div>
 
 <!-- [PV] -->
-## Vulgarisation
+## {{ site.PV | map: page.lang }}
 <div id="pubPV"></div>
 
 <script defer>
-  getPublicationsAuthor({{ strudel_members_HAL }});
+  getPublicationsAuthor({{ clean }});
 </script>
