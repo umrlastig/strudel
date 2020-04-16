@@ -41,6 +41,46 @@ defaults:
     values:
       lang: "fr"
 
+ACL:
+  fr: "Journaux internationaux"
+  en: "International Journals"
+ACLN:
+  fr: "Journaux nationaux"
+  en: "National Journals"
+ASCL:
+  fr: "Autres articles"
+  en: "Other articles"
+ACTI:
+  fr: "Conférences internationales"
+  en: "International conferences"
+ACTN:
+  fr: "Conférences nationales"
+  en: "National Conferences"
+COM:
+  fr: "Communications"
+  en: "Communications"
+OS:
+  fr: "Chapitres d'ouvrages"
+  en: "Book Chapters"
+DO:
+  fr: "Directions d'ouvrages"
+  en: "Books"
+AFF:
+  fr: "Posters"
+  en: "Posters"
+AP:
+  fr: "Rapports ou pré-publications"
+  en: "Reports or preprints"
+TH:
+  fr: "Dissertations (thèses)"
+  en: "Dissertations (PhD theses)"
+INV:
+  fr: "Conférences invitées"
+  en: "Invited Talks"
+PV:
+  fr: "Vulgarisation"
+  en: "Popularization"
+
 # scholar:
 #   style: apa
 #   locale: en
