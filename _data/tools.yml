@@ -5,7 +5,7 @@
   logo: url(https://raw.githubusercontent.com/IGNF/librjmcmc/master/doc/images/librjmcmc.png)
 
 - id: geoxygene
-  logo: url(http://ignf.github.io/geoxygene/_static/img/geoxygene.png)
+  logo: url(https://ignf.github.io/geoxygene/_static/img/geoxygene.png)
 
 - id: geohistoricaldata
   short_name: GHD

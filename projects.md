@@ -28,7 +28,7 @@ Projet ERA4CS URCLIM (2017-2020)
 
 POC : **Arnaud Le Bris**
 
-[Site web](http://www.urclim.eu/)
+[Site web](https://www.urclim.eu/)
 
 </div>
 
@@ -74,14 +74,35 @@ poc: **Loïc Landrieu**
 
 </div>
 
-{% comment %}
-GeoHistoricalData
+<div markdown="1" style="display: none;">
 
-Projets terminés
-  Projet TOSCA PARCELLE (2018 - 2019), poc: Arnaud Le Bris
-  BD Constructibilité, collaboration IAUIDF, IGN, DRIEA financée sur fond prorpre
-  Projet PEPS UPE PLU++ (2015 - 2016)
-    http://ignf.github.io/PLU2PLUS/
+## TOSCA
+
+Projet TOSCA PARCELLE (2018-2019)
+
+poc: **Arnaud Le Bris**
+
+</div>
+
+<div markdown="1" style="display: none;">
+
+## PLU2PLUS
+
+Projet PEPS UPE PLU++ (2015-2016)
+
+poc: **Mickaël Brasebin**
+
+Pour plus d'informations, voir le [site web du projet](https://ignf.github.io/PLU2PLUS/).
+
+</div>
+
+{% comment %}
+GeoHistoricalData ?
 {% endcomment %}
+
+# Projets terminés
+{: .post-title}
+
+{% include project_bottom_slider.html %}
 
 {% include project_functions.html %}

@@ -66,14 +66,17 @@ Des outils développés, utilisés ou maintenus par l'équipe.
 ## GeoHistoricalData
 
 ### Network matching
+
 [HMMSpatialNetworkMatcher](https://github.com/GeoHistoricalData/HMMSpatialNetworkMatcher).
 
 [nm](https://github.com/GeoHistoricalData/nm).
 
 ### Historical Geocoder
+
 [Historical Geocoder](https://github.com/GeoHistoricalData/geocoder-front).
 
 ### Arpenteur Topographe
+
 [Le prototype en ligne](https://geohistoricaldata.herokuapp.com/).
 
 [Le code](https://github.com/IGNF/building-inspector).
@@ -90,7 +93,7 @@ A **Dempster-Shafer** (D-S) engine based on **eVidenZ**, an efficient D-S engine
 
 [evidence4j](https://github.com/IGNF/evidence4j) is a *java* library (as its name suggests).
 
-For more information on **eVidenZ**, the original C++ engine, refer to [https://www.lrde.epita.fr/wiki/TheoEvidenz](the eVidenZ webpage).
+For more information on **eVidenZ**, the original C++ engine, refer to [the eVidenZ webpage](https://www.lrde.epita.fr/wiki/TheoEvidenz).
 
 ### NeatMap
 [Code](https://github.com/IGNF/NeatMap).
@@ -132,7 +135,7 @@ For more information on **eVidenZ**, the original C++ engine, refer to [https://
       "logo": "url(https://raw.githubusercontent.com/IGNF/librjmcmc/master/doc/images/librjmcmc.png)"
     },{
       "id": "geoxygene",
-      "logo": "url(http://ignf.github.io/geoxygene/_static/img/geoxygene.png)"
+      "logo": "url(https://ignf.github.io/geoxygene/_static/img/geoxygene.png)"
     },{
       "id": "geohistoricaldata",
       "short_name": "GHD",

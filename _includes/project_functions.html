@@ -1,4 +1,16 @@
 <script>
+  function activate(tools, toolId) {
+    for (i = 0; i < tools.length; i++) {
+      var id = tools[i].getAttribute("toolID");
+      if (toolId == id) {
+        if (!tools[i].classList.contains("active")) {
+          tools[i].className += " active";
+        }
+      } else {
+        tools[i].className = tools[i].className.replace(" active", "");
+      }
+    }
+  }
   function showTool(toolId) {
     console.log("Show " + toolId);
     var tools = document.getElementsByTagName("h2");
@@ -10,16 +22,7 @@
         tools[i].parentElement.style.display = "none";
       }
     }
-    var toolInSlider = document.getElementById("slider").children;
-    for (i = 0; i < toolInSlider.length; i++) {
-      var id = toolInSlider[i].getAttribute("toolID");
-      if (toolId == id) {
-        if (!toolInSlider[i].classList.contains("active")) {
-          toolInSlider[i].className += " active";
-        }
-      } else {
-        toolInSlider[i].className = toolInSlider[i].className.replace(" active", "");
-      }
-    }
+    activate(document.getElementById("slider").children, toolId);
+    activate(document.getElementById("bottom-slider").children, toolId);
   }
 </script>

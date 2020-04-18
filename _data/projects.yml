@@ -5,7 +5,7 @@
   end: 2020
   poc: Laurence Jolivet
   site: https://www.landsense.eu/
-  logo: http://eurocrowd.org/wp-content/blogs.dir/sites/85/2016/09/LandSense_logo_big.png
+  logo: https://eurocrowd.org/wp-content/blogs.dir/sites/85/2016/09/LandSense_logo_big.png
 
 - id: urclim
   name: Projet ERA4CS URCLIM
@@ -13,7 +13,7 @@
   start: 2017
   end: 2020
   poc: Arnaud Le Bris
-  site: http://www.urclim.eu/
+  site: https://www.urclim.eu/
   logo: http://urclim.prod.lamp.cnrs.fr/wp-content/uploads/2020/03/cropped-city-1117433_960_720.png
 
 - id: soduco
@@ -38,7 +38,25 @@
   poc: Sébastien Giordano
 
 - id: ready3d
-  name: READY3D
+  name: Projet READY3D
+  short_name: READY3D
   start: 2019
   end: 2022
   poc: Loïc Landrieu
+
+- id: tosca
+  name: Projet TOSCA PARCELLE
+  short_name: TOSCA
+  start: 2018
+  end: 2019
+  poc: Arnaud Le Bris
+  logo: https://theia.sedoo.fr/wp-content-theia/uploads/sites/2/2019/03/Logo_Theia.png
+
+- id: plu2plus
+  name: Projet PEPS UPE PLU++
+  short_name: PLU++
+  start: 2015
+  end: 2016
+  poc: Mickaël Brasebin
+  site: https://ignf.github.io/PLU2PLUS/
+  logo: https://ignf.github.io/PLU2PLUS/img/logos/logo_plu2plus.png

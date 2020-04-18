@@ -153,6 +153,14 @@ tr {
   background: $brand-color;
   position: absolute;
 }
+.bottom-divider {
+  height: 20px;
+  top: 0;
+  width: 100%;
+  min-width: 800px;
+  background: $brand-color;
+  position: absolute;
+}
 
 .bib {
   font-size: 1rem;
