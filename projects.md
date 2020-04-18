@@ -101,7 +101,8 @@ GeoHistoricalData ?
 {% endcomment %}
 
 # Projets terminés
-{: .post-title}
+
+<!-- {: .post-title} -->
 
 {% include project_bottom_slider.html %}
 
