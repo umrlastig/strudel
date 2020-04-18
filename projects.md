@@ -9,7 +9,7 @@ Projets dans lesquels des membres de l'équipe sont impliqués.
 <section class = "tool-slider">
   <ul class = "tool-slider" id = "slider">
   {%- for project in site.data.projects -%}
-    {%- assign li_width = 100 | divided_by: site.data.projects.size -%}
+    {%- assign li_width = 100.0 | divided_by: site.data.projects.size -%}
     <li
     class = "tool{% if project.id == 'landsense' %} active{% endif %}"
     toolID="{{project.id}}"

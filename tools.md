@@ -17,7 +17,7 @@ Des outils développés, utilisés ou maintenus par l'équipe.
 
 ## SimPLU
 
-[Le site web](http://SimPLU3D.github.io).
+[Le site web](https://SimPLU3D.github.io).
 
 [SimPLU3D](https://github.com/IGNF/simplu3d), la librairie *java*.
 
@@ -53,7 +53,7 @@ Des outils développés, utilisés ou maintenus par l'équipe.
 
 ## GeOxygene
 
-[GeOxygene website](http://ignf.github.io/geoxygene/).
+[GeOxygene website](https://ignf.github.io/geoxygene/).
 
 [GeOxygene code](https://github.com/IGNF/geoxygene).
 
@@ -74,7 +74,7 @@ Des outils développés, utilisés ou maintenus par l'équipe.
 [Historical Geocoder](https://github.com/GeoHistoricalData/geocoder-front).
 
 ### Arpenteur Topographe
-[Le prototype en ligne](http://geohistoricaldata.herokuapp.com/).
+[Le prototype en ligne](https://geohistoricaldata.herokuapp.com/).
 
 [Le code](https://github.com/IGNF/building-inspector).
 
