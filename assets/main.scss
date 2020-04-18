@@ -160,6 +160,7 @@ tr {
   min-width: 800px;
   background: $brand-color;
   position: absolute;
+  z-index: 1;
 }
 
 .bib {

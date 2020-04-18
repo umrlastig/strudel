@@ -6,7 +6,7 @@
   {%- for project in projects -%}
     {%- assign li_width = 100.0 | divided_by: projects.size -%}
     <li
-    class = "tool{% if project.id == 'landsense' %} active{% endif %}"
+    class = "tool"
     toolID="{{project.id}}"
     onclick="showTool('{{project.id}}');"
     style="width: {{li_width}}%; background-image: url({{project.logo}});">
