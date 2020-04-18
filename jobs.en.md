@@ -4,7 +4,7 @@ title: Jobs
 permalink: /en/jobs/
 lang: en
 ---
-{% assign strudel_jobs = site.data.recruiting | where: "team", "STRUDEL" %}
+{% assign strudel_jobs = site.data.lastig.recruiting | where: "team", "STRUDEL" %}
 
 {% assign open_jobs = strudel_jobs | where: "filled", "false" %}
 {% assign closed_jobs = strudel_jobs | where: "filled", "true" %}

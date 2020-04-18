@@ -4,7 +4,7 @@ title: Publications
 permalink: /en/publications/
 lang: en
 ---
-{% assign strudel_members = site.data.people | where: "team", "STRUDEL" %}
+{% assign strudel_members = site.data.lastig.people | where: "team", "STRUDEL" %}
 
 {%- capture ids -%}
   {%- for m in strudel_members -%}
@@ -22,56 +22,56 @@ lang: en
 <script src="{{ site.baseurl }}/assets/js/hal.js" charset="utf-8"></script>
 
 <!-- [ACL] -->
-## {{ site.ACL | map: page.lang }}
+## {{ site.data.strudel_i18n.ACL | map: page.lang }}
 <div id="pubACL"></div>
 <!-- to use markdown id naming: {: #pubACL} -->
 
 <!-- [ACLN] -->
-## {{ site.ACLN | map: page.lang }}
+## {{ site.data.strudel_i18n.ACLN | map: page.lang }}
 <div id="pubACLN"></div>
 
 <!-- [ASCL] -->
-## {{ site.ASCL | map: page.lang }}
+## {{ site.data.strudel_i18n.ASCL | map: page.lang }}
 <div id="pubASCL"></div>
 
 <!-- [ACTI] -->
-## {{ site.ACTI | map: page.lang }}
+## {{ site.data.strudel_i18n.ACTI | map: page.lang }}
 <div id="pubACTI"></div>
 
 <!-- [ACTN] -->
-## {{ site.ACTN | map: page.lang }}
+## {{ site.data.strudel_i18n.ACTN | map: page.lang }}
 <div id="pubACTN"></div>
 
 <!-- [COM] -->
-## {{ site.COM | map: page.lang }}
+## {{ site.data.strudel_i18n.COM | map: page.lang }}
 <div id="pubCOM"></div>
 
 <!-- [OS] -->
-## {{ site.OS | map: page.lang }}
+## {{ site.data.strudel_i18n.OS | map: page.lang }}
 <div id="pubOS"></div>
 
 <!-- [DO] -->
-## {{ site.DO | map: page.lang }}
+## {{ site.data.strudel_i18n.DO | map: page.lang }}
 <div id="pubDO"></div>
 
 <!-- [AFF] -->
-## {{ site.AFF | map: page.lang }}
+## {{ site.data.strudel_i18n.AFF | map: page.lang }}
 <div id="pubAFF"></div>
 
 <!-- [AP] -->
-## {{ site.AP | map: page.lang }}
+## {{ site.data.strudel_i18n.AP | map: page.lang }}
 <div id="pubAP"></div>
 
 <!-- [TH] -->
-## {{ site.TH | map: page.lang }}
+## {{ site.data.strudel_i18n.TH | map: page.lang }}
 <div id="pubTH"></div>
 
 <!-- [INV] -->
-## {{ site.INV | map: page.lang }}
+## {{ site.data.strudel_i18n.INV | map: page.lang }}
 <div id="pubINV"></div>
 
 <!-- [PV] -->
-## {{ site.PV | map: page.lang }}
+## {{ site.data.strudel_i18n.PV | map: page.lang }}
 <div id="pubPV"></div>
 
 <script defer>

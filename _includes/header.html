@@ -3,6 +3,9 @@
   <div class="wrapper">
 
     <div class="site-header-float">
+    {% if site.logo %}
+    <img class=logo src={{ site.logo | relative_url }}>
+    {% endif %}
     {% include _i18n/sitetitle.html class=true %}
     {% if site.pitch %}
       <span class="site-pitch">{% include _i18n/i18n.html value=site.pitch %}</span>

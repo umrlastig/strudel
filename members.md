@@ -5,7 +5,7 @@ permalink: /fr/members/
 lang: fr
 ---
 
-{% assign strudel_members = site.data.people | where: "team", "STRUDEL" %}
+{% assign strudel_members = site.data.lastig.people | where: "team", "STRUDEL" %}
 
 {% assign strudel_present_members = strudel_members | where: "member", "true" %}
 {% assign strudel_past_members = strudel_members | where: "member", "false" %}

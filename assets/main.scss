@@ -4,11 +4,11 @@
 @charset "utf-8";
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:800|PT+Serif');
-@import "academic";
 
 // Our variables
 // $base-font-family: "Open Sans", sans-serif;
-$base-font-family: "PT Serif", serif;
+// $base-font-family: "PT Serif", serif;
+$base-font-family: "Nunito", sans-serif;
 $base-font-size:   20px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.95;
@@ -21,18 +21,27 @@ $spacing-unit:     50px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
-$brand-color:      #3ac23d;//#d33682;
+$brand-color:      #94c01a;//#d33682;
 
 $grey-color:       #3F3F3F;
 $grey-color-light: lighten($grey-color, 50%);
 $grey-color-lighter: lighten($grey-color, 70%);
 $grey-color-dark:  darken($grey-color, 25%);
 
+@import "academic";
+
 // Width of the content area
 $content-width:    1200px;//700px;
 
 $on-palm:          1200px;//500px;
 $on-laptop:        1200px;//900px;//700px;
+
+.logo {
+  max-width:50px;
+  max-height:50px;
+  width: auto;
+  height: auto;
+}
 
 .rounded-circle {
   border-radius: 50% !important;
@@ -97,5 +106,57 @@ tr {
   }
 }
 .site-nav {
-  padding: 0 30px;  
+  padding: 0 30px;
+}
+
+.tool-slider {
+  width: 100%;
+  height: 160px;
+  margin: 0;
+  text-align: center;
+  //display: inline-flex;
+  position: relative;
+}
+
+.tool {
+  height: 160px;
+  display: inline-block;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  background-size: auto 40px;
+  position: relative;
+}
+
+.tool-name {
+  margin: 80px auto 0 auto;
+  display: block;
+}
+
+.tool:hover {
+  cursor: pointer;
+  background-color: #fafafa;
+}
+.active {
+  background-color: $background-color;
+  z-index: 2;
+}
+.divider {
+  height: 20px;
+  bottom: 0;
+  width: 100%;
+  background: $brand-color;
+  position: absolute;
+}
+
+.bib {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.author {
+  color: $grey-color-light;
+}
+.imgLink {
+  float: right;
+  margin-left: 1px;
+  margin-right: 1px;
 }

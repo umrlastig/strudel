@@ -1,0 +1,21 @@
+---
+layout: post
+title: 2019 Research days at IGN
+date: 2019-04-18
+categories: jr ign
+lang: en
+---
+
+The STRUDEL team presented 3 posters at the [28th Research Days at IGN](http://recherche.ign.fr/jr/jr19.php).
+
+<div class="width-100" align="center">
+  <a href="http://recherche.ign.fr/jr/jr19/posters/Poster_JD_Anatol_Garioud.pdf">
+    <img src= "{{ "/assets/images/posters/Poster_JD_Anatol_Garioud.png" | relative_url }}" width = "32%">
+  </a>
+  <a href="http://recherche.ign.fr/jr/jr19/posters/Poster_JR2019_gio.pdf">
+    <img src= "{{ "/assets/images/posters/Poster_JR2019_gio.png" | relative_url }}" width = "32%">
+  </a>
+  <a href="http://recherche.ign.fr/jr/jr19/posters/PosterMAESTRIA_JRIGN_2019.pdf">
+    <img src= "{{ "/assets/images/posters/PosterMAESTRIA_JRIGN_2019.png" | relative_url }}" width = "32%">
+  </a>
+</div>

@@ -1,0 +1,21 @@
+- id: landsense
+  name: Projet H2020 LandSense
+  start: 2016
+  end: 2020
+  poc: Laurence Jolivet
+  site: https://www.landsense.eu/
+  logo: http://eurocrowd.org/wp-content/blogs.dir/sites/85/2016/09/LandSense_logo_big.png
+
+- id: urclim
+  name: Projet ERA4CS URCLIM
+  start: 2017
+  end: 2020
+  poc: Arnaud Le Bris
+  site: http://www.urclim.eu/
+  logo: http://urclim.prod.lamp.cnrs.fr/wp-content/uploads/2020/03/cropped-city-1117433_960_720.png
+
+- id: soduco
+  name: Projet ANR SODUCO
+  start: 2019
+  end: 2023
+  poc: Julien Perret
