@@ -1,0 +1,25 @@
+<script>
+  function showTool(toolId) {
+    console.log("Show " + toolId);
+    var tools = document.getElementsByTagName("h2");
+    for (i = 0; i < tools.length; i++) {
+      var id = tools[i].id;
+      if (toolId == id) {
+        tools[i].parentElement.style.display = "block";
+      } else {
+        tools[i].parentElement.style.display = "none";
+      }
+    }
+    var toolInSlider = document.getElementById("slider").children;
+    for (i = 0; i < toolInSlider.length; i++) {
+      var id = toolInSlider[i].getAttribute("toolID");
+      if (toolId == id) {
+        if (!toolInSlider[i].classList.contains("active")) {
+          toolInSlider[i].className += " active";
+        }
+      } else {
+        toolInSlider[i].className = toolInSlider[i].className.replace(" active", "");
+      }
+    }
+  }
+</script>

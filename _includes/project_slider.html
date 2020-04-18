@@ -1,0 +1,22 @@
+<section class = "tool-slider">
+  <ul class = "tool-slider" id = "slider">
+  {%- for project in site.data.projects -%}
+    {%- assign li_width = 100.0 | divided_by: site.data.projects.size -%}
+    <li
+    class = "tool{% if project.id == 'landsense' %} active{% endif %}"
+    toolID="{{project.id}}"
+    onclick="showTool('{{project.id}}');"
+    style="width: {{li_width}}%; background-image: url({{project.logo}});">
+      <span class="tool-name">
+        {%- if project.short_name -%}
+        {{ project.short_name }}
+        {%- else -%}
+        {{ project.name }}
+        {%- endif -%}
+      </span>
+    </li>
+  {%- endfor -%}
+  </ul>
+  <div class = "divider">
+  </div>
+</section>

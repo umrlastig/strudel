@@ -1,5 +1,6 @@
 - id: landsense
   name: Projet H2020 LandSense
+  short_name: LandSense
   start: 2016
   end: 2020
   poc: Laurence Jolivet
@@ -8,6 +9,7 @@
 
 - id: urclim
   name: Projet ERA4CS URCLIM
+  short_name: URCLIM
   start: 2017
   end: 2020
   poc: Arnaud Le Bris
@@ -16,6 +18,27 @@
 
 - id: soduco
   name: Projet ANR SODUCO
+  short_name: SoDUCo
   start: 2019
   end: 2023
   poc: Julien Perret
+
+- id: maestria
+  name: Projet ANR MAESTRIA
+  short_name: MAESTRIA
+  start: 2019
+  end: 2022
+  poc: Clément Mallet
+
+- id: hiatus
+  name: Projet ANR HIATUS
+  short_name: HIATUS
+  start: 2019
+  end: 2022
+  poc: Sébastien Giordano
+
+- id: ready3d
+  name: READY3D
+  start: 2019
+  end: 2022
+  poc: Loïc Landrieu

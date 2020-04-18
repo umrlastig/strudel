@@ -135,6 +135,7 @@ For more information on **eVidenZ**, the original C++ engine, refer to [https://
       "logo": "url(http://ignf.github.io/geoxygene/_static/img/geoxygene.png)"
     },{
       "id": "geohistoricaldata",
+      "short_name": "GHD",
       "logo": "url(https://avatars0.githubusercontent.com/u/10074559?s=400&u=b6d7f841fe81dad40ccc84d312aed252f7e40b1a&v=4)"
     },{
       "id": "autres",
@@ -157,14 +158,17 @@ For more information on **eVidenZ**, the original C++ engine, refer to [https://
     li.addEventListener('click', event => {
       showTool(id);
     });
-    for (var j = 0 ; j < toolsdata.length ; j++) {
-      if (toolsdata[j].id == id) {
-        li.style.backgroundImage = toolsdata[j].logo;
-      }
-    }
     const span = document.createElement('span');
     span.innerHTML = name;
     span.className = "tool-name";
+    for (var j = 0 ; j < toolsdata.length ; j++) {
+      if (toolsdata[j].id == id) {
+        li.style.backgroundImage = toolsdata[j].logo;
+        if (toolsdata[j].short_name) {
+          span.innerHTML = toolsdata[j].short_name;
+        }
+      }
+    }
     li.appendChild(span);
     slider.appendChild(li);
   }

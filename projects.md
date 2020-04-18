@@ -6,24 +6,7 @@ lang: fr
 ---
 Projets dans lesquels des membres de l'équipe sont impliqués.
 
-<section class = "tool-slider">
-  <ul class = "tool-slider" id = "slider">
-  {%- for project in site.data.projects -%}
-    {%- assign li_width = 100.0 | divided_by: site.data.projects.size -%}
-    <li
-    class = "tool{% if project.id == 'landsense' %} active{% endif %}"
-    toolID="{{project.id}}"
-    onclick="showTool('{{project.id}}');"
-    style="width: {{li_width}}%; background-image: url({{project.logo}});">
-      <span class="tool-name">
-        {{ project.name }}
-      </span>
-    </li>
-  {%- endfor -%}
-  </ul>
-  <div class = "divider">
-  </div>
-</section>
+{% include project_slider.html %}
 
 <div markdown="1" style="display: block;">
 
@@ -53,27 +36,45 @@ POC : **Arnaud Le Bris**
 
 ## SODUCO
 
-Projet ANR SODUCO (2018 - 2021)
+Projet ANR SODUCO (2019 - 2023)
+
+*Dynamiques Sociales en contexte urbain: outils, modèles et données libres -- Paris et ses banlieues, 1789-1950.*
 
 POC : **Julien Perret**
 
 </div>
 
+<div markdown="1" style="display: none;">
+
+## MAESTRIA
+
+Projet ANR MAESTRIA (2019 - 2022)
+
+poc: **Clément Mallet**
+
+</div>
+
+<div markdown="1" style="display: none;">
+
+## HIATUS
+
+Projet ANR HIATUS (2019 - 2022)
+
+poc: **Sébastien Giordano**
+
+</div>
+
+<div markdown="1" style="display: none;">
+
+## READY3D
+
+Projet READY3D (2019-2022)
+
+poc: **Loïc Landrieu**
+
+</div>
+
 {% comment %}
-Les projets
-
-Projet H2020 LandSense(2016-2020), poc: Laurence Jolivet
-Projet ERA4CS URCLIM (2017-2020), poc: Arnaud Le Bris
-  http://www.urclim.eu/
-Projet ANR SODUCO (2018 - 2021), poc: Julien Perret
-SODUCO (ANR, 2019-2023)
-
-Dynamiques Sociales en contexte urbain: outils, modèles et données libres -- Paris et ses banlieues, 1789-1950 (porteur: J. Perret (IGN))
-
-
-Projet ANR MAESTRIA (2019 - 2022), poc: Clément Mallet
-Projet ANR HIATUS (2019 - 2022), poc: Sébastien Giordano
-READY3D (2019-2022), poc: Loïc Landrieu
 GeoHistoricalData
 
 Projets terminés
@@ -83,28 +84,4 @@ Projets terminés
     http://ignf.github.io/PLU2PLUS/
 {% endcomment %}
 
-<script>
-  function showTool(toolId) {
-    console.log("Show " + toolId);
-    var tools = document.getElementsByTagName("h2");
-    for (i = 0; i < tools.length; i++) {
-      var id = tools[i].id;
-      if (toolId == id) {
-        tools[i].parentElement.style.display = "block";
-      } else {
-        tools[i].parentElement.style.display = "none";
-      }
-    }
-    var toolInSlider = document.getElementById("slider").children;
-    for (i = 0; i < toolInSlider.length; i++) {
-      var id = toolInSlider[i].getAttribute("toolID");
-      if (toolId == id) {
-        if (!toolInSlider[i].classList.contains("active")) {
-          toolInSlider[i].className += " active";
-        }
-      } else {
-        toolInSlider[i].className = toolInSlider[i].className.replace(" active", "");
-      }
-    }
-  }
-</script>
+{% include project_functions.html %}
