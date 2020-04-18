@@ -18,8 +18,11 @@ Des outils développés, utilisés ou maintenus par l'équipe.
 ## SimPLU
 
 [Le site web](http://SimPLU3D.github.io).
+
 [SimPLU3D](https://github.com/IGNF/simplu3d), la librairie *java*.
+
 [Tutoriel](https://github.com/SimPLU3D/simplu3D-tutorial).
+
 [Encapsulation pour OpenMOLE](https://github.com/SimPLU3D/simplu3D-openmole).
 
 </div>
@@ -29,6 +32,7 @@ Des outils développés, utilisés ou maintenus par l'équipe.
 ## ArtiScales
 
 [Le site web](https://artiscales.github.io/).
+
 [Le code](https://github.com/ArtiScales/).
 
 </div>
@@ -38,7 +42,9 @@ Des outils développés, utilisés ou maintenus par l'équipe.
 ## Librjmcmc
 
 [La bibliothèque libRjmcmc originale](https://github.com/IGNF/librjmcmc), en *C++*.
+
 [librjmcmc4j](https://github.com/IGNF/librjmcmc4j), sa version *java*.
+
 [librjmcmc4s](https://github.com/IGNF/librjmcmc4s), la petite dernière en *scala*.
 
 </div>
@@ -48,7 +54,9 @@ Des outils développés, utilisés ou maintenus par l'équipe.
 ## GeOxygene
 
 [GeOxygene website](http://ignf.github.io/geoxygene/).
+
 [GeOxygene code](https://github.com/IGNF/geoxygene).
+
 [GeOxygene 3D application](https://github.com/IGNF/geoxygene-sig3d-appli).
 
 </div>
@@ -56,9 +64,6 @@ Des outils développés, utilisés ou maintenus par l'équipe.
 <div markdown="1" style="display: none;">
 
 ## GeoHistoricalData
-
-### HMMSpatialNetworkMatcher
-https://github.com/GeoHistoricalData/HMMSpatialNetworkMatcher
 
 ### Network matching
 [HMMSpatialNetworkMatcher](https://github.com/GeoHistoricalData/HMMSpatialNetworkMatcher).
@@ -70,6 +75,7 @@ https://github.com/GeoHistoricalData/HMMSpatialNetworkMatcher
 
 ### Arpenteur Topographe
 [Le prototype en ligne](http://geohistoricaldata.herokuapp.com/).
+
 [Le code](https://github.com/IGNF/building-inspector).
 
 </div>
