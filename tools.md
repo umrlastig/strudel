@@ -5,12 +5,6 @@ permalink: /fr/outils/
 lang: fr
 ---
 Des outils développés, utilisés ou maintenus par l'équipe.
-{%comment%}
-<section class = "tool-slider">
-  <ul class = "tool-slider" id = "slider"></ul>
-  <div class = "divider"></div>
-</section>
-{%endcomment%}
 {% include tool_slider.html %}
 
 <div markdown="1" style="display: block;" class="tool-element" id="simplu">
@@ -106,82 +100,4 @@ For more information on **eVidenZ**, the original C++ engine, refer to [the eVid
 
 </div>
 
-{%comment%}
-
-<script>
-  function showTool(toolId) {
-    var tools = document.getElementsByTagName("h2");
-    for (i = 0; i < tools.length; i++) {
-      var id = tools[i].id;
-      if (toolId == id) {
-        tools[i].parentElement.style.display = "block";
-      } else {
-        tools[i].parentElement.style.display = "none";
-      }
-    }
-    var toolInSlider = document.getElementById("slider").children;
-    for (i = 0; i < toolInSlider.length; i++) {
-      var id = toolInSlider[i].getAttribute("toolID");
-      if (toolId == id) {
-        if (!toolInSlider[i].classList.contains("active")) {
-          toolInSlider[i].className += " active";
-        }
-      } else {
-        toolInSlider[i].className = toolInSlider[i].className.replace(" active", "");
-      }
-    }
-  }
-</script>
-<script defer>
-  var toolsdata = [
-    {
-      "id": "simplu",
-      "logo": "url(https://simplu3d.github.io/logo/logo_small.png)"
-    },{
-      "id": "librjmcmc",
-      "logo": "url(https://raw.githubusercontent.com/IGNF/librjmcmc/master/doc/images/librjmcmc.png)"
-    },{
-      "id": "geoxygene",
-      "logo": "url(https://ignf.github.io/geoxygene/_static/img/geoxygene.png)"
-    },{
-      "id": "geohistoricaldata",
-      "short_name": "GHD",
-      "logo": "url(https://avatars0.githubusercontent.com/u/10074559?s=400&u=b6d7f841fe81dad40ccc84d312aed252f7e40b1a&v=4)"
-    },{
-      "id": "autres",
-      "logo": ""
-    },{
-      "id": "artiscales",
-      "logo": "url(https://artiscales.github.io/ArtiScalesExampleSimulationResults.png)"
-    }
-  ];
-  var slider = document.getElementById("slider");
-  var tools = document.getElementsByTagName("h2");
-  for (i = 0; i < tools.length; i++) {
-    var name = tools[i].innerText;
-    const id = tools[i].id;
-    var li = document.createElement('li');
-    li.className = "tool";
-    if (i == 0) {li.className += " active";}
-    li.style.width = (100 / tools.length)+"%";
-    li.setAttribute("toolID", id);
-    li.addEventListener('click', event => {
-      showTool(id);
-    });
-    const span = document.createElement('span');
-    span.innerHTML = name;
-    span.className = "tool-name";
-    for (var j = 0 ; j < toolsdata.length ; j++) {
-      if (toolsdata[j].id == id) {
-        li.style.backgroundImage = toolsdata[j].logo;
-        if (toolsdata[j].short_name) {
-          span.innerHTML = toolsdata[j].short_name;
-        }
-      }
-    }
-    li.appendChild(span);
-    slider.appendChild(li);
-  }
-</script>
-{%endcomment%}
 {% include tool_functions.html %}

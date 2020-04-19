@@ -11,6 +11,31 @@ The website contains 6 pages:
 - **Projects**: a list of (ongoing and finished) research projects
 - **Tools**: a list of research tools developed, used or maintained by the team
 
+## Technical presentation of the website
+
+This is a [jekyll](jekyllrb.com/) website using the [academic](https://github.com/gaalcaras/academic) theme. For an explanation of how a jekyll website is generated, look at the [docs](https://jekyllrb.com/docs/) and [tutorials](https://jekyllrb.com/tutorials/home/).
+Specifically, to understand the whole interpretation process, see [this](https://jekyllrb.com/tutorials/orderofinterpretation/).
+
+The repository contains 4 directories, a configuration file (*_config.yml*) and a bunch of *markdown* files.
+
+- **_data**: contains data files (yaml, csv, etc.). See the [datafiles documentation](https://jekyllrb.com/docs/datafiles/) for a detailed explanation.
+  In particular, it contains the *projects*, *tools* and other internationalisation files (i18n).
+  For instance, the *project.yml* file gives us access to the variable *site.data.projects* containing information about the projects.
+  Finally, it also contains le *lastig_data* repository as a git submodule with the name *lastig*.
+  That provides us with information on the team members and available jobs.
+- **_includes**: contains html files included in differents parts of the site (header, footer, etc.).
+- **_posts**: the place you can add news to the website.
+- **assets**: contains images, javascript and the style of the site (main*.scss*).
+
+The markdown files in the root directory contains the main pages of the website. Each page has two files, one for the default language (french) and one in english:
+- **index.md** (french) and **index.en.md** (english): the home pages of the site
+- **jobs.md** (french) and **jobs.en.md** (english): the jobs pages
+- **members.md** (french) and **members.en.md** (english): the members pages
+- **projects.md** (french) and **projects.en.md** (english): the projects pages
+- **publications.md** (french) and **publications.en.md** (english): the publications pages
+- **research.md** (french) and **research.en.md** (english): the research pages
+- **tools.md** (french) and **tools.en.md** (english): the tools pages
+
 ## Updating the content of the website
 
 The method depends on the pages:
