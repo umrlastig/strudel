@@ -1,0 +1,23 @@
+<section class = "tool-slider">
+  <ul class = "tool-slider" id = "slider">
+  {%- assign tools = site.data.tools -%}
+  {%- for tool in tools -%}
+    {%- assign li_width = 100.0 | divided_by: tools.size -%}
+    <li
+    class = "tool{% if tool.id == 'simplu' %} active{% endif %}"
+    toolID="{{tool.id}}"
+    onclick="showTool('{{tool.id}}');"
+    style="width: {{li_width}}%; background-image: url({{tool.logo}});">
+      <span class="tool-name">
+        {%- if tool.short_name -%}
+        {{ tool.short_name }}
+        {%- else -%}
+        {{ tool.name }}
+        {%- endif -%}
+      </span>
+    </li>
+  {%- endfor -%}
+  </ul>
+  <div class = "divider">
+  </div>
+</section>

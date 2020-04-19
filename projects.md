@@ -8,97 +8,161 @@ Projets dans lesquels des membres de l'équipe sont impliqués.
 
 {% include project_slider.html %}
 
-<div markdown="1" style="display: block;">
+<div markdown="1" style="display: block;" id="landsense" class="project">
+{% assign project = site.data.projects | where: "id", "landsense" | first %}
+## {{project.name}} ({{project.start}} - {{project.end}})
 
-## LandSense
+{% if project.title %}
+  *{{project.title}}*
+  {%- if project.subtitle %}
+  <br>*{{project.subtitle}}*
+  {% endif %}
+{% endif %}
 
-Projet H2020 LandSense(2016-2020)
+POC : **{{project.poc}}**
 
-POC : **Laurence Jolivet**
-
-[Site web](https://www.landsense.eu/)
-
-</div>
-
-<div markdown="1" style="display: none;">
-
-## URCLIM
-
-Projet ERA4CS URCLIM (2017-2020)
-
-POC : **Arnaud Le Bris**
-
-[Site web](https://www.urclim.eu/)
+{% if project.site %}
+  Pour plus d'information, consultez le [site web du projet]({{project.site}})
+{% endif %}
 
 </div>
 
-<div markdown="1" style="display: none;">
+<div markdown="1" style="display: none;" id="urclim" class="project">
+{% assign project = site.data.projects | where: "id", "urclim" | first %}
 
-## SODUCO
+## {{project.name}} ({{project.start}} - {{project.end}})
 
-Projet ANR SODUCO (2019 - 2023)
+{% if project.title %}
+  *{{project.title}}*
+  {% if project.subtitle %}
+  *{{project.subtitle}}*
+  {% endif %}
+{% endif %}
 
-*Dynamiques Sociales en contexte urbain: outils, modèles et données libres -- Paris et ses banlieues, 1789-1950.*
+POC : **{{project.poc}}**
 
-POC : **Julien Perret**
-
-</div>
-
-<div markdown="1" style="display: none;">
-
-## MAESTRIA
-
-Projet ANR MAESTRIA (2019 - 2022)
-
-poc: **Clément Mallet**
+{% if project.site %}
+  Pour plus d'information, consultez le [site web du projet]({{project.site}})
+{% endif %}
 
 </div>
 
-<div markdown="1" style="display: none;">
+<div markdown="1" style="display: none;" id="soduco" class="project">
+{% assign project = site.data.projects | where: "id", "soduco" | first %}
+## {{project.name}} ({{project.start}} - {{project.end}})
 
-## HIATUS
+{% if project.title %}
+  *{{project.title}}*
+  {%- if project.subtitle %}
+  <br>*{{project.subtitle}}*
+  {% endif %}
+{% endif %}
 
-Projet ANR HIATUS (2019 - 2022)
+POC : **{{project.poc}}**
 
-poc: **Sébastien Giordano**
-
-</div>
-
-<div markdown="1" style="display: none;">
-
-## READY3D
-
-Projet READY3D (2019-2022)
-
-poc: **Loïc Landrieu**
-
-</div>
-
-<div markdown="1" style="display: none;">
-
-## TOSCA
-
-Projet TOSCA PARCELLE (2018-2019)
-
-poc: **Arnaud Le Bris**
+{% if project.site %}
+  Pour plus d'information, consultez le [site web du projet]({{project.site}})
+{% endif %}
 
 </div>
 
-<div markdown="1" style="display: none;">
+<div markdown="1" style="display: none;" id="maestria" class="project">
+{% assign project = site.data.projects | where: "id", "maestria" | first %}
 
-## PLU2PLUS
+## {{project.name}} ({{project.start}} - {{project.end}})
 
-Projet PEPS UPE PLU++ (2015-2016)
+{% if project.title %}
+  *{{project.title}}*
+  {%- if project.subtitle %}
+  <br>*{{project.subtitle}}*
+  {% endif %}
+{% endif %}
 
-poc: **Mickaël Brasebin**
+POC : **{{project.poc}}**
 
-Pour plus d'informations, voir le [site web du projet](https://ignf.github.io/PLU2PLUS/).
+{% if project.site %}
+  Pour plus d'information, consultez le [site web du projet]({{project.site}})
+{% endif %}
 
 </div>
 
-{% comment %}
-GeoHistoricalData ?
-{% endcomment %}
+<div markdown="1" style="display: none;" id="hiatus" class="project">
+{% assign project = site.data.projects | where: "id", "hiatus" | first %}
+
+## {{project.name}} ({{project.start}} - {{project.end}})
+
+{% if project.title %}
+  *{{project.title}}*
+  {% if project.subtitle %}
+  *{{project.subtitle}}*
+  {% endif %}
+{% endif %}
+
+POC : **{{project.poc}}**
+
+{% if project.site %}
+  Pour plus d'information, consultez le [site web du projet]({{project.site}})
+{% endif %}
+
+</div>
+
+<div markdown="1" style="display: none;" id="ready3d" class="project">
+{% assign project = site.data.projects | where: "id", "ready3d" | first %}
+
+## {{project.name}} ({{project.start}} - {{project.end}})
+
+{% if project.title %}
+  *{{project.title}}*
+  {% if project.subtitle %}
+  *{{project.subtitle}}*
+  {% endif %}
+{% endif %}
+
+POC : **{{project.poc}}**
+
+{% if project.site %}
+  Pour plus d'information, consultez le [site web du projet]({{project.site}})
+{% endif %}
+
+</div>
+
+<div markdown="1" style="display: none;" id="tosca" class="project">
+{% assign project = site.data.projects | where: "id", "tosca" | first %}
+
+## {{project.name}} ({{project.start}} - {{project.end}})
+{% if project.title %}
+  *{{project.title}}*
+  {% if project.subtitle %}
+  *{{project.subtitle}}*
+  {% endif %}
+{% endif %}
+
+POC : **{{project.poc}}**
+
+{% if project.site %}
+  Pour plus d'information, consultez le [site web du projet]({{project.site}})
+{% endif %}
+
+</div>
+
+<div markdown="1" style="display: none;" id="plu2plus" class="project">
+{% assign project = site.data.projects | where: "id", "plu2plus" | first %}
+
+## {{project.name}} ({{project.start}} - {{project.end}})
+{% if project.title %}
+  *{{project.title}}*
+  {% if project.subtitle %}
+  *{{project.subtitle}}*
+  {% endif %}
+{% endif %}
+
+POC : **{{project.poc}}**
+
+{% if project.site %}
+  Pour plus d'information, consultez le [site web du projet]({{project.site}})
+{% endif %}
+
+</div>
 
 # Projets terminés
 {: .post-title}

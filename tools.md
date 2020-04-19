@@ -5,17 +5,18 @@ permalink: /fr/outils/
 lang: fr
 ---
 Des outils développés, utilisés ou maintenus par l'équipe.
-
+{%comment%}
 <section class = "tool-slider">
-  <ul class = "tool-slider" id = "slider">
-  </ul>
-  <div class = "divider">
-  </div>
+  <ul class = "tool-slider" id = "slider"></ul>
+  <div class = "divider"></div>
 </section>
+{%endcomment%}
+{% include tool_slider.html %}
 
-<div markdown="1" style="display: block;">
+<div markdown="1" style="display: block;" class="tool-element" id="simplu">
 
 ## SimPLU
+
 
 [Le site web](https://SimPLU3D.github.io).
 
@@ -27,9 +28,10 @@ Des outils développés, utilisés ou maintenus par l'équipe.
 
 </div>
 
-<div markdown="1" style="display: none;">
+<div markdown="1" style="display: none;" class="tool-element" id="artiscales">
 
 ## ArtiScales
+
 
 [Le site web](https://artiscales.github.io/).
 
@@ -37,9 +39,10 @@ Des outils développés, utilisés ou maintenus par l'équipe.
 
 </div>
 
-<div markdown="1" style="display: none;">
+<div markdown="1" style="display: none;" class="tool-element" id="librjmcmc">
 
 ## Librjmcmc
+
 
 [La bibliothèque libRjmcmc originale](https://github.com/IGNF/librjmcmc), en *C++*.
 
@@ -49,9 +52,10 @@ Des outils développés, utilisés ou maintenus par l'équipe.
 
 </div>
 
-<div markdown="1" style="display: none;">
+<div markdown="1" style="display: none;" class="tool-element" id="geoxygene">
 
 ## GeOxygene
+
 
 [GeOxygene website](https://ignf.github.io/geoxygene/).
 
@@ -61,9 +65,10 @@ Des outils développés, utilisés ou maintenus par l'équipe.
 
 </div>
 
-<div markdown="1" style="display: none;">
+<div markdown="1" style="display: none;" class="tool-element" id="geohistoricaldata">
 
 ## GeoHistoricalData
+
 
 ### Network matching
 
@@ -83,9 +88,10 @@ Des outils développés, utilisés ou maintenus par l'équipe.
 
 </div>
 
-<div markdown="1" style="display: none;">
+<div markdown="1" style="display: none;" class="tool-element" id="autres">
 
 ## Autres
+
 
 ### evidence4j
 
@@ -100,6 +106,7 @@ For more information on **eVidenZ**, the original C++ engine, refer to [the eVid
 
 </div>
 
+{%comment%}
 
 <script>
   function showTool(toolId) {
@@ -176,3 +183,5 @@ For more information on **eVidenZ**, the original C++ engine, refer to [the eVid
     slider.appendChild(li);
   }
 </script>
+{%endcomment%}
+{% include tool_functions.html %}

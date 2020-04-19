@@ -17,7 +17,9 @@
   logo: http://urclim.prod.lamp.cnrs.fr/wp-content/uploads/2020/03/cropped-city-1117433_960_720.png
 
 - id: soduco
-  name: Projet ANR SODUCO
+  name: Projet ANR SoDUCo
+  title: Dynamiques Sociales en contexte urbain
+  subtitle: outils, modèles et données libres -- Paris et ses banlieues, 1789-1950.
   short_name: SoDUCo
   start: 2019
   end: 2023
