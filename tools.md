@@ -6,20 +6,47 @@ lang: fr
 ---
 Des outils développés, utilisés ou maintenus par l'équipe.
 {% include tool_slider.html %}
+<script src="{{ site.baseurl }}/assets/js/hal.js" charset="utf-8"></script>
 
 <div markdown="1" style="display: block;" class="tool-element" id="simplu">
 
 ## SimPLU
 
+<hr class="tool-header">
 
-[Le site web](https://SimPLU3D.github.io).
+![Illustration de résultats de SimPLU3D](https://simplu3d.github.io/img/background/back1.png)
 
-[SimPLU3D](https://github.com/IGNF/simplu3d), la librairie *java*.
+### Présentation
 
-[Tutoriel](https://github.com/SimPLU3D/simplu3D-tutorial).
+**SimPLU3D** est un ensemble de [bibliothèques Java libres et Open-Source](https://github.com/SimPLU3D/) qui permet de *simuler des formes bâties 3D* à partir de contraintes morphologiques en optimisant une fonction numérique.
+Ces codes peuvent être utilisés pour questionner le rapport entre des contraintes morphologiques (par exemple, issues de réglementations locales d'urbanisme) et les formes produites à l'échelle du quartier ou de l'agglomération. L'approche de SimPLU3D est générique dans le sens où il est possible de définir ses propres contraintes, fonctions d'optimisation ou types de formes.
 
-[Encapsulation pour OpenMOLE](https://github.com/SimPLU3D/simplu3D-openmole).
+![Principe de fonctionnement de SimPLU3D](https://simplu3d.github.io/img/principe.png){:style="height:50%; width:50%; display:block; margin:auto;"}
 
+### Utilisations
+
+Cette bibliothèque a notamment été utilisée pour modéliser des formes bâties à partir de contraintes issues de Plans Locaux d'Urbanisme (PLU) et permet de répondre à ce type de questions :
+
+- Quelle est la quantité maximale de logements que l'on peut bâtir sur une parcelle ?
+- Comment la forme de mon quartier va évoluer si l'on modifie un PLU ?
+- Est-ce que des bâtiments produisant une ombre trop importante sur les parcelles voisines risquent d'être construits ?
+
+### Plus d'information
+
+L'ensemble de ces bibliothèques est disponible dans l'[organisation GitHub SimPLU3D](https://github.com/SimPLU3D/) et est développé et maintenu par l'[équipe STRUDEL](https://www.umr-lastig.fr/strudel/) du [laboratoire LASTIG]({{site.url}}) de l'[Institut National de l'Information Géographique et Forestière](https://www.ign.fr).
+
+Pour plus d'information, visitez [le site web de SimPLU3D](https://SimPLU3D.github.io).
+Un [tutoriel](https://github.com/SimPLU3D/simplu3D-tutorial) est en particulier disponible pour faire vos propres simulations.
+
+![Logo OpenMOLE](https://openmole.org/img/mole/openmole.png){:style="height:50%; width:50%; display:block; margin:auto; background-color: gray; border-radius: 10px; padding: 10px;"}
+
+Enfin, SimPLU3D est utilisable dans des environnement de calcul distribués et peut notamment être utilisé avec [OpenMOLE](https://openmole.org) grâce à une [encapsulation pour OpenMOLE](https://github.com/SimPLU3D/simplu3D-openmole).
+
+### Références bibliographiques
+<div id="simplu"></div>
+<script defer>
+  getPublicationsById(["hal-01650530", "tel-02497711", "tel-02525138", "tel-01092212", "hal-02280486", "hal-01650530", "hal-01882706", "hal-01888422", "hal-02176408", "halshs-00776240"], "simplu");
+</script>
 </div>
 
 <div markdown="1" style="display: none;" class="tool-element" id="artiscales">

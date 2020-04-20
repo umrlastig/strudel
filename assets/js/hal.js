@@ -28,7 +28,7 @@ const hal_baseurl = "https://api.archives-ouvertes.fr";
 const fl = 'fileAnnexesFigure_s,invitedCommunication_s,proceedings_s,popularLevel_s,halId_s,authIdHalFullName_fs,producedDateY_i,docType_s,files_s,fileMain_s,fileMainAnnex_s,linkExtUrl_s,title_s,en_title_s,fr_title_s,label_bibtex,citationRef_s';
 
 // kept just in case : requests with an array of IdHals
-var halApi = function(halIds){
+var halAuthIdHalApi = function(halIds){
   var idList = halIds.join(' OR ');
   return hal_baseurl+"/search/?q=authIdHal_s:\("+idList+"\)&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
 }
@@ -36,6 +36,11 @@ var halApi = function(halIds){
 var halNameApi = function(ids){
   var query = ids.join(' OR ');
   return hal_baseurl+"/search/?q="+query+"&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
+}
+
+var halIdApi = function(ids){
+  var query = ids.join(' OR ');
+  return hal_baseurl+"/search/?q=halId_s:\("+query+"\)&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
 }
 
 var getPublications = function(halIds, parent, params){
@@ -259,4 +264,28 @@ var createPub = function(doc, parent){
   listElement.insertBefore(linksElement, listElement.firstChild);
   parent.appendChild(listElement);
   //jQuery('lang-en').hide();
+}
+
+var getPublicationsById = function(halIds, parentId){
+  var parent = document.getElementById(parentId);
+  if (!parent) return;
+  // Create a request variable and assign a new XMLHttpRequest object to it.
+  var request = new XMLHttpRequest();
+  // Open a new connection, using the GET request on the URL endpoint
+  var url = halIdApi(halIds);
+  // console.log(url);
+  request.open('GET', url, true);
+  request.onload = function () {
+    var docs = JSON.parse(this.response).response.docs;
+    // console.log(docs);
+    if(docs.length == 0) {
+      parent.hidden = true;
+    } else {
+      const ol = document.createElement('ol');
+      ol.setAttribute("class","sub");
+      docs.forEach(doc => createPub(doc, ol));
+      parent.appendChild(ol);
+    }
+  };
+  request.send();
 }

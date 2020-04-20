@@ -129,14 +129,15 @@ A typical entry looks like:
 
 ## SimPLU
 
+### Presentation
+The project has a [website](https://SimPLU3D.github.io).
 
-[Le site web](https://SimPLU3D.github.io).
-
-[SimPLU3D](https://github.com/IGNF/simplu3d), la librairie *java*.
-
-[Tutoriel](https://github.com/SimPLU3D/simplu3D-tutorial).
-
-[Encapsulation pour OpenMOLE](https://github.com/SimPLU3D/simplu3D-openmole).
+### Related publications
+<div id="simplu"></div>
+  <script defer>
+    getPublicationsById(["hal-01650530", "tel-02497711", "tel-02525138", "tel-01092212", "hal-02280486", "hal-01650530", "hal-01882706", "hal-01888422", "hal-02176408", "halshs-00776240"], "simplu");
+  </script>
+</div>
 
 </div>
 ```
@@ -146,4 +147,6 @@ A typical entry looks like:
     - the **style:** is *"display: block;"* for the first project (the one that will be active when the page is loaded) and *"display: none;"* for all the other projects (will be hidden when the page is loaded)
     - the **class:** is *"tool"*, which allows the slider to find all the project divs
     - the **id** is *"simplu"*. It has to match a corresponding *id* in the *tools.yml* file
-- the rest of the div is pire Markdown. That is the place you can add images, text, references, etc.
+- the rest of the *div* is pure *Markdown*.
+  That is the place you can add images, text, references, etc.
+- Notice a second *div* with the id *simplu*. This allows to add publications from the *hal API* using the **halIds** of the publications. It uses the javascript method *getPublicationsById*, an array of *halIds* and the id of the sim to add the publications to (*simplu* here).

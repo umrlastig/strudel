@@ -183,3 +183,10 @@ tr {
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
+hr.tool-header {
+  width: 100%;
+  border-top: 5px solid $grey-color;
+  margin: 25px auto 25px auto;
+  padding-left: 0;
+}
