@@ -8,7 +8,7 @@ has_submenus: true
 
 L'équipe **STRUDEL** du laboratoire **[LaSTIG](https://umr-lastig.fr)** s'intéresse à l'ensemble des *données*, *structures de données*, *algorithmes* et *modèles* nécessaires à l'*analyse du territoire* pour une meilleure *compréhension* de son *fonctionnement* et de ses *évolutions*. Ces analyses sont menées en partenariat avec des utilisateurs finaux et sont guidées par certains de leurs besoins : prescripteurs publics, chercheurs en modélisations numériques, en géographie et en sciences sociales, sociétés privées. Ce projet recouvre donc les questions liées à :
 
-- l'[intégration]({{"/fr/research/integration/" | relative_url}}) (mise en cohérence, fusion, enrichissement, etc.) de données hétérogènes, multi-sources et multi-dimensionnelles,
+- l'[intégration]({{"/fr/research/integration" | relative_url}}) (mise en cohérence, fusion, enrichissement, etc.) de données hétérogènes, multi-sources et multi-dimensionnelles,
 
 - l'**organisation des données** (modélisation des concepts, choix des niveaux d'analyse, identification des structures/objets/éléments pertinents d'étude, sources d'imperfection, etc.),
 
