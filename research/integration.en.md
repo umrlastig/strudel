@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Integration
-permalink: /en/research/integration
+permalink: /en/research/integration/
 lang: en
 submenu: true
 ---
