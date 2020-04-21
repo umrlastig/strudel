@@ -41,8 +41,7 @@ The markdown files in the root directory contains the main pages of the website.
 The method depends on the pages:
 
 - for the **Jobs**, **Members**, and **Publications** pages, you should probably directly edit the files on the [LaSTIG data repository](https://github.com/umrlastig/lastig_data/)
-- for the **Research** page, directly modify the *research.md* and *research.en.md* files
-- for the **Projects** and the **Tools** pages, see the following sections
+- for the **Projects**, **Tools** and **Research** pages, see the following sections
 
 ### Updating the **Projects** page
 
@@ -150,3 +149,11 @@ The project has a [website](https://SimPLU3D.github.io).
 - the rest of the *div* is pure *Markdown*.
   That is the place you can add images, text, references, etc.
 - Notice a second *div* with the id *simplu*. This allows to add publications from the *hal API* using the **halIds** of the publications. It uses the javascript method *getPublicationsById*, an array of *halIds* and the id of the sim to add the publications to (*simplu* here).
+
+### Updating the **Research** pages
+
+There is a home research page (*research.md* and *research.en.md*) and subpages in the *research* directory.
+The research page is a normal page with a variable *has_submenus: true* that tells us to create a dropdown menu at the top of the site.
+Submenus are just pages in the corresponding directory with the variable *submenu: true*.
+
+You can either modify the main page (*research.md* and *research.en.md*) or the subpages (for now only *integration.md* and *integration.en.md*).
