@@ -4,6 +4,7 @@
 @charset "utf-8";
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:800|PT+Serif');
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css');
 
 // Our variables
 // $base-font-family: "Open Sans", sans-serif;
@@ -189,4 +190,14 @@ hr.tool-header {
   border-top: 5px solid $grey-color;
   margin: 25px auto 25px auto;
   padding-left: 0;
+}
+
+.page-link {
+  border: none;
+  padding: 0 0;
+}
+.site-header .lang-selector {
+  width: 30px;
+  margin-left: 10px;
+  padding: 10px 0px 10px 0px;
 }

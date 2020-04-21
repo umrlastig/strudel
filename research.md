@@ -3,6 +3,7 @@ layout: page
 title: Recherches
 permalink: /fr/research/
 lang: fr
+has_submenus: true
 ---
 
 L'équipe **STRUDEL** du laboratoire **[LaSTIG](https://umr-lastig.fr)** s'intéresse à l'ensemble des *données*, *structures de données*, *algorithmes* et *modèles* nécessaires à l'*analyse du territoire* pour une meilleure *compréhension* de son *fonctionnement* et de ses *évolutions*. Ces analyses sont menées en partenariat avec des utilisateurs finaux et sont guidées par certains de leurs besoins : prescripteurs publics, chercheurs en modélisations numériques, en géographie et en sciences sociales, sociétés privées. Ce projet recouvre donc les questions liées à :

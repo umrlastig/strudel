@@ -25,9 +25,9 @@ description:
 baseurl: "/strudel" #"/strudel" # the subpath of your site, e.g. /blog
 url: "https://www.umr-lastig.fr" # the base hostname & protocol for your site, e.g. http://example.com
 cc: by-nc
-nav_ext_links:
-  - name: LaSTIG
-    url: https://www.umr-lastig.fr
+# nav_ext_links:
+#   - name: LaSTIG
+#     url: https://www.umr-lastig.fr
 
 #twitter_username: jekyllrb
 github_username: umrlastig

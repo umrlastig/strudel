@@ -3,6 +3,7 @@ layout: page
 title: Research
 permalink: /en/research/
 lang: en
+has_submenus: true
 ---
 
 The **STRUDEL** team of the **[LaSTIG](https://umr-lastig.fr)** lab is interested in the *data*, *data structures*, *algorithms* and *models* required for *territory analysis* towards a better *understanding* of its *mecanisms* and its *evolutions*. Such analyses are lead in partnership with users and guided by some of their needs: public prescribers, researchers in modeling, geography, social sciences and private companies. This project covers questions related to:
