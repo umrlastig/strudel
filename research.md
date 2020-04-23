@@ -10,7 +10,7 @@ L'équipe **STRUDEL** du laboratoire **[LaSTIG](https://umr-lastig.fr)** s'inté
 
 - l'[intégration]({{"/fr/research/integration" | relative_url}}) (mise en cohérence, fusion, enrichissement, etc.) de données hétérogènes, multi-sources et multi-dimensionnelles,
 
-- l'**organisation des données** (modélisation des concepts, choix des niveaux d'analyse, identification des structures/objets/éléments pertinents d'étude, sources d'imperfection, etc.),
+- l'[organisation des données]({{"/fr/research/data_organisation" | relative_url}}) (modélisation des concepts, choix des niveaux d'analyse, identification des structures/objets/éléments pertinents d'étude, sources d'imperfection, etc.),
 
 ceci afin de permettre :
 

@@ -24,6 +24,8 @@
   start: 2019
   end: 2023
   poc: Julien Perret
+  site: https://soduco.github.io/
+  logo: https://soduco.github.io/assets/img/logo.png
 
 - id: maestria
   name: Projet ANR MAESTRIA
