@@ -162,18 +162,19 @@ You can either modify the main page (*research.md* and *research.en.md*) or the 
 
 If you want to test the site on your machine, follow the following steps:
 
-1. In the root Gemfile, add:
+- In the root Gemfile, add:
 
 ```
 gem "jekyll", "~> 3.8.5"
 ```
 
-2. and comment the following line:
+- and comment the following line:
 
 ```
 gem "github-pages", group: :jekyll_plugins
 ```
 
-Please, try not to push these modifications to the repository ;)
+Please, try not to push these modifications to the repository :wink:
+
 Locally, some images won't show because they use relative urls.
-For instance, some images of the members pages refer to images from private pages relative to [the LaSTIG website](https://umr-lastig.fr).
+For instance, some images of the members pages refer to images from private pages relative to [the LaSTIG website](https://www.umr-lastig.fr).

@@ -53,11 +53,27 @@ Enfin, SimPLU3D est utilisable dans des environnement de calcul distribués et p
 
 ## ArtiScales
 
+<hr class="tool-header">
 
-[Le site web](https://artiscales.github.io/).
+La plate-forme de simulation **ArtiScales** permet d'intégrer les politiques d'aménagement régionales et locales qui visent à réguler le développement résidentiel. **ArtiScales** couple 2 modèles : [MUP-City](https://sourcesup.renater.fr/www/mupcity/) et [SimPLU3D](https://simplu3d.github.io/).
 
-[Le code](https://github.com/ArtiScales/).
+![Illustration d'un résultat de simulation d'ArtiScales](https://artiscales.github.io/ArtiScalesExampleSimulationResults.png){:style="height:100%; width:100%; display:block; margin:auto;"}
 
+### Plus d'information
+
+L'ensemble de ces bibliothèques est disponible dans l'[organisation GitHub ArtiScales](https://github.com/ArtiScales/) et est développé et maintenu par [Maxime Colomb](http://maxime-colomb.eu/) avec l'aide de l'[équipe STRUDEL](https://www.umr-lastig.fr/strudel/) du [laboratoire LASTIG]({{site.url}}) de l'[Institut National de l'Information Géographique et Forestière](https://www.ign.fr).
+
+Pour plus d'information, visitez [le site web d'ArtiScales](https://artiscales.github.io/).
+
+![Logo OpenMOLE](https://openmole.org/img/mole/openmole.png){:style="height:50%; width:50%; display:block; margin:auto; background-color: gray; border-radius: 10px; padding: 10px;"}
+
+Enfin, ArtiScales est utilisable dans des environnement de calcul distribués et peut notamment être utilisé avec [OpenMOLE](https://openmole.org) grâce à une [encapsulation pour OpenMOLE](https://github.com/ArtiScales/Artiscales-openmole).
+
+### Références bibliographiques
+<div id="artiscales"></div>
+<script defer>
+  getPublicationsById(["tel-02497711"], "artiscales");
+</script>
 </div>
 
 <div markdown="1" style="display: none;" class="tool-element" id="librjmcmc">
