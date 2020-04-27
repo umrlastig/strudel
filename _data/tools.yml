@@ -2,22 +2,22 @@
   name: SimPLU3D
   logo: https://simplu3d.github.io/logo/logo_small.png
 
+- id: artiscales
+  name: ArtiScales
+  logo: https://artiscales.github.io/ArtiScalesExampleSimulationResults.png
+
 - id: librjmcmc
   name: libRJMCMC
   logo: https://raw.githubusercontent.com/IGNF/librjmcmc/master/doc/images/librjmcmc.png
-
-- id: geoxygene
-  name: GeOxygene
-  logo: https://ignf.github.io/geoxygene/_static/img/geoxygene.png
 
 - id: geohistoricaldata
   name: GeoHistoricalData
   short_name: GHD
   logo: https://avatars0.githubusercontent.com/u/10074559?s=400&u=b6d7f841fe81dad40ccc84d312aed252f7e40b1a&v=4
 
-- id: artiscales
-  name: ArtiScales
-  logo: https://artiscales.github.io/ArtiScalesExampleSimulationResults.png
+- id: geoxygene
+  name: GeOxygene
+  logo: https://ignf.github.io/geoxygene/_static/img/geoxygene.png
 
 - id: autres
   name: Autres
