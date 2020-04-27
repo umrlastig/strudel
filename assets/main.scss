@@ -22,7 +22,15 @@ $spacing-unit:     50px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
-$brand-color:      #94c01a;//#d33682;
+//$brand-color:      #94c01a;
+$brand-color:      #29AF7F;
+
+
+$bg_gris_clairIGN : #bfbfbf;
+$bg_gris_fonceIGN : #71767A;
+$bg_siteIGN : #f7f6f2;
+
+
 
 $grey-color:       #3F3F3F;
 $grey-color-light: lighten($grey-color, 50%);
@@ -96,6 +104,8 @@ tr {
   // padding-right: $spacing-unit;
   // padding-left: $spacing-unit;
   margin: 0 auto;
+background-image: none !important; 
+
   padding: 0 $spacing-unit;
   position: relative;
   @extend %clearfix;
@@ -177,6 +187,11 @@ tr {
   margin-left: 1px;
   margin-right: 1px;
 }
+
+.site-footer{
+ background-color: $bg_gris_fonceIGN;
+ color: $bg_gris_clairIGN;
+}
 .site-footer .footer-col {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -197,11 +212,24 @@ hr.tool-header {
   border: none;
   // padding: 0 0;
 }
+
+
+.page-content{
+   background-image:  url(./bg_images/tramecontour.svg) ;
+background-attachment: fixed;
+}
+
 .site-nav .nav-list li:not(:last-child) {
   margin-right: 0;
 }
 
+.site-header{
+   background-image:  url(./bg_images/frisemaillage.svg) ;
+	
+}
+
 .site-header .lang-selector {
+background-color: $bg_gris_fonceIGN;	
   width: 50px;
   margin: 0px 10px;
   @include media-query($on-laptop) {
