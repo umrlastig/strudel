@@ -174,7 +174,14 @@ gem "jekyll", "~> 3.8.5"
 gem "github-pages", group: :jekyll_plugins
 ```
 
+- run:
+
+```
+bundle exec jekyll serve
+```
+
 Please, try not to push these modifications to the repository :wink:
+See [this](https://help.github.com/en/github/working-with-github-pages/testing-your-github-pages-site-locally-with-jekyll) for more information on testing pages locally.
 
 Locally, some images won't show because they use relative urls.
 For instance, some images of the members pages refer to images from private pages relative to [the LaSTIG website](https://www.umr-lastig.fr).
