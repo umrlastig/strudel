@@ -7,7 +7,7 @@
       <ul class="footer-col footer-col-1">
         <li>
           {% if site.logo %}
-          <img class=logo src={{ site.logo | relative_url }}>
+          <img class=logo src={{ site.logo | relative_url }} align="left" style="margin:10px 10px 10px 10px">
           {% endif %}
 
           {% include _i18n/sitetitle.html %}
@@ -21,11 +21,12 @@
           {{ site.author }}
           {% endif %}
         </span>
-        </li>
         {% endif %}
-
+	<br>
         {% if site.description %}
-        <li>{% include _i18n/i18n.html value=site.description %}</li>
+        {% include _i18n/i18n.html value=site.description %}
+		
+	</li>
         {% endif %}
 
       </ul>
