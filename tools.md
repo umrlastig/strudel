@@ -125,6 +125,50 @@ Enfin, ArtiScales est utilisable dans des environnement de calcul distribués et
 
 </div>
 
+
+<div markdown="1" style="display: none;" class="tool-element" id="openmole">
+
+## OpenMOLE
+
+
+<hr class="tool-header">
+
+
+![Logo OpenMOLE](https://openmole.org/img/mole/openmole.png){:style="height:50%; width:50%; display:block; margin:auto; background-color: gray; border-radius: 10px; padding: 10px;"}
+
+### Presentation
+
+Développée à l' [ISC-PIF](https://iscpif.fr/), la plateforme  [OpenMOLE](https://next.openmole.org/) est dédiée à l'exploration de modèles de simulation. Elle propose des méthodes pour encapsuler et exécuter les modèles de simulation de l'utilisateur sur des environnements de calcul distribués. Ces méthodes permettent d'explorer et diagnostiquer les propriétés de ces modèles. OpenMOLE encapsule lle modèle de simulation et peut supporter des modèles écrits en différents langages (Java, exécutable binaire, NetLogo, R, SciLab, Python, C++...).
+
+### Uses
+
+OpenMOLE permet de définir des plans d'expériences variés à l'aide de méthodes dédiées : analyse de sensibilité, calibration mono ou mutli objectifs, recherche de diversité dans les dynamiques du modèle, traitement massif de données etc.
+
+
+### More information
+
+[OpenMOLE website](https://next.openmole.org/)
+
+[community chat](https://chat.openmole.org/)
+
+[code repository](https://gitlab.openmole.org/openmole)
+
+[twitter account](https://twitter.com/OpenMOLE)
+
+
+
+
+### Bibliography
+
+Publications  utilisant la plateforme : 
+<div id="openmole"></div>
+<script defer>
+  getPublicationsById(["hal-01650530", "tel-02497711", "tel-02525138", "tel-01092212",], "openmole");
+</script>
+</div>
+
+
+
 <div markdown="1" style="display: none;" class="tool-element" id="autres">
 
 ## Autres

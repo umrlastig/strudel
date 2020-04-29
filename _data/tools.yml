@@ -19,6 +19,10 @@
   name: GeOxygene
   logo: https://ignf.github.io/geoxygene/_static/img/geoxygene.png
 
+- id: openmole
+  name: OpenMOLE
+  logo: https://next.openmole.org/img/mole/openmole.svg
+
 - id: autres
   name: Autres
   logo:

@@ -126,6 +126,50 @@ Finally, ArtiScales can be used in distributed environnements thanks to [OpenMOL
 
 </div>
 
+
+<div markdown="1" style="display: none;" class="tool-element" id="openmole">
+
+## OpenMOLE
+
+
+<hr class="tool-header">
+
+
+![Logo OpenMOLE](https://openmole.org/img/mole/openmole.png){:style="height:50%; width:50%; display:block; margin:auto; background-color: gray; border-radius: 10px; padding: 10px;"}
+
+### Presentation
+
+[OpenMOLE](https://next.openmole.org/) is a free and open-source platform devoted to simulation model exploration, developed at the Complex System  Institute of Paris ([ISC-PIF](https://iscpif.fr/)). It offers tools to run, explore, diagnose and optimize your numerical model, taking advantage of distributed computing environments. OpenMOLE offers to embed your already developed model, in any language (Java, Binary exe, NetLogo, R, SciLab, Python, C++...).
+
+### Uses
+
+OpenMOLE methods allows to perform various kind of Design of Experiments (DoE) : real sensitivity analysis, calibration on mono/multi criterion, pattern diversity research in model dynamics, custom design of experiments, data processing....
+
+
+### More information
+
+[OpenMOLE website](https://next.openmole.org/)
+
+[community chat](https://chat.openmole.org/)
+
+[code repository](https://gitlab.openmole.org/openmole)
+
+[twitter account](https://twitter.com/OpenMOLE)
+
+
+
+
+### Bibliography
+
+STRUDEL team papers featuring the use of OpenMOLE 
+ 
+<div id="openmole"></div>
+<script defer>
+  getPublicationsById(["hal-01650530", "tel-02497711", "tel-02525138", "tel-01092212",], "openmole");
+</script>
+</div>
+
+
 <div markdown="1" style="display: none;" class="tool-element" id="autres">
 
 ## Autres
@@ -143,5 +187,10 @@ For more information on **eVidenZ**, the original C++ engine, refer to [the eVid
 [Code](https://github.com/IGNF/NeatMap).
 
 </div>
+
+
+
+
+
 
 {% include tool_functions.html %}
