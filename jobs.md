@@ -11,12 +11,40 @@ lang: fr
 {% assign closed_jobs = strudel_jobs | where: "filled", "true" %}
 
 {% assign researchers = open_jobs | where: "type", "EC" %}
+{% assign postdocs = open_jobs | where: "type", "postdoc" %}
+{% assign inges = open_jobs | where: "type", "ingenieur" %}
 {% assign phds = open_jobs | where: "type", "PhD" %}
 {% assign internships = open_jobs | where: "type", "Internship" %}
 
 ## Enseignant-e / Chercheur-se-s
 
 {% for job in researchers %}
+  <div>
+    <a href="{{ job.pdf_fr }}">
+      <img src="{{ site.baseurl }}/assets/images/icons/pdf_icon.gif"/>
+    </a>
+    {{ job.titre }}
+  </div>
+{% else %}
+  Aucun poste à pourvoir actuellement.
+{% endfor %}
+
+## Post-doctorants
+
+{% for job in postdocs %}
+  <div>
+    <a href="{{ job.pdf_fr }}">
+      <img src="{{ site.baseurl }}/assets/images/icons/pdf_icon.gif"/>
+    </a>
+    {{ job.titre }}
+  </div>
+{% else %}
+  Aucun poste à pourvoir actuellement.
+{% endfor %}
+
+## Ingénieurs
+
+{% for job in inges %}
   <div>
     <a href="{{ job.pdf_fr }}">
       <img src="{{ site.baseurl }}/assets/images/icons/pdf_icon.gif"/>
