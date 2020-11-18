@@ -43,7 +43,8 @@
   start: 2019
   end: 2022
   poc: Arnaud Le Bris
-  subtitle: Historical Image Analysis for Territory Evolution Stories.
+  title: Historical Image Analysis for Territory Evolution Stories
+  logo: https://www.umr-lastig.fr/strudel/assets/images/icons/anr.png
 
 - id: ready3d
   name: Projet READY3D
@@ -51,6 +52,7 @@
   start: 2019
   end: 2022
   poc: Loïc Landrieu
+  logo: https://www.umr-lastig.fr/strudel/assets/images/icons/anr.png
 
 - id: tosca
   name: Projet TOSCA PARCELLE
