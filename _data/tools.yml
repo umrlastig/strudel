@@ -21,6 +21,6 @@
   name: GeOxygene
   logo: https://ignf.github.io/geoxygene/_static/img/geoxygene.png
   
- - id: librjmcmc
+- id: librjmcmc
   name: libRJMCMC
   logo: https://raw.githubusercontent.com/IGNF/librjmcmc/master/doc/images/librjmcmc.png
