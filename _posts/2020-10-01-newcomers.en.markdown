@@ -3,7 +3,7 @@ layout: post
 title:  "New people in the team !"
 date:   2020-10-01 11:59:01 +0200
 categories: strudel newcomers personnel
-lang: fr
+lang: en
 ---
 We are delighted to welcome 4 brand new folks in our team.
 <ul>
