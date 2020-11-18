@@ -34,7 +34,7 @@
   start: 2019
   end: 2023
   poc: Clément Mallet
-    site: https://maestriaproject.github.io/
+  site: https://maestriaproject.github.io/
   logo: https://maestriaproject.github.io/maestriaproject.github.io/assets/img/logo_maestria.png
 
 - id: hiatus
