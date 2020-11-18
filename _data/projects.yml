@@ -39,11 +39,11 @@
 
 - id: hiatus
   name: Projet ANR HIATUS
+  title: Historical Image Analysis for Territory Evolution Stories
   short_name: HIATUS
   start: 2019
   end: 2022
   poc: Arnaud Le Bris
-  title: Historical Image Analysis for Territory Evolution Stories
   logo: https://www.umr-lastig.fr/strudel/assets/images/icons/anr.png
 
 - id: ready3d
@@ -57,9 +57,9 @@
 - id: tosca
   name: Projet TOSCA PARCELLE
   short_name: PARCELLE
+  title: Production cARtographique grande éChELle par téLédétEction
   start: 2018
   end: 2021
-  subtitle: Production cARtographique grande éChELle par téLédétEction
   poc: Arnaud Le Bris
   logo: https://theia.sedoo.fr/wp-content-theia/uploads/sites/2/2019/03/Logo_Theia.png
 
