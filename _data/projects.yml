@@ -29,8 +29,8 @@
 
 - id: maestria
   name: Projet ANR MAESTRIA
+  title: Multi-Modal Earth Observation Image Analysis
   short_name: MAESTRIA
-  subtitle: Multi-Modal Earth Observation Image Analysis.
   start: 2019
   end: 2023
   poc: Clément Mallet
