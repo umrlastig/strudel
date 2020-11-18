@@ -30,16 +30,20 @@
 - id: maestria
   name: Projet ANR MAESTRIA
   short_name: MAESTRIA
+  subtitle: Multi-Modal Earth Observation Image Analysis.
   start: 2019
-  end: 2022
+  end: 2023
   poc: Clément Mallet
+    site: https://maestriaproject.github.io/
+  logo: https://maestriaproject.github.io/assets/img/logo_maestria.png
 
 - id: hiatus
   name: Projet ANR HIATUS
   short_name: HIATUS
   start: 2019
   end: 2022
-  poc: Sébastien Giordano
+  poc: Arnaud Le Bris
+  subtitle: Historical Image Analysis for Territory Evolution Stories.
 
 - id: ready3d
   name: Projet READY3D
@@ -50,9 +54,10 @@
 
 - id: tosca
   name: Projet TOSCA PARCELLE
-  short_name: TOSCA
+  short_name: PARCELLE
   start: 2018
-  end: 2019
+  end: 2021
+  subtitle: Production cARtographique grande éChELle par téLédétEction
   poc: Arnaud Le Bris
   logo: https://theia.sedoo.fr/wp-content-theia/uploads/sites/2/2019/03/Logo_Theia.png
 
