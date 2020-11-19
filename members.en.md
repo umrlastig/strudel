@@ -30,6 +30,24 @@ lang: en
 
 {% assign strudel_phds = strudel_present_members | where_exp: "member", "member.status == 'PhD student'" %}
 
+{% assign strudel_postdocs = strudel_present_members | where_exp: "member", "member.status == 'Post-doc'" %}
+
+## Post-docs
+
+<table class='width-100'>
+  {% tablerow member in strudel_postdocs cols:3 %}
+    <div align="center">
+      <a href="{{ member.webpage }}">
+        <img class="rounded-circle" src="{{ member.photo }}" alt="No image"/>
+        <br>
+        <b> {{ member.firstname }} <br> {{ member.lastname | capitalize }} </b>
+      </a>
+      <br>
+      Depuis {{ member.start_date | split: "/" | last }}
+    </div>
+  {% endtablerow %}
+</table>
+
 ## PhD students
 
 <table class='width-100'>
