@@ -43,6 +43,7 @@
   short_name: HIATUS
   start: 2019
   end: 2022
+  site: https://anr-hiatus.github.io/
   poc: Arnaud Le Bris
   logo: https://www.umr-lastig.fr/strudel/assets/images/icons/anr.png
 
