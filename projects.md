@@ -166,7 +166,7 @@ PI/POC : **{{project.poc}}**
 <br><br>
 # Projets terminés
 {: .post-title}
-Des liens vers des anciens projets. Vous comprendrez que certains liens puissent ne plus être actifs.
+Des liens vers des anciens projets. Vous comprendrez que certains liens puissent ne plus être actifs.<br>
 
 {% include project_bottom_slider.html %}
 
