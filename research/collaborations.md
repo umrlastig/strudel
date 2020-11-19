@@ -11,7 +11,7 @@ submenu: true
 {% assign strudel_partners_today_sc = strudel_partners_full_sc | where: "end", "false" %}
 
 <table class='width-100'>
-  {% tablerow partner in strudel_partners_today_sc cols:4 %}
+  {% tablerow partner in strudel_partners_today_sc cols:3 %}
     <div align="center">
       <a href="{{ partner.site }}">
         <b> {{ partner.name }}
@@ -32,7 +32,7 @@ submenu: true
 {% assign strudel_partners_today_op = strudel_partners_full_op | where: "end", "false" %}
 
 <table class='width-100'>
-  {% tablerow partner in strudel_partners_today_op cols:4 %}
+  {% tablerow partner in strudel_partners_today_op cols:3 %}
     <div align="center">
       <a href="{{ partner.site }}">
         <b> {{ partner.name }} 
@@ -52,7 +52,7 @@ submenu: true
 {% assign strudel_partners_today_indus = strudel_partners_full_indus | where: "end", "false" %}
 
 <table class='width-100'>
-  {% tablerow partner in strudel_partners_today_indus cols:4 %}
+  {% tablerow partner in strudel_partners_today_indus cols:3 %}
     <div align="center">
       <a href="{{ partner.site }}">
         <b> {{ partner.name }}
