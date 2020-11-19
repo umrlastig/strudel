@@ -5,7 +5,7 @@ permalink: /en/projects/
 lang: en
 ---
 
-Research projects in which members of the {{ site.title.en }} team are (or were) involved.
+Projects lead by {{ site.title.en }} or in which team members are (or were) involved.
 
 {% include project_slider.html %}
 
@@ -20,10 +20,10 @@ Research projects in which members of the {{ site.title.en }} team are (or were)
   {% endif %}
 {% endif %}
 
-POC : **{{project.poc}}**
+PI/POC : **{{project.poc}}**
 
 {% if project.site %}
-  For more information, refer to the [project website]({{project.site}})
+  For more information, refer to the [project website]({{project.site}}).
 {% endif %}
 
 </div>
@@ -40,10 +40,10 @@ POC : **{{project.poc}}**
   {% endif %}
 {% endif %}
 
-POC : **{{project.poc}}**
+PI/POC : **{{project.poc}}**
 
 {% if project.site %}
-  For more information, refer to the [project website]({{project.site}})
+  For more information, refer to the [project website]({{project.site}}).
 {% endif %}
 
 </div>
@@ -59,10 +59,10 @@ POC : **{{project.poc}}**
   {% endif %}
 {% endif %}
 
-POC : **{{project.poc}}**
+PI/POC : **{{project.poc}}**
 
 {% if project.site %}
-  For more information, refer to the [project website]({{project.site}})
+  For more information, refer to the [project website]({{project.site}}).
 {% endif %}
 
 </div>
@@ -79,10 +79,10 @@ POC : **{{project.poc}}**
   {% endif %}
 {% endif %}
 
-POC : **{{project.poc}}**
+PI/POC : **{{project.poc}}**
 
 {% if project.site %}
-  For more information, refer to the [project website]({{project.site}})
+  For more information, refer to the [project website]({{project.site}}).
 {% endif %}
 
 </div>
@@ -99,10 +99,10 @@ POC : **{{project.poc}}**
   {% endif %}
 {% endif %}
 
-POC : **{{project.poc}}**
+PI/POC : **{{project.poc}}**
 
 {% if project.site %}
-  For more information, refer to the [project website]({{project.site}})
+  For more information, refer to the [project website]({{project.site}}).
 {% endif %}
 
 </div>
@@ -119,10 +119,10 @@ POC : **{{project.poc}}**
   {% endif %}
 {% endif %}
 
-POC : **{{project.poc}}**
+PI/POC : **{{project.poc}}**
 
 {% if project.site %}
-  For more information, refer to the [project website]({{project.site}})
+  For more information, refer to the [project website]({{project.site}}).
 {% endif %}
 
 </div>
@@ -138,10 +138,10 @@ POC : **{{project.poc}}**
   {% endif %}
 {% endif %}
 
-POC : **{{project.poc}}**
+PI/POC : **{{project.poc}}**
 
 {% if project.site %}
-  For more information, refer to the [project website]({{project.site}})
+  For more information, refer to the [project website]({{project.site}}).
 {% endif %}
 
 </div>
@@ -157,16 +157,17 @@ POC : **{{project.poc}}**
   {% endif %}
 {% endif %}
 
-POC : **{{project.poc}}**
+PI/POC : **{{project.poc}}**
 
 {% if project.site %}
-  For more information, refer to the [project website]({{project.site}})
+  For more information, refer to the [project website]({{project.site}}).
 {% endif %}
 
 </div>
-
+<br><br>
 # Finished projets
 {: .post-title}
+Links to former projects. Please note some links may be now inactive.<br>
 
 {% include project_bottom_slider.html %}
 
