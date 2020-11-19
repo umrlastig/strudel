@@ -11,7 +11,7 @@ The **STRUDEL** team of the **[LaSTIG](https://umr-lastig.fr)** lab is intereste
 
 - the [integration]({{"/en/research/production" | relative_url}}) of heterogeneous, multi-sources and multi-dimensional data,
 
-- the [organisation of data]({{"/en/research/data_organisation" | relative_url}}) (concepts, analysis levels, identification of relevant structures/objects/elements, imperfection sources, etc.),
+- the [organisation of data]({{"/en/research/analyse" | relative_url}}) (concepts, analysis levels, identification of relevant structures/objects/elements, imperfection sources, etc.),
 
 in order to:
 - **develop models and algorithms** taking into account the *structure* (spatial, temporal, spectral, modal) of data for a better precision of results, a better integration of relevant objects, of spatial representation or to optimise their computation,
