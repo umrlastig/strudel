@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Recherches
+title: Orientations
 permalink: /fr/research/
 lang: fr
 has_submenus: true
