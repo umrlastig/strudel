@@ -11,7 +11,7 @@ Nous nous intéressons à l'ensemble des données, structures de données, algor
 l'analyse du territoire pour une meilleure compréhension de son fonctionnement et de ses évolutions (analyse
 menée avec des utilisateurs finaux: prescripteurs publics, chercheurs en modélisation numériques et
 géographiques, sociétés privées). Ce projet recouvre donc les questions liées à:
-- l'[intégration]({{"/fr/research/integration" | relative_url}}) (mise en cohérence, fusion, enrichissement, etc.) de données hétérogènes, multi-sources
+- l'[intégration]({{"/fr/research/production" | relative_url}}) (mise en cohérence, fusion, enrichissement, etc.) de données hétérogènes, multi-sources
 et multi-dimensionnelles,
 - l'[organisation des données]({{"/fr/research/data_organisation" | relative_url}}) (modélisation, choix des niveaux d'analyse, identification des
 structures/objets/éléments pertinents d'étude, sources d'imperfection, etc.) afin de permettre
