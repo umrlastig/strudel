@@ -9,7 +9,7 @@ has_submenus: true
 ### Objectives
 The **STRUDEL** team of the **[LaSTIG](https://umr-lastig.fr)** lab is interested in the *data*, *data structures*, *algorithms* and *models* required for *territory analysis* towards a better *understanding* of its *mecanisms* and its *evolutions*. Such analyses are lead in partnership with users and guided by some of their needs: public prescribers, researchers in modeling, geography, social sciences and private companies. This project covers questions related to:
 
-- the [integration]({{"/en/research/integration" | relative_url}}) of heterogeneous, multi-sources and multi-dimensional data,
+- the [integration]({{"/en/research/production" | relative_url}}) of heterogeneous, multi-sources and multi-dimensional data,
 
 - the [organisation of data]({{"/en/research/data_organisation" | relative_url}}) (concepts, analysis levels, identification of relevant structures/objects/elements, imperfection sources, etc.),
 
