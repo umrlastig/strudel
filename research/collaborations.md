@@ -18,11 +18,14 @@ submenu: true
       </a>
       <br>
       <i>{{ partner.poc }}</i>
+     {% if partner.projects %}
+		<br> Project(s): {{partners.projects}}*
+		{% endif %}
     </div>
   {% endtablerow %}
 </table>
 
-## Partenaire opérationnels
+## Partenaires opérationnels
 {% assign strudel_partners_full_op = site.data.partners | where: "type", "operational" %}
 {% assign strudel_partners_today_op = strudel_partners_full_op | where: "end", "false" %}
 
