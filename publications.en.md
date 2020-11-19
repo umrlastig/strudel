@@ -5,7 +5,9 @@ permalink: /en/publications/
 lang: en
 page_order : 4
 ---
-Only the publications of the last {{ site.publication_filter }} years are displayed.
+{% if site.publication_filter %}
+  Only the publications of the last {{ site.publication_filter }} years are displayed.
+{% endif %}
 
 {% assign strudel_members = site.data.lastig.people | where: "team", "STRUDEL" %}
 
@@ -78,7 +80,11 @@ Only the publications of the last {{ site.publication_filter }} years are displa
 <div id="pubPV"></div>
 
 <script defer>
+{% if site.publication_filter %}
   var currentYear = new Date().getFullYear()
   var firstYearToDisplay = currentYear - parseInt({{ site.publication_filter }})
   getPublicationsAuthor({{ clean }}, "["+firstYearToDisplay+" TO "+currentYear+"]");
+{% else %}
+  getPublicationsAuthor({{ clean }});
+{% endif %}
 </script>
