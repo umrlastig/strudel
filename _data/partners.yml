@@ -1,3 +1,11 @@
+- id: cesbio
+  name: CESBIO
+  long_name:
+  type: scientific
+  end: false
+  poc: Jordi Inglada
+  site: https://www.cesbio.cnrs.fr/
+
 - id: ligm
   name: LIGM
   long_name: IMAGINE
