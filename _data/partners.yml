@@ -19,4 +19,20 @@
   long_name: Photogrammetry and Remote Sensing 
   type: scientific
   end: Konrad Schindler
-  site: https://prs.igp.ethz.ch/  
+  site: https://prs.igp.ethz.ch/    
+   
+- id: engie
+  name: ENGIE
+  long_name: ENGIE
+  type: industrial
+  end: 2100
+  poc: Damien Robert
+  site: https://www.engie.com
+   
+- id: asp
+  name: ASP
+  long_name: Agence de Services et de  Paiements
+  type: operational
+  end: 2100
+  poc: Elodie Buard
+  site: https://www.asp-public.fr/
