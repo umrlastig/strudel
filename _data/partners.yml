@@ -5,6 +5,7 @@
   end: false
   poc: Jordi Inglada
   site: https://www.cesbio.cnrs.fr/
+  projects: MAESTRIA, PARCELLE
 
 - id: ligm
   name: LIGM
@@ -13,7 +14,61 @@
   end: false
   poc: Mathieu Aubry
   site: https://imagine-lab.enpc.fr/
-  projects: READY3D
+  projects: READY3D 
+ 
+- id: letg
+  name: LETG
+  long_name: Rennes
+  type: scientific
+  end: false
+  poc: Thomas Corpetti
+  site: https://letg.cnrs.fr/
+  projects: HIATUS 
+  
+- id: lrde
+  name: EPITA
+  long_name: LRDE
+  type: scientific
+  end: false
+  poc: Theo Géraud
+  site: https://www.lrde.epita.fr/wiki/Home
+  projects: SODUCO 
+
+- id: thema
+  name: THEMA
+  long_name: Univ. Franche Comté
+  type: scientific
+  end: false
+  poc: Cécile Tannier
+  site: http://thema.univ-fcomte.fr/
+  
+
+- id: live
+  name: LIVE
+  long_name: Univ. Strasbourg
+  type: scientific
+  end: false
+  poc: Anne Puissant
+  site: https://live.unistra.fr/
+  projects: HIATUS, AIMCEE 
+ 
+
+- id: ehess
+  name: EHESS
+  long_name:
+  type: scientific
+  end: false
+  poc: 
+  site: https://www.ehess.fr/en/
+  projects: SODUCO
+ 
+- id: inc
+  name: INC Cameroun
+  long_name:
+  type: operational
+  end: false
+  poc: 
+  site: https://www.inc.ayoos.com/
  
 - id: epfl
   name: EPFL
@@ -46,3 +101,11 @@
   end: false
   poc: Elodie Buard
   site: https://www.asp-public.fr/
+
+- id: theia
+  name: Théia
+  long_name: (Pole de données)
+  type: operational
+  end: false
+  poc: Nicolas Baghdadi
+  site: https://www.theia-land.fr/
