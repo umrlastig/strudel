@@ -9,7 +9,7 @@ lang: fr
 
 ### Carte d'identité
 <br>
-<img src="https://www.umr-lastig.fr/strudel/assets/images/graphical_abstract.png" alt="No image"/>
+<img src="https://www.umr-lastig.fr/strudel/assets/images/graphical_abstract.png" alt="No image"/><br>
 En naviguant dans les menus, vous pourrez tout savoir sur notre équipe. N'hésitez pas à nous contacter si vous avez des questions !
 <br>
 
