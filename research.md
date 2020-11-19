@@ -43,7 +43,7 @@ données (format : vecteur/raster/3D ; différents niveaux de détail, capteurs 
 et temporelles hétérogènes mais complémentaires).
 
 
-L’équipe fait également le choix de plutôt développer des méthodes capables de traiter le plus possible toutes les échelles spatiales (ilôt/quartier -->
+L’équipe fait également le choix de plutôt développer des méthodes capables de traiter le plus possible toutes les échelles spatiales (ilôt/quartier &#8658;
 France entière) et temporelles (du changement abrupt à 300 ans d'histoire). Au-delà des questions de
 modélisation que ce choix implique, traiter de grandes échelles spatiales et temporelles nécessite un travail
 sur le passage à l’échelle des traitements qui doivent être capables de gérer des données très massives, de
