@@ -6,3 +6,5 @@ layout: home
 lang: fr
 ---
 Page d'accueil de l'équipe STRUDEL du laboratoire LaSTIG
+
+<img src="/assets/images/graphical_abstract.png" alt="No image"/>
