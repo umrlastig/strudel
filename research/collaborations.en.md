@@ -17,7 +17,7 @@ submenu: true
         <b> {{ partner.name }} <br> ({{ partner.long_name | capitalize }}) </b>
       </a>
      {% if partner.projects %}
-		<br> Projet(s): {{ partner.projects }}
+		<br> Project(s): {{ partner.projects }}
 		{% endif %}
     </div>
   {% endtablerow %}
@@ -34,7 +34,7 @@ submenu: true
         <b> {{ partner.name }} <br> ({{ partner.long_name | capitalize }}) </b>
       </a>
 	   {% if partner.projects %}
-		<br> Projet(s): {{ partner.projects }}
+		<br> Project(s): {{ partner.projects }}
 		{% endif %}
     </div>
   {% endtablerow %}
@@ -51,7 +51,7 @@ submenu: true
         <b> {{ partner.name }} <br> ({{ partner.long_name | capitalize }}) </b>
       </a>
 	   {% if partner.projects %}
-		<br> Projet(s): {{ partner.projects }}
+		<br> Project(s): {{ partner.projects }}
 		{% endif %}
     </div>
   {% endtablerow %}
