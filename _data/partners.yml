@@ -2,7 +2,7 @@
   name: LIGM
   long_name: IMAGINE
   type: scientific
-  end: 2100
+  end: false
   poc: Mathieu Aubry
   site: https://imagine-lab.enpc.fr/
  
@@ -10,7 +10,7 @@
   name: EPFL
   long_name: ECEO
   type: scientific
-  end: 2100
+  end: false
   poc: Devis Tuia
   site: https://www.epfl.ch/labs/eceo/fr/home-fr/
 
@@ -18,14 +18,15 @@
   name: ETH Zurich
   long_name: Photogrammetry and Remote Sensing 
   type: scientific
-  end: Konrad Schindler
+  end: false
+  poc: Konrad Schindler
   site: https://prs.igp.ethz.ch/    
    
 - id: engie
   name: ENGIE
   long_name: ENGIE
   type: industrial
-  end: 2100
+  end: false
   poc: Damien Robert
   site: https://www.engie.com
    
@@ -33,6 +34,6 @@
   name: ASP
   long_name: Agence de Services et de  Paiements
   type: operational
-  end: 2100
+  end: false
   poc: Elodie Buard
   site: https://www.asp-public.fr/
