@@ -3,7 +3,10 @@ layout: page
 title: Publications
 permalink: /fr/publications/
 lang: fr
+page_order : 4
 ---
+Seules les publications des {{ site.publication_filter }} dernières années sont affichées.
+
 {% assign strudel_members = site.data.lastig.people | where: "team", "STRUDEL" %}
 
 {%- capture ids -%}
@@ -75,5 +78,7 @@ lang: fr
 <div id="pubPV"></div>
 
 <script defer>
-  getPublicationsAuthor({{ clean }});
+  var currentYear = new Date().getFullYear()
+  var firstYearToDisplay = currentYear - parseInt({{ site.publication_filter }})
+  getPublicationsAuthor({{ clean }}, "["+firstYearToDisplay+" TO "+currentYear+"]");
 </script>

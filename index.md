@@ -4,6 +4,7 @@
 
 layout: home
 lang: fr
+page_order : 1
 ---
 ## Accueil
 

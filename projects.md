@@ -3,6 +3,7 @@ layout: page
 title: Projets
 permalink: /fr/projects/
 lang: fr
+page_order : 6
 ---
 Projets pilotés par STRUDEL ou dans lesquels des membres de l'équipe sont impliqués.
 

@@ -4,6 +4,7 @@ title: Recherches
 permalink: /fr/research/
 lang: fr
 has_submenus: true
+page_order : 2
 ---
 
 ### Objectifs

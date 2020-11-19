@@ -110,12 +110,17 @@ function classement(doc)
   return '???';
 }
 
-var getPublicationsAuthor = function(halId, options = publication_options)
+var getPublicationsAuthor = function(halIds, yearOption = -1, options = publication_options)
 {
-  // console.log("getPublicationsAuthor: " + halId + " with " + options)
+  if (yearOption === -1) {
+    yearOptionFilter = ""
+  } else {
+    yearOptionFilter = "&fq=producedDateY_i:"+yearOption
+  }
+  // console.log("getPublicationsAuthor: " + halIds + " with " + yearOption + " and " + options)
   for (var id in options) {
     // console.log("\toption: " + id)
-    getPublications(halId, document.getElementById(id), options[id]);
+    getPublications(halIds, document.getElementById(id), options[id] + yearOptionFilter);
   }
 }
 

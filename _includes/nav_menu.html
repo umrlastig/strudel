@@ -11,7 +11,7 @@
 {% endfor %}
 
 {% if nblangs > 1 %}
-  {% assign pages = site.pages | where:"lang",plang %}
+  {% assign pages = site.pages | where:"lang",plang | sort:"page_order" %}
 {% else %}
   {% assign pages = site.pages %}
 {% endif %}
