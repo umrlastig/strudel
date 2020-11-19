@@ -8,7 +8,7 @@ submenu: true
 
 ## Partenaires scientifiques
 {% assign strudel_partners_full_sc = site.data.partners | where: "type", "scientific" %}
-{% assign strudel_partners_today_sc = strudel_partners_full | where: "end", "false" %}
+{% assign strudel_partners_today_sc = strudel_partners_full_sc | where: "end", "false" %}
 
 <table class='width-100'>
   {% tablerow partner in strudel_partners_today_sc cols:4 %}
