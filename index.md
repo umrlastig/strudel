@@ -5,6 +5,6 @@
 layout: home
 lang: fr
 ---
-Page d'accueil de l'équipe STRUDEL du laboratoire LaSTIG
+Page d'accueil
 
-<img src="/assets/images/graphical_abstract.png" alt="No image"/>
+<img src="https://www.umr-lastig.fr/strudel/assets/images/graphical_abstract.png" alt="No image"/>
