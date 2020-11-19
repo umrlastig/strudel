@@ -3,6 +3,7 @@ layout: page
 title: Outils
 permalink: /fr/outils/
 lang: fr
+page_order : 5
 ---
 Des outils développés, utilisés ou maintenus par l'équipe.
 {% include tool_slider.html %}
@@ -160,7 +161,7 @@ OpenMOLE permet de définir des plans d'expériences variés à l'aide de métho
 
 ### Bibliography
 
-Publications  utilisant la plateforme : 
+Publications  utilisant la plateforme :
 <div id="openmole"></div>
 <script defer>
   getPublicationsById(["hal-01650530", "tel-02497711", "tel-02525138", "tel-01092212",], "openmole");

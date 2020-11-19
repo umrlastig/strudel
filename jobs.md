@@ -3,6 +3,7 @@ layout: page
 title: Emplois
 permalink: /fr/jobs/
 lang: fr
+page_order : 10
 ---
 
 {% assign strudel_jobs = site.data.lastig.recruiting | where: "team", "STRUDEL" %}

@@ -3,6 +3,7 @@ layout: page
 title: Membres
 permalink: /fr/members/
 lang: fr
+page_order : 8
 ---
 
 {% assign strudel_members = site.data.lastig.people | where: "team", "STRUDEL" %}

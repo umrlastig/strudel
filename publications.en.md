@@ -3,6 +3,7 @@ layout: page
 title: Publications
 permalink: /en/publications/
 lang: en
+page_order : 4
 ---
 Only the publications of the last {{ site.publication_filter }} years are displayed.
 

@@ -4,6 +4,7 @@ title: Research
 permalink: /en/research/
 lang: en
 has_submenus: true
+page_order : 2
 ---
 
 ### Objectives

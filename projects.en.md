@@ -3,6 +3,7 @@ layout: page
 title: Projects
 permalink: /en/projects/
 lang: en
+page_order : 6
 ---
 
 Projects lead by {{ site.title.en }} or in which team members are (or were) involved.

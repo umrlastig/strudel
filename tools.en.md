@@ -3,6 +3,7 @@ layout: page
 title: Tools
 permalink: /en/tools/
 lang: en
+page_order : 5
 ---
 The tools used, developed or maintained by the team.
 {% include tool_slider.html %}
@@ -161,8 +162,8 @@ OpenMOLE methods allows to perform various kind of Design of Experiments (DoE) :
 
 ### Bibliography
 
-STRUDEL team papers featuring the use of OpenMOLE 
- 
+STRUDEL team papers featuring the use of OpenMOLE
+
 <div id="openmole"></div>
 <script defer>
   getPublicationsById(["hal-01650530", "tel-02497711", "tel-02525138", "tel-01092212",], "openmole");
