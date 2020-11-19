@@ -5,4 +5,12 @@
 layout: home
 lang: en
 ---
-Homepage of the STRUDEL LaSTIG team.
+## Homepage
+
+### Identity card
+<br>
+<img src="https://www.umr-lastig.fr/strudel/assets/images/graphical_abstract.png" alt="No image"/>
+If you navigate throughout these pages, you will definitively know everything on our team. Feel free to contact us if you have questions !
+<br>
+
+### News
