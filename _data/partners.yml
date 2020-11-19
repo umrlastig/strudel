@@ -16,7 +16,7 @@
 
 - id: ethz
   name: ETH Zurich
-  long_name: Photogrammetry and Remote Sensing 
+  long_name: PRS group
   type: scientific
   end: false
   poc: Konrad Schindler
