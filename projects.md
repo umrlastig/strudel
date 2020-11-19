@@ -4,7 +4,7 @@ title: Projets
 permalink: /fr/projects/
 lang: fr
 ---
-Projets dans lesquels des membres de l'équipe sont impliqués.
+Projets pilotés par STRUDEL ou dans lesquels des membres de l'équipe sont impliqués.
 
 {% include project_slider.html %}
 
@@ -19,10 +19,10 @@ Projets dans lesquels des membres de l'équipe sont impliqués.
   {% endif %}
 {% endif %}
 
-POC : **{{project.poc}}**
+PI/POC : **{{project.poc}}**
 
 {% if project.site %}
-  Pour plus d'information, consultez le [site web du projet]({{project.site}})
+  Pour plus d'information, consultez le [site web du projet]({{project.site}}).
 {% endif %}
 
 </div>
@@ -39,10 +39,10 @@ POC : **{{project.poc}}**
   {% endif %}
 {% endif %}
 
-POC : **{{project.poc}}**
+PI/POC : **{{project.poc}}**
 
 {% if project.site %}
-  Pour plus d'information, consultez le [site web du projet]({{project.site}})
+  Pour plus d'information, consultez le [site web du projet]({{project.site}}).
 {% endif %}
 
 </div>
@@ -58,10 +58,10 @@ POC : **{{project.poc}}**
   {% endif %}
 {% endif %}
 
-POC : **{{project.poc}}**
+PI/POC : **{{project.poc}}**
 
 {% if project.site %}
-  Pour plus d'information, consultez le [site web du projet]({{project.site}})
+  Pour plus d'information, consultez le [site web du projet]({{project.site}}).
 {% endif %}
 
 </div>
@@ -78,10 +78,10 @@ POC : **{{project.poc}}**
   {% endif %}
 {% endif %}
 
-POC : **{{project.poc}}**
+PI/POC : **{{project.poc}}**
 
 {% if project.site %}
-  Pour plus d'information, consultez le [site web du projet]({{project.site}})
+  Pour plus d'information, consultez le [site web du projet]({{project.site}}).
 {% endif %}
 
 </div>
@@ -98,10 +98,10 @@ POC : **{{project.poc}}**
   {% endif %}
 {% endif %}
 
-POC : **{{project.poc}}**
+PI/POC : **{{project.poc}}**
 
 {% if project.site %}
-  Pour plus d'information, consultez le [site web du projet]({{project.site}})
+  Pour plus d'information, consultez le [site web du projet]({{project.site}}).
 {% endif %}
 
 </div>
@@ -118,10 +118,10 @@ POC : **{{project.poc}}**
   {% endif %}
 {% endif %}
 
-POC : **{{project.poc}}**
+PI/POC : **{{project.poc}}**
 
 {% if project.site %}
-  Pour plus d'information, consultez le [site web du projet]({{project.site}})
+  Pour plus d'information, consultez le [site web du projet]({{project.site}}).
 {% endif %}
 
 </div>
@@ -137,10 +137,10 @@ POC : **{{project.poc}}**
   {% endif %}
 {% endif %}
 
-POC : **{{project.poc}}**
+PI/POC : **{{project.poc}}**
 
 {% if project.site %}
-  Pour plus d'information, consultez le [site web du projet]({{project.site}})
+  Pour plus d'information, consultez le [site web du projet]({{project.site}}).
 {% endif %}
 
 </div>
@@ -156,16 +156,17 @@ POC : **{{project.poc}}**
   {% endif %}
 {% endif %}
 
-POC : **{{project.poc}}**
+PI/POC : **{{project.poc}}**
 
 {% if project.site %}
-  Pour plus d'information, consultez le [site web du projet]({{project.site}})
+  Pour plus d'information, consultez le [site web du projet]({{project.site}}).
 {% endif %}
 
 </div>
-
+<br><br>
 # Projets terminés
 {: .post-title}
+Des liens vers des anciens projets. Vous comprendrez que certains liens puissent ne plus être actifs.
 
 {% include project_bottom_slider.html %}
 
