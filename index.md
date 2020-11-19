@@ -7,9 +7,10 @@ lang: fr
 ---
 ## Page d'accueil
 
-### Carte d'indentité
-
+### Carte d'identité
+<br>
 <img src="https://www.umr-lastig.fr/strudel/assets/images/graphical_abstract.png" alt="No image"/>
 En naviguant dans les menus, vous pourrez tout savoir sur notre équipe. N'hésitez pas à nous contacter si vous avez des questions !
+<br>
 
 ### Nouvelles
