@@ -5,7 +5,7 @@
 layout: home
 lang: fr
 ---
-## Page d'accueil
+## Accueil
 
 ### Carte d'identité
 <br>
