@@ -16,6 +16,8 @@ lang: fr
 {% assign phds = open_jobs | where: "type", "PhD" %}
 {% assign internships = open_jobs | where: "type", "Internship" %}
 
+Vous trouverez ici les offres d'emploi (CDD, CDI) à pourvoir dans l'équipe. Nous vous conseillons vivement de visiter plus en détails ce site et de nous contacter avant de candidater. merci !
+
 ## Enseignant-e / Chercheur-se-s
 
 {% for job in researchers %}
