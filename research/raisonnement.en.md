@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Raisonnement
-permalink: /fr/research/raisonnement
+title: Reasoning
+permalink: /en/research/raisonnement
 lang: en
 submenu: true
 ---
 
-Un des objectifs de l'équipe **STRUDEL** est le raisonnement sur les phénomènes spatialisés.
+One of the research themes of the **STRUDEL** team is ** reasoning** on spatial phenomena.
