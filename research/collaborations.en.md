@@ -11,10 +11,14 @@ submenu: true
 {% assign strudel_partners_today_sc = strudel_partners_full_sc | where: "end", "false" %}
 
 <table class='width-100'>
-  {% tablerow partner in strudel_partners_today_sc cols:4 %}
+  {% tablerow partner in strudel_partners_today_sc cols:3 %}
     <div align="center">
       <a href="{{ partner.site }}">
-        <b> {{ partner.name }} <br> ({{ partner.long_name | capitalize }}) </b>
+        <b> {{ partner.name }}
+		{% if partner.long_name %}
+		<br> ({{ partner.long_name | capitalize }})
+		{% endif %}
+		</b>
       </a>
      {% if partner.projects %}
 		<br> Project(s): {{ partner.projects }}
@@ -28,10 +32,14 @@ submenu: true
 {% assign strudel_partners_today_op = strudel_partners_full_op | where: "end", "false" %}
 
 <table class='width-100'>
-  {% tablerow partner in strudel_partners_today_op cols:4 %}
+  {% tablerow partner in strudel_partners_today_op cols:3 %}
     <div align="center">
       <a href="{{ partner.site }}">
-        <b> {{ partner.name }} <br> ({{ partner.long_name | capitalize }}) </b>
+        <b> {{ partner.name }}
+		{% if partner.long_name %}
+		<br> ({{ partner.long_name | capitalize }})
+		{% endif %}
+		</b>
       </a>
 	   {% if partner.projects %}
 		<br> Project(s): {{ partner.projects }}
@@ -45,10 +53,14 @@ submenu: true
 {% assign strudel_partners_today_indus = strudel_partners_full_indus | where: "end", "false" %}
 
 <table class='width-100'>
-  {% tablerow partner in strudel_partners_today_indus cols:4 %}
+  {% tablerow partner in strudel_partners_today_indus cols:3 %}
     <div align="center">
       <a href="{{ partner.site }}">
-        <b> {{ partner.name }} <br> ({{ partner.long_name | capitalize }}) </b>
+        <b> {{ partner.name }}
+				{% if partner.long_name %}
+		<br> ({{ partner.long_name | capitalize }})
+		{% endif %}
+		</b>
       </a>
 	   {% if partner.projects %}
 		<br> Project(s): {{ partner.projects }}
