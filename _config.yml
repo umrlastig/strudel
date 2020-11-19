@@ -20,8 +20,8 @@ title_html: "<b>STRUDEL</b>"
 logo: assets/images/icons/logo_strudel.png
 email: clement.mallet@ign.fr
 description:
-  fr: "Équipe de recherche sur les structures spatio-temporelles pour l'analyse des territoires"
-  en: "Research team on spatio-temporal structures for spatial dynamics of territories"
+  fr: "Équipe de recherche du laboratoire LaSTIG sur les structures spatio-temporelles pour l'analyse des territoires"
+  en: "Research team of the LaSTIG lab on spatio-temporal structures for spatial dynamics of territories"
 baseurl: "/strudel" #"/strudel" # the subpath of your site, e.g. /blog
 url: "https://www.umr-lastig.fr" # the base hostname & protocol for your site, e.g. http://example.com
 cc: by-nc
