@@ -41,7 +41,7 @@ lang: en
         <b> {{ member.firstname }} <br> {{ member.lastname | capitalize }} </b>
       </a>
       <br>
-      {{ member.status }}
+      Since {{ member.start_date | split: "/" | last }}
     </div>
   {% endtablerow %}
 </table>
