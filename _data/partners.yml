@@ -5,6 +5,7 @@
   end: false
   poc: Mathieu Aubry
   site: https://imagine-lab.enpc.fr/
+  projets: READY3D
  
 - id: epfl
   name: EPFL
@@ -20,11 +21,11 @@
   type: scientific
   end: false
   poc: Konrad Schindler
-  site: https://prs.igp.ethz.ch/    
+  site: https://prs.igp.ethz.ch/
    
 - id: engie
   name: ENGIE
-  long_name: ENGIE
+  long_name: R&D
   type: industrial
   end: false
   poc: Damien Robert
