@@ -30,7 +30,7 @@ lang: fr
 
 {% assign strudel_postdocs = strudel_present_members | where_exp: "member", "member.status == 'Post-doc'" %}
 
-## Post-doctorants :
+## Post-doctorants
 
 <table class='width-100'>
   {% tablerow member in strudel_postdocs cols:3 %}
@@ -48,7 +48,7 @@ lang: fr
 
 {% assign strudel_phds = strudel_present_members | where_exp: "member", "member.status == 'PhD student'" %}
 
-## Doctorants :
+## Doctorants
 
 <table class='width-100'>
   {% tablerow member in strudel_phds cols:3 %}
@@ -64,7 +64,7 @@ lang: fr
   {% endtablerow %}
 </table>
 
-## Anciens membres de l'équipe :
+## Anciens membres de l'équipe
 
 <table class='width-100'>
   {% tablerow member in strudel_past_members cols:3 %}
