@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Reasoning
-permalink: /en/research/raisonnement
-lang: en
+title: Raisonnement
+permalink: /fr/research/raisonnement
+lang: fr
 submenu: true
 ---
 
