@@ -14,7 +14,11 @@ submenu: true
   {% tablerow partner in strudel_partners_today_sc cols:4 %}
     <div align="center">
       <a href="{{ partner.site }}">
-        <b> {{ partner.name }} <br> ({{ partner.long_name | capitalize }}) </b>
+        <b> {{ partner.name }}
+		{% if partner.long_name %}
+		<br> ({{ partner.long_name | capitalize }})
+		{% endif %}
+		</b>
       </a>
      {% if partner.projects %}
 		<br> Projet(s): {{ partner.projects }}
@@ -31,7 +35,10 @@ submenu: true
   {% tablerow partner in strudel_partners_today_op cols:4 %}
     <div align="center">
       <a href="{{ partner.site }}">
-        <b> {{ partner.name }} <br> ({{ partner.long_name | capitalize }}) </b>
+        <b> {{ partner.name }} 
+		{% if partner.long_name %}
+		<br> ({{ partner.long_name | capitalize }})
+		{% endif %} </b>
       </a>
 	   {% if partner.projects %}
 		<br> Projet(s): {{ partner.projects }}
@@ -48,7 +55,11 @@ submenu: true
   {% tablerow partner in strudel_partners_today_indus cols:4 %}
     <div align="center">
       <a href="{{ partner.site }}">
-        <b> {{ partner.name }} <br> ({{ partner.long_name | capitalize }}) </b>
+        <b> {{ partner.name }}
+				{% if partner.long_name %}
+		<br> ({{ partner.long_name | capitalize }})
+		{% endif %}
+		</b>
       </a>
 	   {% if partner.projects %}
 		<br> Projet(s): {{ partner.projects }}
