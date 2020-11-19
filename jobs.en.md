@@ -15,7 +15,7 @@ lang: en
 {% assign phds = open_jobs | where: "type", "PhD" %}
 {% assign internships = open_jobs | where: "type", "Internship" %}
 
-You can find here the positions currently available in the team. We highly recommend you to get in touch with us before applying.
+You can find here the positions currently available in the team. We highly recommend you to get in touch with us and navigate throughout these fancy pages before applying.
 
 ## Lecturers
 
