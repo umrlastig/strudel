@@ -9,7 +9,7 @@ lang: en
 
 ### Identity card
 <br>
-<img src="https://www.umr-lastig.fr/strudel/assets/images/graphical_abstract.png" alt="No image"/>
+<img src="https://www.umr-lastig.fr/strudel/assets/images/graphical_abstract.png" alt="No image"/><br>
 If you navigate throughout these pages, you will definitively know everything on our team. Feel free to contact us if you have questions !
 <br>
 
