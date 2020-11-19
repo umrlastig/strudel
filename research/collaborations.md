@@ -7,15 +7,17 @@ submenu: true
 ---
 
 ## Partenaires scientifiques
-{% assign strudel_partners = site.data.partners | where: "type", "scientific" %}
+{% assign strudel_partners_full_sc = site.data.partners | where: "type", "scientific" %}
+{% assign strudel_partners_today_sc = strudel_partners_full | where: "end", "false" %}
+
 <table class='width-100'>
-  {% tablerow partner in strudel_partners cols:3 %}
+  {% tablerow partner in strudel_partners_today_sc cols:4 %}
     <div align="center">
       <a href="{{ partner.site }}">
-        <b> {{ partner.name }} <br> ({{ partner.longname | capitalize }}) </b>
+        <b> {{ partner.name }} <br> ({{ partner.long_name | capitalize }}) </b>
       </a>
       <br>
-      {{ partner.poc }}
+      <i>{{ partner.poc }}</i>
     </div>
   {% endtablerow %}
 </table>
