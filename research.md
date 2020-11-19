@@ -13,7 +13,7 @@ menée avec des utilisateurs finaux: prescripteurs publics, chercheurs en modél
 géographiques, sociétés privées). Ce projet recouvre donc les questions liées à:
 - l'[intégration]({{"/fr/research/production" | relative_url}}) (mise en cohérence, fusion, enrichissement, etc.) de données hétérogènes, multi-sources
 et multi-dimensionnelles,
-- l'[organisation des données]({{"/fr/research/data_organisation" | relative_url}}) (modélisation, choix des niveaux d'analyse, identification des
+- l'[organisation des données]({{"/fr/research/analyse" | relative_url}}) (modélisation, choix des niveaux d'analyse, identification des
 structures/objets/éléments pertinents d'étude, sources d'imperfection, etc.) afin de permettre
 - in fine le **raisonnement sur les phénomènes spatialisés**, la détection et caractérisation du
 changement, la sémantisation, la simulation, etc.
