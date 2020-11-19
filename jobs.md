@@ -18,7 +18,7 @@ lang: fr
 
 Vous trouverez ici les offres d'emploi (CDD, CDI) à pourvoir dans l'équipe. Nous vous conseillons vivement de visiter plus en détails ce site et de nous contacter avant de candidater. Merci !
 
-## Enseignant-e / Chercheur-se-s
+## Enseignants-chercheurs
 
 {% for job in researchers %}
   <div>
