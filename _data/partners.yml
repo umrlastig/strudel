@@ -102,9 +102,17 @@
   poc: Elodie Buard
   site: https://www.asp-public.fr/
 
+- id: cnes
+  name: CNES
+  long_name: Pole de données
+  type: industrial
+  end: false
+  poc: 
+  site: MAESTRIA, AI4GEO
+  
 - id: theia
   name: Théia
-  long_name: (Pole de données)
+  long_name: Pole de données
   type: operational
   end: false
   poc: Nicolas Baghdadi
