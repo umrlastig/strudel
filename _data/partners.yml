@@ -5,6 +5,7 @@
   end: false
   poc: Jordi Inglada
   site: https://www.cesbio.cnrs.fr/
+  logo: https://labo.obs-mip.fr/wp-content-labo/uploads/sites/20/2016/03/logo_cesbio.png
   projects: MAESTRIA, PARCELLE
 
 - id: ligm
@@ -14,8 +15,9 @@
   end: false
   poc: Mathieu Aubry
   site: https://imagine-lab.enpc.fr/
-  projects: READY3D 
- 
+  logo: https://imagine-lab.enpc.fr/wp-content/uploads/enpclogo-150x150.png
+  projects: READY3D
+
 - id: letg
   name: LETG
   long_name: Rennes
@@ -23,8 +25,8 @@
   end: false
   poc: Thomas Corpetti
   site: https://letg.cnrs.fr/
-  projects: HIATUS 
-  
+  projects: HIATUS
+
 - id: lrde
   name: EPITA
   long_name: LRDE
@@ -32,7 +34,8 @@
   end: false
   poc: Theo Géraud
   site: https://www.lrde.epita.fr/wiki/Home
-  projects: SODUCO 
+  logo: https://www.lrde.epita.fr/skins/common/images/logo.png
+  projects: SODUCO
 
 - id: thema
   name: THEMA
@@ -41,7 +44,7 @@
   end: false
   poc: Cécile Tannier
   site: http://thema.univ-fcomte.fr/
-  
+  logo: https://sourcesup.renater.fr/www/pixscape/img/thema.png
 
 - id: live
   name: LIVE
@@ -50,26 +53,28 @@
   end: false
   poc: Anne Puissant
   site: https://live.unistra.fr/
-  projects: HIATUS, AIMCEE 
- 
+  logo: https://live.unistra.fr/fileadmin/templates/DUN/live/images/picto-live.svg
+  projects: HIATUS, AIMCEE
 
 - id: ehess
   name: EHESS
   long_name:
   type: scientific
   end: false
-  poc: 
+  poc:
   site: https://www.ehess.fr/en/
+  logo: https://www.ehess.fr/sites/all/themes/ehess_subtheme/logo.png
   projects: SODUCO
- 
+
 - id: inc
   name: INC Cameroun
   long_name:
   type: operational
   end: false
-  poc: 
+  poc:
   site: https://www.inc.ayoos.com/
- 
+  logo: https://www.inc.ayoos.com/img2/mpig.jpg
+
 - id: epfl
   name: EPFL
   long_name: ECEO
@@ -77,6 +82,7 @@
   end: false
   poc: Devis Tuia
   site: https://www.epfl.ch/labs/eceo/fr/home-fr/
+  logo: https://www.epfl.ch/wp/5.5/wp-content/themes/wp-theme-2018/assets/svg/epfl-logo.svg?refresh=now
 
 - id: ethz
   name: ETH Zurich
@@ -85,7 +91,8 @@
   end: false
   poc: Konrad Schindler
   site: https://prs.igp.ethz.ch/
-   
+  logo: https://ethz.ch/etc/designs/ethz/img/header/ethz_logo_black.svg
+
 - id: engie
   name: ENGIE
   long_name: R&D
@@ -93,7 +100,8 @@
   end: false
   poc: Damien Robert
   site: https://www.engie.com
-   
+  logo: https://www.engie.com/themes/engie/assets/img/thumbnail-engie.png
+
 - id: asp
   name: ASP
   long_name: Agence de Services et de  Paiements
@@ -101,15 +109,18 @@
   end: false
   poc: Elodie Buard
   site: https://www.asp-public.fr/
+  logo: https://www.asp-public.fr/sites/all/themes/bootstrap_asp/logo.png
 
 - id: cnes
   name: CNES
   long_name: Pole de données
   type: industrial
   end: false
-  poc: 
-  site: MAESTRIA, AI4GEO
-  
+  poc:
+  site: https://cnes.fr
+  projects: MAESTRIA, AI4GEO
+  logo: https://www.cnes-multimedia.fr/web3/images_404/is_logo-cnes-carre-developpe-bleu.png
+
 - id: theia
   name: Théia
   long_name: Pole de données
@@ -117,3 +128,4 @@
   end: false
   poc: Nicolas Baghdadi
   site: https://www.theia-land.fr/
+  logo: https://theia.sedoo.fr/wp-content-theia/uploads/sites/2/2019/03/Logo_Theia.png

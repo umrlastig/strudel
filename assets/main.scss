@@ -52,6 +52,12 @@ $on-laptop:        1200px;//900px;//700px;
   height: auto;
 }
 
+.large-logo {
+  max-width:100px;
+  max-height:100px;
+  width: auto;
+  height: auto;
+}
 .rounded-circle {
   border-radius: 50% !important;
   display: block;
@@ -104,7 +110,7 @@ tr {
   // padding-right: $spacing-unit;
   // padding-left: $spacing-unit;
   margin: 0 auto;
-background-image: none !important; 
+background-image: none !important;
 
   padding: 0 $spacing-unit;
   position: relative;
@@ -225,11 +231,11 @@ background-attachment: fixed;
 
 .site-header{
    background-image:  url(./bg_images/frisemaillage.svg) ;
-	
+
 }
 
 .site-header .lang-selector {
-background-color: $bg_gris_fonceIGN;	
+background-color: $bg_gris_fonceIGN;
   width: 50px;
   margin: 0px 10px;
   @include media-query($on-laptop) {

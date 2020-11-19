@@ -14,6 +14,10 @@ submenu: true
   {% tablerow partner in strudel_partners_today_sc cols:3 %}
     <div align="center">
       <a href="{{ partner.site }}">
+        {% if partner.logo %}
+        <img class="large-logo" src="{{ partner.logo }}" alt="No image"/>
+        <br>
+        {% endif %}
         <b> {{ partner.name }}
 		{% if partner.long_name %}
 		<br> ({{ partner.long_name | capitalize }})
@@ -35,6 +39,10 @@ submenu: true
   {% tablerow partner in strudel_partners_today_op cols:3 %}
     <div align="center">
       <a href="{{ partner.site }}">
+        {% if partner.logo %}
+        <img class="large-logo" src="{{ partner.logo }}" alt="No image"/>
+        <br>
+        {% endif %}
         <b> {{ partner.name }}
 		{% if partner.long_name %}
 		<br> ({{ partner.long_name | capitalize }})
@@ -56,6 +64,10 @@ submenu: true
   {% tablerow partner in strudel_partners_today_indus cols:3 %}
     <div align="center">
       <a href="{{ partner.site }}">
+        {% if partner.logo %}
+        <img class="large-logo" src="{{ partner.logo }}" alt="No image"/>
+        <br>
+        {% endif %}
         <b> {{ partner.name }}
 				{% if partner.long_name %}
 		<br> ({{ partner.long_name | capitalize }})

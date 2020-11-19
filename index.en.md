@@ -5,6 +5,7 @@
 layout: home
 lang: en
 page_order : 1
+invisible: true
 ---
 ## Homepage
 
