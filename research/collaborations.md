@@ -6,7 +6,7 @@ lang: fr
 submenu: true
 ---
 
-## Partenaires scientifiques
+## Partenaires académiques
 {% assign strudel_partners_full_sc = site.data.partners | where: "type", "scientific" %}
 {% assign strudel_partners_today_sc = strudel_partners_full_sc | where: "end", "false" %}
 
