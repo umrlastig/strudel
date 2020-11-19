@@ -19,7 +19,7 @@ submenu: true
       <br>
       <i>{{ partner.poc }}</i>
      {% if partner.projects %}
-		<br> Project(s): {{partners.projects}}*
+		<br> Project(s): {{partners.projects}}
 		{% endif %}
     </div>
   {% endtablerow %}
