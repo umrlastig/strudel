@@ -1,0 +1,22 @@
+- id: ligm
+  name: LIGM
+  long_name: IMAGINE
+  type: scientific
+  end: 2100
+  poc: Mathieu Aubry
+  site: https://imagine-lab.enpc.fr/
+ 
+- id: epfl
+  name: EPFL
+  long_name: ECEO
+  type: scientific
+  end: 2100
+  poc: Devis Tuia
+  site: https://www.epfl.ch/labs/eceo/fr/home-fr/
+
+- id: ethz
+  name: ETH Zurich
+  long_name: Photogrammetry and Remote Sensing 
+  type: scientific
+  end: Konrad Schindler
+  site: https://prs.igp.ethz.ch/  
