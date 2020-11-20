@@ -1,0 +1,10 @@
+- id: psetae
+  name: PSE-TAE
+  short_title:
+  long_description:
+  type: publication
+  end: false
+  poc: Loic Landrieu
+  publications: CVPR2020
+  image: 
+  projects: ASP
