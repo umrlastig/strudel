@@ -26,6 +26,7 @@
   poc: Thomas Corpetti
   site: https://letg.cnrs.fr/
   projects: HIATUS
+  logo: https://letg.cnrs.fr/plugins/letg/images/letg.png
 
 - id: lrde
   name: EPITA
@@ -113,7 +114,7 @@
 
 - id: cnes
   name: CNES
-  long_name: Pole de données
+  long_name:
   type: industrial
   end: false
   poc:
