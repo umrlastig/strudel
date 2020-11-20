@@ -15,7 +15,7 @@ submenu: true
     <div align="center">
       <a href="{{ partner.site }}">
         {% if partner.logo %}
-        <img class="large-logo" src="{{ partner.logo }}" width="5px" alt="No image"/>
+        <img class="large-logo" src="{{ partner.logo }}" alt="No image"/>
         <br>
         {% endif %}
         <b> {{ partner.name }}
