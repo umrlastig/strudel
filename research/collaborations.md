@@ -20,7 +20,7 @@ submenu: true
         {% endif %}
         <b> {{ partner.name }}
 		{% if partner.long_name %}
-		<br> ({{ partner.long_name | capitalize }})
+		<br> ({{ partner.long_name }})
 		{% endif %}
 		</b>
       </a>
