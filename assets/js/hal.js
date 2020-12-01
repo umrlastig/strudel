@@ -1,5 +1,3 @@
----
----
 // The MIT License (MIT)
 
 // hal.js | Copyright (c) 2019 IGN
@@ -24,33 +22,19 @@
 
 // documentation on HAL API: https://api.archives-ouvertes.fr/docs/search/?schema=fields#fields
 
-const hal_baseurl = "https://api.archives-ouvertes.fr";
-const fl = 'fileAnnexesFigure_s,invitedCommunication_s,proceedings_s,popularLevel_s,halId_s,authIdHalFullName_fs,producedDateY_i,docType_s,files_s,fileMain_s,fileMainAnnex_s,linkExtUrl_s,title_s,en_title_s,fr_title_s,label_bibtex,citationRef_s';
-
-// kept just in case : requests with an array of IdHals
-var halAuthIdHalApi = function(halIds){
-  var idList = halIds.join(' OR ');
-  return hal_baseurl+"/search/?q=authIdHal_s:\("+idList+"\)&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
+var halApi = function(halId){
+  const fl = 'fileAnnexesFigure_s,invitedCommunication_s,proceedings_s,popularLevel_s,halId_s,authIdHalFullName_fs,producedDateY_i,docType_s,files_s,fileMain_s,fileMainAnnex_s,linkExtUrl_s,title_s,en_title_s,fr_title_s,label_bibtex,citationRef_s';
+  return "https://api.archives-ouvertes.fr/search/?q=authIdHal_s:%22"+halId+"%22&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
 }
 
-var halNameApi = function(ids){
-  var query = ids.join(' OR ');
-  return hal_baseurl+"/search/?q="+query+"&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
-}
-
-var halIdApi = function(ids){
-  var query = ids.join(' OR ');
-  return hal_baseurl+"/search/?q=halId_s:\("+query+"\)&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
-}
-
-var getPublications = function(halIds, parent, params){
+var getPublications = function(halId, parent, params){
   if (!parent) return;
 
   // Create a request variable and assign a new XMLHttpRequest object to it.
   var request = new XMLHttpRequest();
 
   // Open a new connection, using the GET request on the URL endpoint
-  var url = halNameApi(halIds)+params;
+  var url = halApi(halId)+params;
   // console.log(url);
   request.open('GET', url, true);
   request.onload = function () {
@@ -70,22 +54,22 @@ var getPublications = function(halIds, parent, params){
 
 const publication_options = {
   pubPV:  "&fq=popularLevel_s:1",
-  pubASCL:"&fq=popularLevel_s:0&fq=docType_s:ART&fq=peerReviewing_s:0",
-  pubACL: "&fq=popularLevel_s:0&fq=docType_s:ART&fq=peerReviewing_s:1&fq=audience_s:2",
-  pubACLN:"&fq=popularLevel_s:0&fq=docType_s:ART&fq=peerReviewing_s:1&fq=audience_s:(1 OR 3)",
-  pubINV: "&fq=popularLevel_s:0&fq=docType_s:COMM&fq=invitedCommunication_s:1",
-  pubCOM: "&fq=popularLevel_s:0&fq=docType_s:COMM&fq=invitedCommunication_s:0&fq=proceedings_s:0",
-  pubACTI:"&fq=popularLevel_s:0&fq=docType_s:COMM&fq=invitedCommunication_s:0&fq=proceedings_s:1&fq=audience_s:2",
-  pubACTN:"&fq=popularLevel_s:0&fq=docType_s:COMM&fq=invitedCommunication_s:0&fq=proceedings_s:1&fq=audience_s:(1 OR 3)",
-  pubOS:  "&fq=docType_s:COUV",
-  pubDO:  "&fq=docType_s:DOUV",
-  pubAP:  "&fq=docType_s:(REPORT OR UNDEFINED)",
-  pubTH:  "&fq=docType_s:(THESE OR HDR)",
-  pubAFF: "&fq=docType_s:POSTER"
+  pubASCL:"&fq=popularLevel_s:0&fq=docType_s:\"ART\"&fq=peerReviewing_s:0",
+  pubACL: "&fq=popularLevel_s:0&fq=docType_s:\"ART\"&fq=peerReviewing_s:1&fq=audience_s:2",
+  pubACLN:"&fq=popularLevel_s:0&fq=docType_s:\"ART\"&fq=peerReviewing_s:1&fq=audience_s:(1 OR 3)",
+  pubINV: "&fq=popularLevel_s:0&fq=docType_s:\"COMM\"&fq=invitedCommunication_s:1",
+  pubCOM: "&fq=popularLevel_s:0&fq=docType_s:\"COMM\"&fq=invitedCommunication_s:0&fq=proceedings_s:0",
+  pubACTI:"&fq=popularLevel_s:0&fq=docType_s:\"COMM\"&fq=invitedCommunication_s:0&fq=proceedings_s:1&fq=audience_s:2",
+  pubACTN:"&fq=popularLevel_s:0&fq=docType_s:\"COMM\"&fq=invitedCommunication_s:0&fq=proceedings_s:1&fq=audience_s:(1 OR 3)",
+  pubOS:  "&fq=popularLevel_s:0&fq=docType_s:\"COUV\"",
+  pubDO:  "&fq=popularLevel_s:0&fq=docType_s:\"DOUV\"",
+  pubAP:  "&fq=popularLevel_s:0&fq=docType_s:(\"REPORT\" OR \"UNDEFINED\")",
+  pubTH:  "&fq=popularLevel_s:0&fq=docType_s:(\"THESE\" OR \"HDR\")",
+  pubAFF: "&fq=popularLevel_s:0&fq=docType_s:\"POSTER\""
 }
 
 // based on http://production-scientifique.bnf.fr/Annexe/cadre-de-classement
-function classement(doc)
+function classement(doc) 
 {
   if (doc.popularLevel_s == 1) return 'PV';
   if (doc.docType_s == 'COUV') return 'OS';
@@ -95,7 +79,7 @@ function classement(doc)
   if (doc.docType_s == 'REPORT' || doc.docType_s == 'UNDEFINED') return 'AP';
   if (doc.docType_s == 'COMM')
   {
-    // console.log(doc);
+    console.log(doc);
     if (doc.invitedCommunication_s == 1) return 'INV';
     if (doc.proceedings_s == 0) return 'COM';
     if (doc.audience_s == 2) return 'ACTI';
@@ -110,18 +94,10 @@ function classement(doc)
   return '???';
 }
 
-var getPublicationsAuthor = function(halIds, yearOption = -1, options = publication_options)
+var getPublicationsAuthor = function(halId, options = publication_options)
 {
-  if (yearOption === -1) {
-    yearOptionFilter = ""
-  } else {
-    yearOptionFilter = "&fq=producedDateY_i:"+yearOption
-  }
-  // console.log("getPublicationsAuthor: " + halIds + " with " + yearOption + " and " + options)
-  for (var id in options) {
-    // console.log("\toption: " + id)
-    getPublications(halIds, document.getElementById(id), options[id] + yearOptionFilter);
-  }
+  for (var id in options)
+    getPublications(halId, document.getElementById(id), options[id]);
 }
 
 var getKeywordPublicationsAuthor = function(halId, keyword, parent){
@@ -136,7 +112,7 @@ var getKeywordPublicationsAuthorYear = function(halId, keyword, year, parent){
 
 var getKeywordPublicationsAuthorStartYear = function(halId, keyword, startYear, parent, endYear){
   parent = document.getElementById(parent || "pub") || parent;
-  // console.log(parent);
+console.log(parent);
   endYear = endYear || new Date().getFullYear();
   for(year=endYear;year >= startYear;year--)
   {
@@ -159,8 +135,9 @@ function parseCitation(doc, citationElement, linksElement)
     var icons = {
       'dx.doi.org': 'doi.svg',
       'www.mdpi.com': 'mdpi.jpg'
-    };
-    const img = "{{ site.baseurl }}/assets/images/icons/"+(icons[host] || "link.svg");
+    }
+    const img = "img/icons/"+(icons[host] || "link.svg")
+
     const aElement = document.createElement('a');
     aElement.setAttribute("href",url);
     aElement.setAttribute("class","imgLink");
@@ -180,7 +157,7 @@ var clickBibtex = function(label_bibtex){
   document.body.appendChild(input);
   input.value = label_bibtex;
   input.select();
-  document.execCommand("copy");
+  document.execCommand("copy"); 
   document.body.removeChild(input);
   alert("This bibtex entry should be copied to the clipboard:\n"+label_bibtex);
 }
@@ -194,7 +171,7 @@ function createBibtex(label_bibtex, parent)
   const inputElement = document.createElement('input');
   inputElement.setAttribute("type","image");
   inputElement.setAttribute("class","imgLink");
-  inputElement.setAttribute("src","{{ site.baseurl }}/assets/images/icons/bibtex.jpg");
+  inputElement.setAttribute("src","img/icons/bibtex.jpg");
   inputElement.setAttribute("alt","Copy BibTeX to clipboard");
   inputElement.setAttribute("title","Copy BibTeX to clipboard");
   inputElement.onclick = function() {clickBibtex(label_bibtex);}
@@ -227,7 +204,7 @@ var createPub = function(doc, parent){
   listElement.appendChild(authors);
 
   const title = document.createElement('a');
-
+  
   title.setAttribute("href",'https://hal.archives-ouvertes.fr/'+doc.halId_s);
   title.setAttribute("class","title");
   if (doc.en_title_s && doc.fr_title_s) {
@@ -259,7 +236,7 @@ var createPub = function(doc, parent){
     pdfElement.setAttribute("class","imgLink");
     imgPdfElement = document.createElement('img');
     imgPdfElement.setAttribute("title","pdf");
-    imgPdfElement.setAttribute("src","{{ site.baseurl }}/assets/images/icons/pdf_icon.gif");
+    imgPdfElement.setAttribute("src","img/icons/pdf_icon.gif");
     imgPdfElement.setAttribute("height","20");
     imgPdfElement.setAttribute("alt","pdf");
     pdfElement.appendChild(imgPdfElement);
@@ -268,29 +245,6 @@ var createPub = function(doc, parent){
   linksElement.insertBefore(createBibtex(doc.label_bibtex), linksElement.firstChild);
   listElement.insertBefore(linksElement, listElement.firstChild);
   parent.appendChild(listElement);
-  //jQuery('lang-en').hide();
+  jQuery('lang-en').hide();
 }
 
-var getPublicationsById = function(halIds, parentId){
-  var parent = document.getElementById(parentId);
-  if (!parent) return;
-  // Create a request variable and assign a new XMLHttpRequest object to it.
-  var request = new XMLHttpRequest();
-  // Open a new connection, using the GET request on the URL endpoint
-  var url = halIdApi(halIds);
-  // console.log(url);
-  request.open('GET', url, true);
-  request.onload = function () {
-    var docs = JSON.parse(this.response).response.docs;
-    // console.log(docs);
-    if(docs.length == 0) {
-      parent.hidden = true;
-    } else {
-      const ol = document.createElement('ol');
-      ol.setAttribute("class","sub");
-      docs.forEach(doc => createPub(doc, ol));
-      parent.appendChild(ol);
-    }
-  };
-  request.send();
-}
