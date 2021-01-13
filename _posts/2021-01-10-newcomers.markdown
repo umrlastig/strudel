@@ -1,6 +1,6 @@
 ﻿---
 layout: post
-title:  "New people in the team (again)!"
+title:  "De nouveau de nouvelles arrivées!"
 date:   2021-01-10 11:59:01 +0200
 categories: strudel newcomers personnel
 lang: fr
