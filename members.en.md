@@ -11,7 +11,7 @@ page_order : 8
 {% assign strudel_present_members = strudel_members | where: "member", "true" %}
 {% assign strudel_past_members = strudel_members | where: "member", "false" %}
 
-{% assign strudel_permanent_researchers = strudel_present_members | where_exp: "member", "member.status != 'PhD student'", "member.status != 'Post-doc'" %}
+{% assign strudel_permanent_researchers = strudel_present_members | where_exp: "member", "member.status != 'PhD student'" %}
 
 ## Staff
 
