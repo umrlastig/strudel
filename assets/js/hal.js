@@ -43,7 +43,7 @@ var halIdApi = function(ids){
   return hal_baseurl+"/search/?q=halId_s:\("+query+"\)&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
 }
 
-var getPublications = function(halIds, parent, params){
+var getPublications = function(halIds, parent, params, div){
   if (!parent) return;
 
   // Create a request variable and assign a new XMLHttpRequest object to it.
@@ -56,9 +56,19 @@ var getPublications = function(halIds, parent, params){
   request.onload = function () {
     var docs = JSON.parse(this.response).response.docs;
     // console.log(docs);
+    while (parent.hasChildNodes()) {  
+	parent.removeChild(parent.firstChild);
+    }
     if(docs.length == 0) {
-      parent.hidden = true;
+	parent.style.visibility = "hidden";
+	if(typeof div !== "undefined") {
+	    div.style.visibility = "hidden";
+	}
     } else {
+      parent.style.visibility = "visible";
+	if(typeof div !== "undefined") {
+	    div.style.visibility = "visible";
+	}
       const ol = document.createElement('ol');
       ol.setAttribute("class","sub");
       docs.forEach(doc => createPub(doc, ol));
@@ -120,7 +130,7 @@ var getPublicationsAuthor = function(halIds, yearOption = -1, options = publicat
   // console.log("getPublicationsAuthor: " + halIds + " with " + yearOption + " and " + options)
   for (var id in options) {
     // console.log("\toption: " + id)
-    getPublications(halIds, document.getElementById(id), options[id] + yearOptionFilter);
+      getPublications(halIds, document.getElementById(id), options[id] + yearOptionFilter, document.getElementById(id.substring(3)));
   }
 }
 

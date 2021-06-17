@@ -25,7 +25,7 @@ description:
 baseurl: "/strudel" #"/strudel" # the subpath of your site, e.g. /blog
 url: "https://www.umr-lastig.fr" # the base hostname & protocol for your site, e.g. http://example.com
 cc: by-nc
-publication_filter: 3
+# publication_filter: 3
 # nav_ext_links:
 #   - name: LaSTIG
 #     url: https://www.umr-lastig.fr
@@ -48,6 +48,8 @@ defaults:
       path: ""
     values:
       lang: "fr"
+
+encoding: utf-8
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
