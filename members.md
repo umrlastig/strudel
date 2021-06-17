@@ -11,7 +11,8 @@ page_order : 8
 {% assign strudel_present_members = strudel_members | where: "member", "true" %}
 {% assign strudel_past_members = strudel_members | where: "member", "false" %}
 
-{% assign strudel_permanent_researchers = strudel_present_members | where_exp: "member", "member.status != 'PhD student'" %}
+{% assign strudel_permanent_researchers_tmp = strudel_present_members | where_exp: "member", "member.status != 'PhD student'" %}
+{% assign strudel_permanent_researchers = strudel_permanent_researchers_tmp | where_exp: "member", "member.status != 'Post-doc'" %}
 
 ## Permanents :
 
