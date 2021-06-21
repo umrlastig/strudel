@@ -35,12 +35,18 @@ function halAuthIdHalApi(halIds){
 }
 
 function halNameApi(ids){
-  var query = ids.join(' OR ');
+  var query = halIds;
+  if (Array.isArray(halIds)) {
+    query = ids.join(' OR ');
+  }
   return hal_baseurl+"/search/?q="+query+"&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
 }
 
 function halIdApi(ids){
-  var query = ids.join(' OR ');
+  var query = halIds;
+  if (Array.isArray(halIds)) {
+    query = ids.join(' OR ');
+  }
   return hal_baseurl+"/search/?q=halId_s:\("+query+"\)&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
 }
 
