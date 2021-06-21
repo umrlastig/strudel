@@ -38,87 +38,86 @@ page_order : 4
 <script src="{{ site.baseurl }}/assets/js/hal.js" charset="utf-8"></script>
 
 <!-- [ACL] -->
-## {{ site.data.strudel_i18n.ACL | map: page.lang }}
-{: #ACL }
-<div id="pubACL"></div>
-<!-- to use markdown id naming: {: #pubACL} -->
+<div id="pubACL">
+     <h2> {{ site.data.strudel_i18n.ACL | map: page.lang }} </h2>
+</div>
 
 <!-- [ACLN] -->
-## {{ site.data.strudel_i18n.ACLN | map: page.lang }}
-{: #ACLN }
-<div id="pubACLN"></div>
+<div id="pubACLN">
+     <h2> {{ site.data.strudel_i18n.ACLN | map: page.lang }} </h2>
+</div>
 
 <!-- [ASCL] -->
-## {{ site.data.strudel_i18n.ASCL | map: page.lang }}
-{: #ASCL }
-<div id="pubASCL"></div>
+<div id="pubASCL">
+     <h2> {{ site.data.strudel_i18n.ASCL | map: page.lang }} </h2>
+</div>
 
 <!-- [ACTI] -->
-## {{ site.data.strudel_i18n.ACTI | map: page.lang }}
-{: #ACTI }
-<div id="pubACTI"></div>
+<div id="pubACTI">
+     <h2> {{ site.data.strudel_i18n.ACTI | map: page.lang }} </h2>
+</div>
 
 <!-- [ACTN] -->
-## {{ site.data.strudel_i18n.ACTN | map: page.lang }}
-{: #ACTN }
-<div id="pubACTN"></div>
+<div id="pubACTN">
+     <h2> {{ site.data.strudel_i18n.ACTN | map: page.lang }} </h2>
+</div>
 
 <!-- [COM] -->
-## {{ site.data.strudel_i18n.COM | map: page.lang }}
-{: #COM }
-<div id="pubCOM"></div>
+<div id="pubCOM">
+     <h2> {{ site.data.strudel_i18n.COM | map: page.lang }} </h2>
+</div>
 
 <!-- [OS] -->
-## {{ site.data.strudel_i18n.OS | map: page.lang }}
-{: #OS }
-<div id="pubOS"></div>
+<div id="pubOS">
+     <h2> {{ site.data.strudel_i18n.OS | map: page.lang }} </h2>
+</div>
 
 <!-- [DO] -->
-## {{ site.data.strudel_i18n.DO | map: page.lang }}
-{: #DO }
-<div id="pubDO"></div>
+<div id="pubDO">
+     <h2> {{ site.data.strudel_i18n.DO | map: page.lang }} </h2>
+</div>
 
 <!-- [AFF] -->
-## {{ site.data.strudel_i18n.AFF | map: page.lang }}
-{: #AFF }
-<div id="pubAFF"></div>
+<div id="pubAFF">
+     <h2> {{ site.data.strudel_i18n.AFF | map: page.lang }} </h2>
+</div>
 
 <!-- [AP] -->
-## {{ site.data.strudel_i18n.AP | map: page.lang }}
-{: #AP }
-<div id="pubAP"></div>
+<div id="pubAP">
+     <h2> {{ site.data.strudel_i18n.AP | map: page.lang }} </h2>
+</div>
 
 <!-- [TH] -->
-## {{ site.data.strudel_i18n.TH | map: page.lang }}
-{: #TH }
-<div id="pubTH"></div>
+<div id="pubTH">
+     <h2> {{ site.data.strudel_i18n.TH | map: page.lang }} </h2>
+</div>
 
 <!-- [INV] -->
-## {{ site.data.strudel_i18n.INV | map: page.lang }}
-{: #INV }
-<div id="pubINV"></div>
+<div id="pubINV">
+     <h2> {{ site.data.strudel_i18n.INV | map: page.lang }} </h2>
+</div>
 
 <!-- [PV] -->
-## {{ site.data.strudel_i18n.PV | map: page.lang }}
-{: #PV }
-<div id="pubPV"></div>
+<div id="pubPV">
+     <h2> {{ site.data.strudel_i18n.PV | map: page.lang }} </h2>
+</div>
 
 <script>
   function showAllPublications() {
-    getPublicationsAuthor({{ clean }});
+    getPublicationsAuthor({{ clean }}, "{{ site.baseurl }}/assets/images");
   }
   function showLatestPublications() {
     var currentYear = new Date().getFullYear()
     var firstYearToDisplay = currentYear - 3
-    getPublicationsAuthor({{ clean }}, "["+firstYearToDisplay+" TO "+currentYear+"]");
+    getPublicationsAuthor({{ clean }}, "{{ site.baseurl }}/assets/images", "["+firstYearToDisplay+" TO "+currentYear+"]");
   }
 </script>
 <script defer>
 {% if site.publication_filter %}
   var currentYear = new Date().getFullYear()
   var firstYearToDisplay = currentYear - parseInt({{ site.publication_filter }})
-  getPublicationsAuthor({{ clean }}, "["+firstYearToDisplay+" TO "+currentYear+"]");
+  getPublicationsAuthor({{ clean }}, "{{ site.baseurl }}/assets/images", "["+firstYearToDisplay+" TO "+currentYear+"]");
 {% else %}
-  getPublicationsAuthor({{ clean }});
+  getPublicationsAuthor({{ clean }}, "{{ site.baseurl }}/assets/images");
 {% endif %}
 </script>

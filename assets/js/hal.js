@@ -1,5 +1,3 @@
----
----
 // The MIT License (MIT)
 
 // hal.js | Copyright (c) 2019 IGN
@@ -28,50 +26,43 @@ const hal_baseurl = "https://api.archives-ouvertes.fr";
 const fl = 'fileAnnexesFigure_s,invitedCommunication_s,proceedings_s,popularLevel_s,halId_s,authIdHalFullName_fs,producedDateY_i,docType_s,files_s,fileMain_s,fileMainAnnex_s,linkExtUrl_s,title_s,en_title_s,fr_title_s,label_bibtex,citationRef_s';
 
 // kept just in case : requests with an array of IdHals
-var halAuthIdHalApi = function(halIds){
-  var idList = halIds.join(' OR ');
+function halAuthIdHalApi(halIds){
+  var idList = halIds;
+  if (Array.isArray(halIds)) {
+    idList = halIds.join(' OR ');
+  }
   return hal_baseurl+"/search/?q=authIdHal_s:\("+idList+"\)&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
 }
 
-var halNameApi = function(ids){
+function halNameApi(ids){
   var query = ids.join(' OR ');
   return hal_baseurl+"/search/?q="+query+"&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
 }
 
-var halIdApi = function(ids){
+function halIdApi(ids){
   var query = ids.join(' OR ');
   return hal_baseurl+"/search/?q=halId_s:\("+query+"\)&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
 }
 
-var getPublications = function(halIds, parent, params, div){
+function getPublications(halIds, parent, params, baseImageUrl){
   if (!parent) return;
-
   // Create a request variable and assign a new XMLHttpRequest object to it.
   var request = new XMLHttpRequest();
-
   // Open a new connection, using the GET request on the URL endpoint
   var url = halNameApi(halIds)+params;
-  // console.log(url);
   request.open('GET', url, true);
   request.onload = function () {
     var docs = JSON.parse(this.response).response.docs;
-    // console.log(docs);
-    while (parent.hasChildNodes()) {  
-	parent.removeChild(parent.firstChild);
+    while (parent.childElementCount > 1) {
+	parent.removeChild(parent.lastChild);
     }
     if(docs.length == 0) {
 	parent.style.visibility = "hidden";
-	if(typeof div !== "undefined") {
-	    div.style.visibility = "hidden";
-	}
     } else {
       parent.style.visibility = "visible";
-	if(typeof div !== "undefined") {
-	    div.style.visibility = "visible";
-	}
       const ol = document.createElement('ol');
       ol.setAttribute("class","sub");
-      docs.forEach(doc => createPub(doc, ol));
+      docs.forEach(doc => createPub(doc, ol, baseImageUrl));
       parent.appendChild(ol);
     }
   };
@@ -105,7 +96,6 @@ function classement(doc)
   if (doc.docType_s == 'REPORT' || doc.docType_s == 'UNDEFINED') return 'AP';
   if (doc.docType_s == 'COMM')
   {
-    // console.log(doc);
     if (doc.invitedCommunication_s == 1) return 'INV';
     if (doc.proceedings_s == 0) return 'COM';
     if (doc.audience_s == 2) return 'ACTI';
@@ -120,33 +110,30 @@ function classement(doc)
   return '???';
 }
 
-var getPublicationsAuthor = function(halIds, yearOption = -1, options = publication_options)
+function getPublicationsAuthor(halIds, baseImageUrl = "img", yearOption = -1, options = publication_options)
 {
   if (yearOption === -1) {
     yearOptionFilter = ""
   } else {
     yearOptionFilter = "&fq=producedDateY_i:"+yearOption
   }
-  // console.log("getPublicationsAuthor: " + halIds + " with " + yearOption + " and " + options)
   for (var id in options) {
-    // console.log("\toption: " + id)
-      getPublications(halIds, document.getElementById(id), options[id] + yearOptionFilter, document.getElementById(id.substring(3)));
+    getPublications(halIds, document.getElementById(id), options[id] + yearOptionFilter, baseImageUrl);
   }
 }
 
-var getKeywordPublicationsAuthor = function(halId, keyword, parent){
+function getKeywordPublicationsAuthor(halId, keyword, parent){
   parent = document.getElementById(parent || "pub") || parent;
   getPublications(halId, parent, "&fq=keyword_s:\""+keyword+"\"");
 }
 
-var getKeywordPublicationsAuthorYear = function(halId, keyword, year, parent){
+function getKeywordPublicationsAuthorYear(halId, keyword, year, parent){
   parent = document.getElementById(parent || "pub") || parent;
   getPublications(halId, parent, "&fq=keyword_s:\""+keyword+"\"&fq=producedDateY_i:"+year);
 }
 
-var getKeywordPublicationsAuthorStartYear = function(halId, keyword, startYear, parent, endYear){
+function getKeywordPublicationsAuthorStartYear(halId, keyword, startYear, parent, endYear){
   parent = document.getElementById(parent || "pub") || parent;
-  // console.log(parent);
   endYear = endYear || new Date().getFullYear();
   for(year=endYear;year >= startYear;year--)
   {
@@ -157,7 +144,7 @@ var getKeywordPublicationsAuthorStartYear = function(halId, keyword, startYear, 
   }
 }
 
-function parseCitation(doc, citationElement, linksElement)
+function parseCitation(doc, citationElement, linksElement, baseImageUrl)
 {
   var regex = /. <a[^>]*href="(https?:\/\/([^"\/]*)\/[^"]*)"[^>]*>&#x27E8;([^<]*)&#x27E9;<\/a>/;
   var citation = doc.citationRef_s;
@@ -170,7 +157,7 @@ function parseCitation(doc, citationElement, linksElement)
       'dx.doi.org': 'doi.svg',
       'www.mdpi.com': 'mdpi.jpg'
     };
-    const img = "{{ site.baseurl }}/assets/images/icons/"+(icons[host] || "link.svg");
+    const img = baseImageUrl+"/icons/"+(icons[host] || "link.svg");
     const aElement = document.createElement('a');
     aElement.setAttribute("href",url);
     aElement.setAttribute("class","imgLink");
@@ -185,7 +172,7 @@ function parseCitation(doc, citationElement, linksElement)
   citationElement.innerHTML = citation;
 }
 
-var clickBibtex = function(label_bibtex){
+function clickBibtex(label_bibtex){
   const input = document.createElement("input");
   document.body.appendChild(input);
   input.value = label_bibtex;
@@ -195,7 +182,7 @@ var clickBibtex = function(label_bibtex){
   alert("This bibtex entry should be copied to the clipboard:\n"+label_bibtex);
 }
 
-function createBibtex(label_bibtex, parent)
+function createBibtex(label_bibtex, baseImageUrl)
 {
   // create a span element inside the new div
   const spanElement = document.createElement('span');
@@ -204,7 +191,7 @@ function createBibtex(label_bibtex, parent)
   const inputElement = document.createElement('input');
   inputElement.setAttribute("type","image");
   inputElement.setAttribute("class","imgLink");
-  inputElement.setAttribute("src","{{ site.baseurl }}/assets/images/icons/bibtex.jpg");
+  inputElement.setAttribute("src", baseImageUrl+"/icons/bibtex.jpg");
   inputElement.setAttribute("alt","Copy BibTeX to clipboard");
   inputElement.setAttribute("title","Copy BibTeX to clipboard");
   inputElement.onclick = function() {clickBibtex(label_bibtex);}
@@ -212,8 +199,7 @@ function createBibtex(label_bibtex, parent)
   return spanElement;
 }
 
-var createPub = function(doc, parent){
-  // console.log(doc);
+function createPub(doc, parent, baseImageUrl){
   if (!parent) return;
   const listElement = document.createElement('li');
   listElement.setAttribute("class", "bib");
@@ -255,7 +241,7 @@ var createPub = function(doc, parent){
   listElement.appendChild(title);
 
   const ref = document.createElement('span');
-  parseCitation(doc, ref, linksElement);
+  parseCitation(doc, ref, linksElement, baseImageUrl);
   listElement.appendChild(ref);
 
   // create an a element with the url of the pdf
@@ -269,30 +255,28 @@ var createPub = function(doc, parent){
     pdfElement.setAttribute("class","imgLink");
     imgPdfElement = document.createElement('img');
     imgPdfElement.setAttribute("title","pdf");
-    imgPdfElement.setAttribute("src","{{ site.baseurl }}/assets/images/icons/pdf_icon.gif");
+    imgPdfElement.setAttribute("src", baseImageUrl+"/icons/pdf_icon.gif");
     imgPdfElement.setAttribute("height","20");
     imgPdfElement.setAttribute("alt","pdf");
     pdfElement.appendChild(imgPdfElement);
     linksElement.appendChild(pdfElement);
   }
-  linksElement.insertBefore(createBibtex(doc.label_bibtex), linksElement.firstChild);
+    linksElement.insertBefore(createBibtex(doc.label_bibtex,baseImageUrl), linksElement.firstChild);
   listElement.insertBefore(linksElement, listElement.firstChild);
   parent.appendChild(listElement);
   //jQuery('lang-en').hide();
 }
 
-var getPublicationsById = function(halIds, parentId){
+function getPublicationsById(halIds, parentId){
   var parent = document.getElementById(parentId);
   if (!parent) return;
   // Create a request variable and assign a new XMLHttpRequest object to it.
   var request = new XMLHttpRequest();
   // Open a new connection, using the GET request on the URL endpoint
   var url = halIdApi(halIds);
-  // console.log(url);
   request.open('GET', url, true);
   request.onload = function () {
     var docs = JSON.parse(this.response).response.docs;
-    // console.log(docs);
     if(docs.length == 0) {
       parent.hidden = true;
     } else {
