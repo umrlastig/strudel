@@ -37,7 +37,7 @@ function halAuthIdHalApi(halIds){
 function halNameApi(halIds){
   var query = "authIdHal_s:"+halIds;
   if (Array.isArray(halIds)) {
-    query = ids.join(' OR ');
+    query = halIds.join(' OR ');
   }
   return hal_baseurl+"/search/?q="+query+"&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
 }
@@ -45,7 +45,7 @@ function halNameApi(halIds){
 function halIdApi(halIds){
   var query = halIds;
   if (Array.isArray(halIds)) {
-    query = ids.join(' OR ');
+    query = halIds.join(' OR ');
   }
   return hal_baseurl+"/search/?q=halId_s:\("+query+"\)&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
 }
