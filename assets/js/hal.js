@@ -34,15 +34,15 @@ function halAuthIdHalApi(halIds){
   return hal_baseurl+"/search/?q=authIdHal_s:\("+idList+"\)&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
 }
 
-function halNameApi(ids){
-  var query = halIds;
+function halNameApi(halIds){
+  var query = "authIdHal_s:"+halIds;
   if (Array.isArray(halIds)) {
     query = ids.join(' OR ');
   }
   return hal_baseurl+"/search/?q="+query+"&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
 }
 
-function halIdApi(ids){
+function halIdApi(halIds){
   var query = halIds;
   if (Array.isArray(halIds)) {
     query = ids.join(' OR ');
