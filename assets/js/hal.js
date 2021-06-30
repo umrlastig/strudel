@@ -23,7 +23,7 @@
 // documentation on HAL API: https://api.archives-ouvertes.fr/docs/search/?schema=fields#fields
 
 const hal_baseurl = "https://api.archives-ouvertes.fr";
-const fl = 'fileAnnexesFigure_s,invitedCommunication_s,proceedings_s,popularLevel_s,halId_s,authIdHalFullName_fs,producedDateY_i,docType_s,files_s,fileMain_s,fileMainAnnex_s,linkExtUrl_s,title_s,en_title_s,fr_title_s,label_bibtex,citationRef_s';
+const fl = 'fileAnnexes_s,fileAnnexesFigure_s,invitedCommunication_s,proceedings_s,popularLevel_s,halId_s,authIdHalFullName_fs,producedDateY_i,docType_s,files_s,fileMain_s,fileMainAnnex_s,linkExtUrl_s,title_s,en_title_s,fr_title_s,label_bibtex,citationRef_s';
 
 // kept just in case : requests with an array of IdHals
 function halAuthIdHalApi(halIds){
@@ -251,7 +251,7 @@ function createPub(doc, parent, baseImageUrl){
   listElement.appendChild(ref);
 
   // create an a element with the url of the pdf
-  const file = doc.linkExtUrl_s || doc.fileMain_s || doc.fileMainAnnex_s;
+  const file = doc.linkExtUrl_s || doc.fileMain_s || doc.fileMainAnnex_s || doc.fileAnnexes_s;
   const files = doc.files_s || (file ? [file] : []);
   for(var i = 0; i < files.length; ++i)
   {
