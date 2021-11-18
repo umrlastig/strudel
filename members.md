@@ -12,6 +12,10 @@ page_order : 8
 {% assign strudel_past_members = strudel_members | where: "member", "false" %}
 
 {% assign strudel_permanent_researchers = strudel_present_members | where: "perm", "true" %}
+{% assign strudel_non_permanent_researchers = strudel_present_members | where: "perm", "false" %}
+{% assign strudel_postdocs = strudel_non_permanent_researchers | where_exp: "member", "member.status == 'Post-doc'" %}
+{% assign strudel_phds = strudel_non_permanent_researchers | where_exp: "member", "member.status == 'PhD student'" %}
+{% assign strudel_engineers = strudel_non_permanent_researchers | where_exp: "member", "member.status == 'Engineer'" %}
 
 ## Permanent-e-s :
 
@@ -29,8 +33,6 @@ page_order : 8
   {% endtablerow %}
 </table>
 
-{% assign strudel_postdocs = strudel_present_members | where_exp: "member", "member.status == 'Post-doc'" %}
-
 ## Post-doctorant-e-s
 
 <table class='width-100'>
@@ -47,8 +49,6 @@ page_order : 8
   {% endtablerow %}
 </table>
 
-{% assign strudel_phds = strudel_present_members | where_exp: "member", "member.status == 'PhD student'" %}
-
 ## Doctorant-e-s
 
 <table class='width-100'>
@@ -64,8 +64,6 @@ page_order : 8
     </div>
   {% endtablerow %}
 </table>
-
-{% assign strudel_engineers = strudel_present_members | where_exp: "member", "member.status == 'Engineer'" %}
 
 ## Ingénieur-e-s
 

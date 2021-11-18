@@ -11,8 +11,11 @@ page_order : 8
 {% assign strudel_present_members = strudel_members | where: "member", "true" %}
 {% assign strudel_past_members = strudel_members | where: "member", "false" %}
 
-{% assign strudel_permanent_researchers_tmp = strudel_present_members | where_exp: "member", "member.status != 'PhD student'" %}
-{% assign strudel_permanent_researchers = strudel_permanent_researchers_tmp | where_exp: "member", "member.status != 'Post-doc'" %}
+{% assign strudel_permanent_researchers = strudel_present_members | where: "perm", "true" %}
+{% assign strudel_non_permanent_researchers = strudel_present_members | where: "perm", "false" %}
+{% assign strudel_postdocs = strudel_non_permanent_researchers | where_exp: "member", "member.status == 'Post-doc'" %}
+{% assign strudel_phds = strudel_non_permanent_researchers | where_exp: "member", "member.status == 'PhD student'" %}
+{% assign strudel_engineers = strudel_non_permanent_researchers | where_exp: "member", "member.status == 'Engineer'" %}
 
 ## Staff
 
@@ -29,10 +32,6 @@ page_order : 8
     </div>
   {% endtablerow %}
 </table>
-
-{% assign strudel_phds = strudel_present_members | where_exp: "member", "member.status == 'PhD student'" %}
-
-{% assign strudel_postdocs = strudel_present_members | where_exp: "member", "member.status == 'Post-doc'" %}
 
 ## Post-docs
 
@@ -62,6 +61,22 @@ page_order : 8
       </a>
       <br>
       Since {{ member.start_date | split: "/" | last }}
+    </div>
+  {% endtablerow %}
+</table>
+
+## Engineers
+
+<table class='width-100'>
+  {% tablerow member in strudel_engineers cols:3 %}
+    <div align="center">
+      <a href="{{ member.webpage }}">
+        <img class="rounded-circle" src="{{ member.photo }}" alt="No image"/>
+        <br>
+        <b> {{ member.firstname }} <br> {{ member.lastname | capitalize }} </b>
+      </a>
+      <br>
+      Depuis {{ member.start_date | split: "/" | last }}
     </div>
   {% endtablerow %}
 </table>
