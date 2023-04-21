@@ -11,7 +11,8 @@ page_order : 10
 {% assign open_jobs = strudel_jobs | where: "filled", "false" %}
 {% assign closed_jobs = strudel_jobs | where: "filled", "true" %}
 
-{% assign researchers = open_jobs | where: "type", "EC" %}
+{% assign researchers = open_jobs | where: "type", "Researcher" %}
+{% assign lecturers = open_jobs | where: "type", "EC" %}
 {% assign postdocs = open_jobs | where: "type", "postdoc" %}
 {% assign inges = open_jobs | where: "type", "ingenieur" %}
 {% assign phds = open_jobs | where: "type", "PhD" %}
@@ -19,9 +20,22 @@ page_order : 10
 
 Vous trouverez ici les offres d'emploi (CDD, CDI) à pourvoir dans l'équipe. Nous vous conseillons vivement de visiter plus en détails ce site et de nous contacter avant de candidater. Merci !
 
-## Enseignants-chercheurs
+## Chercheurs
 
 {% for job in researchers %}
+  <div>
+    <a href="{{ job.pdf_fr }}">
+      <img src="{{ site.baseurl }}/assets/images/icons/pdf_icon.gif"/>
+    </a>
+    {{ job.titre }}
+  </div>
+{% else %}
+  Aucun poste à pourvoir actuellement.
+{% endfor %}
+
+## Enseignants-chercheurs
+
+{% for job in lecturers %}
   <div>
     <a href="{{ job.pdf_fr }}">
       <img src="{{ site.baseurl }}/assets/images/icons/pdf_icon.gif"/>
