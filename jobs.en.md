@@ -10,7 +10,8 @@ page_order : 10
 {% assign open_jobs = strudel_jobs | where: "filled", "false" %}
 {% assign closed_jobs = strudel_jobs | where: "filled", "true" %}
 
-{% assign researchers = open_jobs | where: "type", "EC" %}
+{% assign researchers = open_jobs | where: "type", "Researcher" %}
+{% assign lecturers = open_jobs | where: "type", "EC" %}
 {% assign postdocs = open_jobs | where: "type", "postdoc" %}
 {% assign inges = open_jobs | where: "type", "ingenieur" %}
 {% assign phds = open_jobs | where: "type", "PhD" %}
@@ -18,9 +19,22 @@ page_order : 10
 
 You can find here the positions currently available in the team. We highly recommend you to get in touch with us and navigate throughout these fancy pages before applying. Thank you !
 
-## Lecturers
+## Researchers
 
 {% for job in researchers %}
+  <div>
+    <a href="{{ job.pdf_en }}">
+      <img src="{{ site.baseurl }}/assets/images/icons/pdf_icon.gif"/>
+    </a>
+    {{ job.title }}
+  </div>
+{% else %}
+  No position available at the moment.
+{% endfor %}
+
+## Lecturers
+
+{% for job in lecturers %}
   <div>
     <a href="{{ job.pdf_en }}">
       <img src="{{ site.baseurl }}/assets/images/icons/pdf_icon.gif"/>
