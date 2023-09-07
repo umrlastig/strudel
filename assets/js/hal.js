@@ -23,7 +23,13 @@
 // documentation on HAL API: https://api.archives-ouvertes.fr/docs/search/?schema=fields#fields
 
 const hal_baseurl = "https://api.archives-ouvertes.fr";
-const fl = 'fileAnnexes_s,fileAnnexesFigure_s,invitedCommunication_s,proceedings_s,popularLevel_s,halId_s,authIdHalFullName_fs,producedDateY_i,docType_s,files_s,fileMain_s,fileMainAnnex_s,linkExtUrl_s,title_s,en_title_s,fr_title_s,label_bibtex,citationRef_s';
+const fl = 'fileAnnexes_s,fileAnnexesFigure_s,invitedCommunication_s,proceedings_s,popularLevel_s,halId_s,authIdHalFullName_fs,producedDateY_i,docType_s,files_s,fileMain_s,fileMainAnnex_s,linkExtUrl_s,title_s,en_title_s,fr_title_s,label_bibtex,citationRef_s,labStructId_i';
+// this filter contains the different historical research structures:
+// 1003089: LASTIG (2020-)
+// 536752: LASTIG (2012-2019)
+// 60135: MATIS (1993-2011)
+// 1002888: COGIT (1988-2011)
+const lastig_filter = '&fq=(labStructId_i:1003089 OR labStructId_i:536752 OR labStructId_i:60135 OR labStructId_i:1002888)'
 
 // kept just in case : requests with an array of IdHals
 function halAuthIdHalApi(halIds){
@@ -55,7 +61,7 @@ function getPublications(halIds, parent, params, baseImageUrl){
   // Create a request variable and assign a new XMLHttpRequest object to it.
   var request = new XMLHttpRequest();
   // Open a new connection, using the GET request on the URL endpoint
-  var url = halNameApi(halIds)+params;
+  var url = halNameApi(halIds)+params+lastig_filter;
   request.open('GET', url, true);
   request.onload = function () {
     var docs = JSON.parse(this.response).response.docs;
