@@ -76,7 +76,7 @@ page_order : 8
         <b> {{ member.firstname }} <br> {{ member.lastname | capitalize }} </b>
       </a>
       <br>
-      Depuis {{ member.start_date | split: "-" | first }}
+      Since {{ member.start_date | split: "-" | first }}
     </div>
   {% endtablerow %}
 </table>
