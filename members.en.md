@@ -23,7 +23,7 @@ page_order : 8
   {% tablerow member in strudel_permanent_researchers cols:3 %}
     <div align="center">
       <a href="{{ member.webpage }}">
-        <img class="rounded-circle" src="{{ member.photo }}" alt="No image"/>
+        <img class="rounded-circle" src="{{ member.photo | default: '/lastig_data/img/abstract-user-icon.svg' }}" alt="No image"/>
         <br>
         <b> {{ member.firstname }} <br> {{ member.lastname | capitalize }} </b>
       </a>
@@ -39,12 +39,12 @@ page_order : 8
   {% tablerow member in strudel_postdocs cols:3 %}
     <div align="center">
       <a href="{{ member.webpage }}">
-        <img class="rounded-circle" src="{{ member.photo }}" alt="No image"/>
+        <img class="rounded-circle" src="{{ member.photo | default: '/lastig_data/img/abstract-user-icon.svg' }}" alt="No image"/>
         <br>
         <b> {{ member.firstname }} <br> {{ member.lastname | capitalize }} </b>
       </a>
       <br>
-      Since {{ member.start_date | split: "/" | last }}
+      Since {{ member.start_date | split: "-" | first }}
     </div>
   {% endtablerow %}
 </table>
@@ -55,12 +55,12 @@ page_order : 8
   {% tablerow member in strudel_phds cols:3 %}
     <div align="center">
       <a href="{{ member.webpage }}">
-        <img class="rounded-circle" src="{{ member.photo }}" alt="No image"/>
+        <img class="rounded-circle" src="{{ member.photo | default: '/lastig_data/img/abstract-user-icon.svg' }}" alt="No image"/>
         <br>
         <b> {{ member.firstname }} <br> {{ member.lastname | capitalize }} </b>
       </a>
       <br>
-      Since {{ member.start_date | split: "/" | last }}
+      Since {{ member.start_date | split: "-" | first }}
     </div>
   {% endtablerow %}
 </table>
@@ -71,12 +71,12 @@ page_order : 8
   {% tablerow member in strudel_engineers cols:3 %}
     <div align="center">
       <a href="{{ member.webpage }}">
-        <img class="rounded-circle" src="{{ member.photo }}" alt="No image"/>
+        <img class="rounded-circle" src="{{ member.photo | default: '/lastig_data/img/abstract-user-icon.svg' }}" alt="No image"/>
         <br>
         <b> {{ member.firstname }} <br> {{ member.lastname | capitalize }} </b>
       </a>
       <br>
-      Depuis {{ member.start_date | split: "/" | last }}
+      Depuis {{ member.start_date | split: "-" | first }}
     </div>
   {% endtablerow %}
 </table>
@@ -87,14 +87,14 @@ page_order : 8
   {% tablerow member in strudel_past_members cols:3 %}
     <div align="center">
       <a href="{{ member.webpage }}">
-        <img class="rounded-circle" src="{{ member.photo }}" alt="No image"/>
+        <img class="rounded-circle" src="{{ member.photo | default: '/lastig_data/img/abstract-user-icon.svg' }}" alt="No image"/>
         <br>
         <b> {{ member.firstname }} <br> {{ member.lastname | capitalize }} </b>
       </a>
       <br>
       {{ member.status }}
       <br>
-      {{ member.start_date | split: "/" | last }} - {{ member.end_date | split: "/" | last }}
+      {{ member.start_date | split: "-" | first }} - {{ member.end_date | split: "-" | first }}
     </div>
   {% endtablerow %}
 </table>
