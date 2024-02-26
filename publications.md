@@ -25,11 +25,11 @@ page_order : 4
 {%- capture ids -%}
   {%- for m in strudel_members -%}
     {%- if forloop.first != true -%},{%- endif -%}
-    {%- if m.HAL == "todo" -%}
+    {%- if m.HAL and m.HAL.size > 0 -%}
+      authIdHal_s:{{ m.HAL }}
+    {%- else -%}
       {%- assign lastname = m.lastname | strip -%}
       authFullName_s:"{{ m.firstname | strip | append: " " | append: lastname | strip | url_encode }}"
-    {%- else -%}
-      authIdHal_s:{{ m.HAL }}
     {%- endif -%}
   {%- endfor -%}
 {%- endcapture -%}
