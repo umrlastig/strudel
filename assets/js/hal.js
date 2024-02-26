@@ -35,7 +35,7 @@ const lastig_filter = '&fq=(labStructId_i:1003089 OR labStructId_i:536752 OR lab
 function halAuthIdHalApi(halIds){
   var idList = halIds;
   if (Array.isArray(halIds)) {
-    idList = halIds.join(' OR ');
+    idList = halIds.filter((word) => word.length > 0).join(' OR ');
   }
   return hal_baseurl+"/search/?q=authIdHal_s:\("+idList+"\)&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
 }
@@ -43,7 +43,7 @@ function halAuthIdHalApi(halIds){
 function halNameApi(halIds){
   var query = "authIdHal_s:"+halIds;
   if (Array.isArray(halIds)) {
-    query = halIds.join(' OR ');
+    query = halIds.filter((word) => word.length > 0).join(' OR ');
   }
   return hal_baseurl+"/search/?q="+query+"&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
 }
@@ -51,25 +51,28 @@ function halNameApi(halIds){
 function halIdApi(halIds){
   var query = halIds;
   if (Array.isArray(halIds)) {
-    query = halIds.join(' OR ');
+    query = halIds.filter((word) => word.length > 0).join(' OR ');
   }
   return hal_baseurl+"/search/?q=halId_s:\("+query+"\)&wt=json&sort=producedDateY_i desc&rows=10000&fl="+fl;
 }
 
-function getPublications(halIds, parent, params, baseImageUrl){
+function getPublications(halIds, parent, params, baseImageUrl, only_lastig_publications=true){
   if (!parent) return;
   // Create a request variable and assign a new XMLHttpRequest object to it.
   var request = new XMLHttpRequest();
   // Open a new connection, using the GET request on the URL endpoint
-  var url = halNameApi(halIds)+params+lastig_filter;
+  var url = halNameApi(halIds)+params;
+  if (only_lastig_publications) {
+    url = url+lastig_filter;
+  }
   request.open('GET', url, true);
   request.onload = function () {
     var docs = JSON.parse(this.response).response.docs;
     while (parent.childElementCount > 1) {
-	parent.removeChild(parent.lastChild);
+	    parent.removeChild(parent.lastChild);
     }
     if(docs.length == 0) {
-	parent.style.visibility = "hidden";
+	    parent.style.visibility = "hidden";
     } else {
       parent.style.visibility = "visible";
       const ol = document.createElement('ol');
@@ -122,7 +125,7 @@ function classement(doc)
   return '???';
 }
 
-function getPublicationsAuthor(halIds, baseImageUrl = "img", yearOption = -1, options = publication_options)
+function getPublicationsAuthor(halIds, baseImageUrl = "img", yearOption = -1, options = publication_options, only_lastig_publications = true)
 {
   if (yearOption === -1) {
     yearOptionFilter = ""
@@ -130,7 +133,7 @@ function getPublicationsAuthor(halIds, baseImageUrl = "img", yearOption = -1, op
     yearOptionFilter = "&fq=producedDateY_i:"+yearOption
   }
   for (var id in options) {
-    getPublications(halIds, document.getElementById(id), options[id] + yearOptionFilter, baseImageUrl);
+    getPublications(halIds, document.getElementById(id), options[id] + yearOptionFilter, baseImageUrl, only_lastig_publications);
   }
 }
 
